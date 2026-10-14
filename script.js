@@ -1,12 +1,14 @@
 /**
  * ==========================================================================
- * THORVON TALENT — OFFICIAL SCRIPTPACK
- * A Creator Management Division of Thorvon Media
+ * THORVON TALENT — OFFICIAL SCRIPTPACK (FINAL BRIEF)
+ * A Creator Management & Talent Partnerships Division of Thorvon Media
  *
  * Core Features:
- * - Streamlined Creator Application Flow
- * - High-Contrast Electric Lime Ambient Cursor Glow
- * - Secondary Brand Partnerships & Careers Portals
+ * - Interactive 3-Stage Creator Journey Switcher
+ * - Interactive Creator Showcase Filter
+ * - Streamlined Creator Application Flow ("Let's Get to Know You.")
+ * - Apple-Grade Micro-Interactions & Electric Lime Ambient Glow
+ * - Secondary Brand Partnerships & Verified Recruitment Portals
  * - Resilient Form Dispatch Engine with Direct Fallback
  * ==========================================================================
  */
@@ -33,7 +35,49 @@ const AppConfig = {
 };
 
 // --------------------------------------------------------------------------
-// 2. Verified Thorvon Media Vacancies Catalog
+// 2. Interactive Creator Journey Stages Data
+// --------------------------------------------------------------------------
+const JourneyStages = [
+  {
+    badge: 'STAGE 01 • REPUTATION ARCHITECTURE',
+    heading: 'Build Your Presence',
+    desc: 'Social media management, content strategy, and stronger personal branding that position you as an unmistakable voice in your niche.',
+    cta: 'Start Stage 01',
+    metrics: [
+      { label: 'Content Strategy', val: 'Retention Pacing' },
+      { label: 'Feed Optimization', val: 'Omnichannel' },
+      { label: 'Brand Positioning', val: 'Authority First' },
+      { label: 'Operational Support', val: 'Thorvon Media' }
+    ]
+  },
+  {
+    badge: 'STAGE 02 • COMMERCIAL ALIGNMENT',
+    heading: 'Find Your Opportunities',
+    desc: 'Relevant brand collaborations, commercial partnerships, and campaign opportunities that fit your creative identity without compromise.',
+    cta: 'Start Stage 02',
+    metrics: [
+      { label: 'Brand Matching', val: 'Vetted Sponsors' },
+      { label: 'Deal Structuring', val: 'Multi-Month Retainers' },
+      { label: 'Rate Protection', val: 'Ethical Floor' },
+      { label: 'Legal Defense', val: 'Contract Security' }
+    ]
+  },
+  {
+    badge: 'STAGE 03 • CREATIVE FREEDOM',
+    heading: 'Focus on Your Craft',
+    desc: 'Let creators focus entirely on creating while our dedicated team supports your social media publishing, clip editing, and commercial pipelines.',
+    cta: 'Start Stage 03',
+    metrics: [
+      { label: 'Workflow Burden', val: 'Zero Admin Friction' },
+      { label: 'Video Post-Production', val: 'Clipper Network' },
+      { label: 'Native Scheduling', val: 'Managed Publishing' },
+      { label: 'Career Horizon', val: 'Long-Term Equity' }
+    ]
+  }
+];
+
+// --------------------------------------------------------------------------
+// 3. Verified Thorvon Media Vacancies Catalog
 // --------------------------------------------------------------------------
 const CareerPositions = {
   'clipper': {
@@ -166,7 +210,7 @@ const CareerPositions = {
 };
 
 // --------------------------------------------------------------------------
-// 3. UI State & Modal Controller
+// 4. Modal System Controller
 // --------------------------------------------------------------------------
 const ModalController = {
   activeModal: null,
@@ -215,7 +259,7 @@ const ModalController = {
 };
 
 // --------------------------------------------------------------------------
-// 4. Job Details Modal Handler
+// 5. Job Details Modal Handler
 // --------------------------------------------------------------------------
 function showJobDetails(roleId) {
   const position = CareerPositions[roleId];
@@ -254,7 +298,6 @@ function showJobDetails(roleId) {
     });
   }
 
-  // Switch to view pane
   const viewPane = document.getElementById('jobViewPane');
   const formPane = document.getElementById('jobFormPane');
   if (viewPane) viewPane.style.display = 'block';
@@ -264,7 +307,7 @@ function showJobDetails(roleId) {
 }
 
 // --------------------------------------------------------------------------
-// 5. Toast Feedback Utility
+// 6. Toast Notification Utility
 // --------------------------------------------------------------------------
 function showToast(title, message, type = 'info') {
   const container = document.getElementById('toastContainer');
@@ -298,7 +341,7 @@ function showToast(title, message, type = 'info') {
 }
 
 // --------------------------------------------------------------------------
-// 6. Resilient Lead & Application Submission Handler
+// 7. Form Submission Pipeline
 // --------------------------------------------------------------------------
 async function handleFormSubmit(form, formType) {
   const submitBtn = form.querySelector('button[type="submit"]');
@@ -306,7 +349,7 @@ async function handleFormSubmit(form, formType) {
 
   if (submitBtn) {
     submitBtn.disabled = true;
-    submitBtn.innerHTML = 'Transmitting... <span class="arrow">⌛</span>';
+    submitBtn.innerHTML = 'Submitting... <span class="arrow">⌛</span>';
   }
 
   const formData = new FormData(form);
@@ -324,21 +367,21 @@ async function handleFormSubmit(form, formType) {
 
   if (formType === 'creator') {
     targetEmail = AppConfig.CONTACT.EMAIL_RECRUITMENT;
-    subjectPrefix = `Creator Representation: ${data.name || 'Creator'}`;
+    subjectPrefix = `Creator Application: ${data.name || 'Creator'}`;
     formattedSummary = [
-      'THORVON TALENT — CREATOR REPRESENTATION INQUIRY',
+      'THORVON TALENT — CREATOR APPLICATION',
       '==================================================',
-      `Creator Name: ${data.name || 'N/A'}`,
-      `Email / Contact: ${data.contact || 'N/A'}`,
-      `Primary Platform: ${data.platform || 'N/A'}`,
+      `Full Name: ${data.name || 'N/A'}`,
+      `Contact: ${data.contact || 'N/A'}`,
+      `Main Platform: ${data.platform || 'N/A'}`,
       `Profile Link / Handle: ${data.profile_url || 'N/A'}`,
       `Content Niche: ${data.niche || 'N/A'}`,
-      `Introduction & Goals: ${data.introduction || 'None provided'}`,
-      `Submitted At: ${timestamp}`
+      `Introduction: ${data.introduction || 'None provided'}`,
+      `Submitted: ${timestamp}`
     ].join('\n');
   } else if (formType === 'brand') {
     targetEmail = AppConfig.CONTACT.EMAIL_PRIMARY;
-    subjectPrefix = `Brand Partnership Inquiry: ${data.brand_name || 'Brand'}`;
+    subjectPrefix = `Brand Partnership: ${data.brand_name || 'Brand'}`;
     formattedSummary = [
       'THORVON TALENT — BRAND PARTNERSHIP INQUIRY',
       '==================================================',
@@ -347,20 +390,20 @@ async function handleFormSubmit(form, formType) {
       `Work Email: ${data.work_email || 'N/A'}`,
       `Website: ${data.website || 'N/A'}`,
       `Campaign Brief: ${data.campaign_brief || 'N/A'}`,
-      `Submitted At: ${timestamp}`
+      `Submitted: ${timestamp}`
     ].join('\n');
   } else if (formType === 'career') {
     targetEmail = AppConfig.CONTACT.EMAIL_RECRUITMENT;
     subjectPrefix = `Job Application: ${data.role_name || 'Role'} — ${data.name || 'Candidate'}`;
     formattedSummary = [
-      'THORVON MEDIA — RECRUITMENT APPLICATION',
+      'THORVON MEDIA — JOB APPLICATION',
       '==================================================',
-      `Role: ${data.role_name || 'General Application'}`,
+      `Position: ${data.role_name || 'General Application'}`,
       `Applicant Name: ${data.name || 'N/A'}`,
       `Email Address: ${data.email || 'N/A'}`,
-      `Portfolio / Work URL: ${data.portfolio || 'N/A'}`,
-      `Cover Note / Intro: ${data.introduction || 'N/A'}`,
-      `Submitted At: ${timestamp}`
+      `Portfolio Link: ${data.portfolio || 'N/A'}`,
+      `Introduction: ${data.introduction || 'N/A'}`,
+      `Submitted: ${timestamp}`
     ].join('\n');
   }
 
@@ -415,7 +458,7 @@ async function handleFormSubmit(form, formType) {
     showToast('Application Transmitted', 'Your details have been received by Thorvon Talent.', 'success');
     if (dispatchTitle) dispatchTitle.textContent = 'Application Received';
     if (dispatchMsg) {
-      dispatchMsg.textContent = `Thank you. Your details have been submitted to our talent management team at ${targetEmail}. We will review your profile and follow up within 24–48 hours.`;
+      dispatchMsg.textContent = `Thank you. Our talent management team will review your application and respond if there is a suitable opportunity.`;
     }
     if (failsafeBox) failsafeBox.style.display = 'none';
     if (mailtoBtn) mailtoBtn.style.display = 'none';
@@ -423,7 +466,7 @@ async function handleFormSubmit(form, formType) {
     showToast('Inquiry Formatted', 'Ready for direct transmission to our inbox.', 'info');
     if (dispatchTitle) dispatchTitle.textContent = 'Application Ready to Send';
     if (dispatchMsg) {
-      dispatchMsg.textContent = `Your application has been securely formatted for our executive inbox at ${targetEmail}. Click below to dispatch via your preferred email app or copy the summary.`;
+      dispatchMsg.textContent = `Your application has been formatted for our executive inbox at ${targetEmail}. Click below to transmit via your email client or copy the summary.`;
     }
     if (failsafeBox) failsafeBox.style.display = 'block';
     if (preEl) preEl.textContent = formattedSummary;
@@ -441,10 +484,10 @@ async function handleFormSubmit(form, formType) {
 }
 
 // --------------------------------------------------------------------------
-// 7. Interactive Initialization
+// 8. Interactive Initialization & Micro-Interactions
 // --------------------------------------------------------------------------
 document.addEventListener('DOMContentLoaded', () => {
-  // A. Scroll Progress Line & Sticky Header
+  // A. Scroll Progress Line & Header Blur
   const scrollProgress = document.getElementById('scrollProgress');
   const siteHeader = document.querySelector('.site-header');
 
@@ -465,7 +508,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
-  // B. Ambient Glow Cursor Spotlight (Electric Lime glow)
+  // B. Ambient Glow Cursor Spotlight
   const ambientGlow = document.getElementById('ambientGlow');
   if (ambientGlow && window.matchMedia('(pointer: fine)').matches) {
     let mouseX = window.innerWidth / 2;
@@ -481,7 +524,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const animateGlow = () => {
       currentX += (mouseX - currentX) * 0.08;
       currentY += (mouseY - currentY) * 0.08;
-      ambientGlow.style.background = `radial-gradient(circle at ${currentX}px ${currentY}px, rgba(204, 255, 0, 0.04), transparent 60%)`;
+      ambientGlow.style.background = `radial-gradient(circle at ${currentX}px ${currentY}px, rgba(204, 255, 0, 0.038), transparent 60%)`;
       requestAnimationFrame(animateGlow);
     };
     animateGlow();
@@ -503,7 +546,66 @@ document.addEventListener('DOMContentLoaded', () => {
     kineticHeadings.forEach((h) => h.classList.add('is-visible'));
   }
 
-  // D. Mobile Menu Toggle
+  // D. Interactive Creator Journey Switcher
+  const stageTabs = document.querySelectorAll('.journey-tab-btn');
+  const stageBadge = document.getElementById('journeyStageBadge');
+  const stageHeading = document.getElementById('journeyStageHeading');
+  const stageDesc = document.getElementById('journeyStageDesc');
+  const metric1 = document.getElementById('journeyMetric1');
+  const metric2 = document.getElementById('journeyMetric2');
+  const metric3 = document.getElementById('journeyMetric3');
+  const metric4 = document.getElementById('journeyMetric4');
+
+  function setJourneyStage(stageIndex) {
+    const stage = JourneyStages[stageIndex];
+    if (!stage) return;
+
+    stageTabs.forEach((tab, idx) => {
+      const isActive = idx === stageIndex;
+      tab.classList.toggle('active', isActive);
+      tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    });
+
+    if (stageBadge) stageBadge.textContent = stage.badge;
+    if (stageHeading) stageHeading.textContent = stage.heading;
+    if (stageDesc) stageDesc.textContent = stage.desc;
+
+    if (metric1 && stage.metrics[0]) metric1.textContent = stage.metrics[0].val;
+    if (metric2 && stage.metrics[1]) metric2.textContent = stage.metrics[1].val;
+    if (metric3 && stage.metrics[2]) metric3.textContent = stage.metrics[2].val;
+    if (metric4 && stage.metrics[3]) metric4.textContent = stage.metrics[3].val;
+  }
+
+  stageTabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      const idx = parseInt(tab.getAttribute('data-stage'), 10);
+      setJourneyStage(idx);
+    });
+  });
+
+  // E. Showcase Filter Pills
+  const showcasePills = document.querySelectorAll('.showcase-filter-pill');
+  const showcaseCards = document.querySelectorAll('.showcase-card');
+
+  showcasePills.forEach((pill) => {
+    pill.addEventListener('click', () => {
+      showcasePills.forEach((p) => p.classList.remove('active'));
+      pill.classList.add('active');
+
+      const filter = pill.getAttribute('data-filter');
+
+      showcaseCards.forEach((card) => {
+        const cat = card.getAttribute('data-category');
+        if (filter === 'all' || cat === filter) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // F. Mobile Menu Toggle
   const mobileToggle = document.getElementById('mobileToggle');
   const mobileDrawer = document.getElementById('mobileDrawer');
   const mobileLinks = document.querySelectorAll('.mobile-nav-link');
@@ -530,7 +632,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // E. Global Click Delegations
+  // G. Global Click Delegations
   document.addEventListener('click', (e) => {
     // Close modal
     const closeBtn = e.target.closest('[data-action="close-modal"]');
@@ -576,7 +678,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    // View Job Details from list
+    // View Job Details
     const jobDetailBtn = e.target.closest('[data-action="view-job-details"]');
     if (jobDetailBtn) {
       e.preventDefault();
@@ -585,7 +687,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    // Back to Careers List from Details
+    // Back to Careers List
     const backToCareersBtn = e.target.closest('[data-action="back-to-careers-list"]');
     if (backToCareersBtn) {
       e.preventDefault();
@@ -599,7 +701,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // F. Switch Between Role Details & Application Form in Job Modal
+  // H. Job Modal Details <-> Form switch
   const proceedApplyBtn = document.getElementById('jobProceedApplyBtn');
   const backToPaneBtn = document.getElementById('jobBackToPaneBtn');
   const viewPane = document.getElementById('jobViewPane');
@@ -619,7 +721,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // G. Escape Key Modal Closing
+  // I. Keyboard Escape key
   window.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       if (mobileDrawer.classList.contains('is-open')) toggleMobile();
@@ -627,7 +729,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // H. Form Submissions
+  // J. Form Submission Binding
   const formsToBind = [
     { id: 'creatorAppForm', type: 'creator' },
     { id: 'brandModalForm', type: 'brand' },
@@ -644,7 +746,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // I. Copy Dispatch Summary Helper
+  // K. Copy Dispatch Summary Helper
   const copyBtn = document.getElementById('copyDispatchBtn');
   if (copyBtn) {
     copyBtn.addEventListener('click', () => {
