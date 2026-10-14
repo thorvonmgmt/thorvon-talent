@@ -29,12 +29,12 @@ Built with an **Apple-inspired typography system**, a signature **Electric Lime 
 
 ## 2. Interactive Homepage Experience
 
-### A. Immersive Hero Section
+### A. Confident Editorial Hero Section
 * **Headline**: *"Your Talent. Our Network. Bigger Opportunities."*
 * **Supporting Line**: *"Your brand deserves more than just content."*
 * **Primary Action**: **Get Represented** (Electric lime pill with hover lift).
 * **Secondary Action**: **Discover Thorvon Talent** (Smooth scroll to the Creator Journey).
-* **Cinematic Viewfinder**: Interactive camera frame featuring a pulsing `[REC 4K 60FPS]` indicator, aperture crosshair, exposure metrics, and editorial brand statement.
+* **Talent Worth Representing**: 5 interactive, clickable niche cards (Podcasts & Media, Business & Finance, Education & Infotainment, Beauty & Lifestyle, Comedy & Entertainment) that auto-fill the application modal on click.
 
 ### B. Interactive Creator Journey
 Demonstrates the transformation through 3 interactive stages:
@@ -96,17 +96,45 @@ Then visit **[http://localhost:8089](http://localhost:8089)** in your browser.
 
 ---
 
-## 6. Deployment to Vercel & Subdomain Setup
+## 6. Live Subdomain Deployment Guide (`talent.thorvonmedia.in`)
 
-1. **Commit & Push to GitHub**:
-   ```bash
-   git add .
-   git commit -m "feat: complete final Apple-inspired Thorvon Talent website"
-   git push origin main
-   ```
-2. **Import into Vercel**: Connect your repository in your Vercel Dashboard.
-3. **Map Dedicated Subdomain (`talent.yourdomain.com`)**:
-   * In Vercel Project → **Settings** → **Domains**, add `talent.yourdomain.com` (e.g. `talent.thorvonmedia.com`).
-   * In your DNS provider (Cloudflare, GoDaddy, Namecheap, etc.), create a `CNAME` record:
-     * **Host**: `talent`
-     * **Target**: `cname.vercel-dns.com`
+This repository is published on GitHub at:
+👉 **[https://github.com/thorvonmgmt/thorvon-talent](https://github.com/thorvonmgmt/thorvon-talent)**
+
+### Option A: Vercel (Recommended — Same Platform as Parent Site)
+
+1. **Import Project into Vercel**:
+   - Go to [vercel.com/new](https://vercel.com/new).
+   - Under **Import Git Repository**, select **`thorvonmgmt/thorvon-talent`**.
+   - Leave Framework Preset as **Other** (Root directory `./`).
+   - Click **Deploy**. Vercel will instantly generate a live production deployment in under 15 seconds.
+
+2. **Assign Subdomain (`talent.thorvonmedia.in`)**:
+   - Navigate to your project on Vercel: **Settings** → **Domains**.
+   - In the input field, enter: `talent.thorvonmedia.in`.
+   - Click **Add**.
+
+3. **Configure DNS (at your domain registrar/DNS provider e.g. Cloudflare, GoDaddy, Namecheap)**:
+   - Add the following DNS record to your `thorvonmedia.in` zone:
+     | Type | Name / Host | Value / Target | TTL |
+     | :--- | :--- | :--- | :--- |
+     | **CNAME** | `talent` | `cname.vercel-dns.com.` | Auto / 1 Hour |
+   - Vercel will automatically detect the record, provision an SSL certificate (HTTPS), and route `https://talent.thorvonmedia.in` worldwide.
+
+---
+
+### Option B: Cloudflare Pages
+
+1. Go to **Cloudflare Dashboard** → **Workers & Pages** → **Create application** → **Pages**.
+2. Connect GitHub account `thorvonmgmt` and pick `thorvon-talent`.
+3. Set build output directory to `/` and click **Save and Deploy**.
+4. Go to **Custom domains** → **Set up a domain** → enter `talent.thorvonmedia.in`.
+5. Cloudflare automatically handles the DNS routing with zero manual records needed if your domain is on Cloudflare.
+
+---
+
+### Option C: GitHub Pages (`talent.thorvonmedia.in`)
+
+1. In repository settings: **Settings** → **Pages** → Source: **Deploy from a branch (`main` / root)**.
+2. Under **Custom domain**, enter `talent.thorvonmedia.in` and click **Save**.
+3. In DNS, point CNAME `talent` to `thorvonmgmt.github.io`.
