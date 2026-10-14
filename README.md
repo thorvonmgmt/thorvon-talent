@@ -1,156 +1,96 @@
 # THORVON TALENT
-**A Talent, Creator Management, and Recruitment Division of Thorvon Media**
+**A Creator Management Division of Thorvon Media**
 
-A minimalist, high-contrast editorial website engineered specifically for **Thorvon Talent**, serving as a dedicated platform for creator representation, brand collaboration inquiries, and verified talent recruitment for Thorvon Media.
+A visually arresting, high-contrast editorial platform for **Thorvon Talent**, engineered to attract influencers, artists, and digital creators looking for professional representation, elevated social presence, and tier-1 brand collaborations.
 
-The website maintains the exact visual identity, typography system, spacing, button interactions, ambient cursor glow, kinetic word reveals, and dark editorial aesthetic of the parent **Thorvon Media** platform.
-
----
-
-## 1. Division Architecture & Core Objectives
-
-* **Parent Brand**: Thorvon Media (`thorvonmedia@gmail.com`)
-* **Division**: Thorvon Talent (`thorvonmgmt@gmail.com`)
-* **Target Domain**: `talent.yourdomain.com` (e.g. `talent.thorvonmedia.com`)
-* **Deployment Target**: Vercel
-
-### Key Platform Areas:
-1. **Hero Platform**: Minimalist hero with masked word-by-word kinetic typography ("*Talent Deserves the Right Platform.*") and immediate dual actions.
-2. **Creator & Influencer Management**: Detailed overview of 6 management pillars (Representation, Brand Deal Sourcing, Ambassadorships, Growth Support, Social Media Management, and Post-Production Coordination) with a 4-step onboarding roadmap and modal application.
-3. **Brand Collaborations**: High-impact business inquiry interface allowing brands, founders, and marketing directors to initiate influencer campaigns with vetted creators.
-4. **Careers at Thorvon Media**: Clean job listing interface showcasing 7 verified vacancies with category filtering and an interactive application portal.
-5. **About Thorvon Talent**: Articulates the structural synergy between Thorvon Media (PR & content production power) and Thorvon Talent (creator representation and talent pipeline).
-6. **Contact Hub**: Separate routing paths for creators, brands, careers, and general inquiries, paired with active direct communication links (Phone, WhatsApp, Email).
+Built with an **Electric Lime / Acid Green** (`#ccff00`) and **Deep Charcoal** (`#07080a`) color identity that stands out sharply while honoring the typographic rigor and editorial standards of Thorvon Media.
 
 ---
 
-## 2. File Structure
+## 1. Core Vision & Experience
 
-```
-thorvon-talent/
-├── index.html       # Clean semantic HTML5 layout & interactive modal systems
-├── styles.css       # Monochromatic editorial styling, kinetic reveals & responsive design
-├── script.js        # State machine, modal controller, verified job catalog & form engine
-├── vercel.json      # Security headers, asset caching & clean URL routing for Vercel
-├── README.md        # Documentation and deployment guide
-└── assets/          # High-resolution logos, favicons, and icons
-    ├── logo-white.png
-    ├── logo-dark.png
-    ├── apple-touch-icon.png
-    ├── favicon-16x16.png
-    ├── favicon-32x32.png
-    └── favicon.ico
-```
+* **Philosophy**: *Less text. More emotion. More aspiration. More visual impact.*
+* **Primary Objective**: Creator acquisition.
+* **Core Value Pillars**:
+  1. **WE BUILD YOUR PRESENCE.** Social media strategy and management that make your brand stand out.
+  2. **WE CONNECT YOU TO BRANDS.** Relevant partnerships and campaign opportunities that fit your identity.
+  3. **WE HANDLE THE EXECUTION.** Operational freedom covering content planning, editing, and distribution.
+* **Secondary Pathways**:
+  * **Brand Partnerships**: Dedicated conversational modal for companies seeking creator campaigns.
+  * **Careers at Thorvon Media**: Secondary portal featuring 7 verified agency vacancies, strictly separated from creator onboarding.
 
 ---
 
-## 3. How to Preview & Test Locally
+## 2. Visual Identity & Contrast with Parent Site
 
-### Option 1: Python Local Server (Recommended)
-Open PowerShell or your terminal in this directory and run:
+| Element | Thorvon Media (Parent) | Thorvon Talent (Creator Division) |
+| :--- | :--- | :--- |
+| **Primary Accent** | Monochrome / Classic Blue (`#3b82f6`) | **Electric Lime / Acid Green (`#ccff00`)** |
+| **Accent Glow** | Cool Blue Subtlety | **Luminous Acid Lime Halo (`rgba(204, 255, 0, 0.3)`)** |
+| **Background** | Deep Graphite (`#090a0d`) | **High-Contrast Deep Obsidian (`#07080a`)** |
+| **Atmosphere** | Corporate & Editorial PR | **Cinematic Viewfinder, Stage Lighting & Editorial Culture** |
+| **Typography** | Plus Jakarta Sans, Inter & Space Mono | Retained for brand family harmony |
+
+---
+
+## 3. Homepage Architecture
+
+1. **Hero Platform**:
+   * Headline: *"Your Talent. Our Network. Bigger Opportunities."*
+   * Supporting Line: *"Your brand deserves more than just content."*
+   * Primary Action: **Get Represented** (Electric lime pill).
+   * Secondary Action: **See What We Do** (Smooth scroll).
+   * Visual Centerpiece: Dramatic camera/creator viewfinder container with REC indicator and technical metrics.
+2. **The Transformation**:
+   * Three punchy statements supported by compact visual indicators.
+3. **Creator Opportunities**:
+   * *"Make Your Influence Mean More. Build your brand. Find your people. Unlock new opportunities."*
+   * CTA: **Join Thorvon Talent**.
+4. **Final CTA**:
+   * *"Ready for What's Next?"*
+   * CTA: **Let's Talk**.
+
+---
+
+## 4. Streamlined Creator Application
+
+To maximize applicant conversion, the application form is fast and focused:
+* Full Name
+* Email or Preferred Contact
+* Primary Social Platform (Instagram, YouTube, TikTok, LinkedIn, etc.)
+* Profile Link / Handle
+* Content Niche
+* Short Optional Introduction
+
+---
+
+## 5. Local Testing & Verification
+
+Run a lightweight local server:
 ```powershell
-python -m http.server 8080
+python -m http.server 8089
 ```
-Then visit **[http://localhost:8080](http://localhost:8080)** in your browser.
-
-### Option 2: Direct Browser Preview
-Double-click `index.html` in your file explorer to open it in any modern browser.
+Then open **[http://localhost:8089](http://localhost:8089)** in any browser.
 
 ---
 
-## 4. Connecting Form Submissions to Your Inboxes
+## 6. Form Transmission (Web3Forms or Direct Mailto)
 
-The website supports two delivery modes:
+* **Web3Forms Key**: Update `AppConfig.WEB3FORMS_ACCESS_KEY` in `script.js` with your key from [web3forms.com](https://web3forms.com).
+* **Failsafe Mailto Mode**: Active by default. Automatically generates an email formatted with all applicant details targeting `thorvonmgmt@gmail.com` with a 1-click clipboard summary so no lead is ever lost.
 
-### Mode A: Web3Forms Direct API Delivery (Automated)
-To have applications land directly in `thorvonmedia@gmail.com` and `thorvonmgmt@gmail.com`:
-1. Visit **[web3forms.com](https://web3forms.com)**.
-2. Enter your email and click **Create Access Key** (100% free, no server required).
-3. Copy the access key from your inbox.
-4. In `script.js` (line 17), update the access key:
-   ```javascript
-   WEB3FORMS_ACCESS_KEY: 'paste_your_key_here',
+---
+
+## 7. Deployment to Vercel (Subdomain Setup)
+
+1. Push this repository to GitHub:
+   ```bash
+   git add .
+   git commit -m "feat: complete creator-first electric lime redesign"
+   git push origin main
    ```
-5. Deploy or push changes.
-
-### Mode B: Zero-Config Resilient Fallback (Active by Default)
-If no key is configured or the client is offline:
-* Every form submission is instantly validated and cleanly formatted.
-* A direct `mailto:` link is automatically triggered with pre-formatted Subject and Body targeting the appropriate inbox (`thorvonmgmt@gmail.com` or `thorvonmedia@gmail.com`).
-* An on-screen confirmation modal provides a **1-click "Copy Summary"** button so no lead or applicant is ever lost.
-
----
-
-## 5. Verified Open Positions Catalog
-
-All positions in `script.js` reflect verified openings within Thorvon Media:
-* **Clipper (Short-Form Video Editor)** — Urgent Hiring · Remote · Full-time / Part-time
-* **Social Media Manager** — Urgent Hiring · Remote · Full-time
-* **Content Creator** — Urgent Hiring · Remote · Full-time / Part-time
-* **Creator & Brand Acquisition Head** — Leadership Role · Remote · Full-time
-* **Content Writers** — Open · Remote · Full-time
-* **Graphic Designers** — Open · Remote · Full-time
-* **Project Manager** — Open · Remote · Full-time
-
-To add, edit, or close any position, update the `CareerPositions` object in [script.js](file:///C:/Users/User/.gemini/antigravity/scratch/thorvon-talent/script.js#L30-L200).
-
----
-
-## 6. Deploying to Vercel & Subdomain Setup
-
-### Step 1: Push Project to GitHub
-Initialize Git and push to your GitHub account:
-```bash
-git init
-git add .
-git commit -m "Initial commit: Thorvon Talent platform"
-git branch -M main
-git remote add origin https://github.com/your-username/thorvon-talent.git
-git push -u origin main
-```
-
-### Step 2: Import into Vercel
-1. Log in to your [Vercel Dashboard](https://vercel.com).
-2. Click **Add New** → **Project**.
-3. Select your `thorvon-talent` repository and click **Deploy**.
-4. Vercel will automatically recognize the static site and `vercel.json` configuration.
-
-### Step 3: Connect Subdomain (`talent.yourdomain.com`)
-1. In your Vercel project dashboard, navigate to **Settings** → **Domains**.
-2. Enter your desired subdomain: `talent.yourdomain.com` (e.g. `talent.thorvonmedia.com`).
-3. Click **Add**.
-4. Vercel will provide a **CNAME record** (e.g., `cname.vercel-dns.com`).
-5. Open your DNS provider (Cloudflare, GoDaddy, Namecheap, etc.) where your root domain is managed.
-6. Add a new DNS Record:
-   * **Type**: `CNAME`
-   * **Name / Host**: `talent`
-   * **Target / Value**: `cname.vercel-dns.com`
-   * **TTL**: Automatic or 1 Hour
-7. Once DNS propagates (typically 2–15 minutes), your site will be live securely with automatic SSL at `https://talent.yourdomain.com`.
-
----
-
-## 7. Contact Details Configuration
-
-To update any telephone number, WhatsApp link, or email address across the site, modify the `AppConfig.CONTACT` object in [script.js](file:///C:/Users/User/.gemini/antigravity/scratch/thorvon-talent/script.js#L20-L30):
-```javascript
-CONTACT: {
-  PHONE: '+916000156191',
-  PHONE_DISPLAY: '+91 60001 56191',
-  PHONE_LINK: 'tel:+916000156191',
-  WHATSAPP: '+917002889463',
-  WHATSAPP_DISPLAY: '+91 70028 89463',
-  WHATSAPP_LINK: 'https://wa.me/917002889463',
-  EMAIL_PRIMARY: 'thorvonmedia@gmail.com',
-  EMAIL_RECRUITMENT: 'thorvonmgmt@gmail.com',
-  INSTAGRAM_LINK: 'https://instagram.com/thorvonmedia'
-}
-```
-
----
-
-## 8. Privacy & Applicant Data Protection
-
-* Applicant resumes and portfolios are collected with explicit consent checkoffs.
-* Cloud storage links (Google Drive, Notion, Dropbox) ensure private file handling without hosting sensitive public resume documents on the static server.
-* All data transmission is encrypted via HTTPS with security headers configured in `vercel.json`.
+2. Import project into your **Vercel Dashboard**.
+3. Under **Settings** → **Domains**, add `talent.yourdomain.com` (e.g. `talent.thorvonmedia.com`).
+4. In your DNS provider, create a `CNAME` record:
+   * **Host**: `talent`
+   * **Target**: `cname.vercel-dns.com`

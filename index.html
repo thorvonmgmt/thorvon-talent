@@ -3,29 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>THORVON TALENT — Creator Management, Brand Partnerships & Careers</title>
+  <title>THORVON TALENT — Creator &amp; Influencer Management</title>
   
-  <meta name="description" content="Thorvon Talent is the talent, creator management, and recruitment division of Thorvon Media. Connecting creators with opportunities, brands with the right voices, and ambitious professionals with opportunities to grow.">
-  <meta name="keywords" content="Thorvon Talent, Thorvon Media, creator management, influencer agency, talent partnerships, brand collaborations, media recruitment, video editor jobs, short form clipper, social media careers">
+  <meta name="description" content="Your Talent. Our Network. Bigger Opportunities. Thorvon Talent is the creator management division of Thorvon Media, dedicated to elevating creator presence, managing social channels, and structuring valuable brand collaborations.">
+  <meta name="keywords" content="Thorvon Talent, Thorvon Media, creator management, talent agency, influencer partnerships, social media management, brand deals, creator representation">
   <meta name="author" content="Thorvon Media">
-  <meta name="theme-color" content="#090a0d">
+  <meta name="theme-color" content="#07080a">
 
   <!-- Open Graph / Social Sharing -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="THORVON TALENT — Creator Management, Brand Partnerships & Careers">
-  <meta property="og:description" content="Talent Deserves the Right Platform. Connecting ambitious creators, brands, and professionals through meaningful opportunities. A division of Thorvon Media.">
+  <meta property="og:title" content="THORVON TALENT — Your Talent. Our Network. Bigger Opportunities.">
+  <meta property="og:description" content="Your brand deserves more than just content. Professional creator representation and brand partnerships by Thorvon Media.">
   <meta property="og:image" content="assets/logo-white.png">
 
-  <!-- Twitter Cards -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="THORVON TALENT — Creator Management, Brand Partnerships & Careers">
-  <meta name="twitter:description" content="Talent Deserves the Right Platform. A division of Thorvon Media.">
-  <meta name="twitter:image" content="assets/logo-white.png">
-
-  <!-- Modern Professional Typography: Plus Jakarta Sans & Inter paired with Space Mono -->
+  <!-- Typography: Plus Jakarta Sans & Inter paired with Space Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- Website Favicon & App Icons -->
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
@@ -36,39 +30,34 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Top Scroll Progress Line -->
+  <!-- Top Scroll Progress Line (Electric Lime) -->
   <div class="scroll-progress-line" id="scrollProgress"></div>
   
   <!-- Ambient Spotlight Glow -->
   <div class="ambient-glow" id="ambientGlow"></div>
 
-  <!-- Site Navigation -->
+  <!-- Minimalist Site Header -->
   <header class="site-header" id="top">
     <div class="container header-inner">
       <a href="#top" class="brand-group" aria-label="Thorvon Talent Home">
-        <img src="assets/logo-white.png" alt="Thorvon Media" class="brand-logo-img">
-        <span class="division-badge">TALENT</span>
+        <img src="assets/logo-white.png" alt="Thorvon" class="brand-logo-img">
+        <span class="division-badge-lime"><span class="dot-indicator"></span> TALENT</span>
       </a>
 
+      <!-- Minimal Navigation -->
       <nav class="site-nav" aria-label="Primary Navigation">
         <ul class="nav-links">
-          <li><a href="#hero" class="nav-link">Home</a></li>
-          <li><a href="#creators" class="nav-link">Creator Management</a></li>
-          <li><a href="#brands" class="nav-link">Brand Partnerships</a></li>
-          <li>
-            <a href="#careers" class="nav-link">
-              Careers <span class="nav-hiring-indicator">Hiring</span>
-            </a>
-          </li>
-          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#transformation" class="nav-link">Creators</a></li>
+          <li><a href="#brands" class="nav-link" data-action="open-brand-modal">Brand Partnerships</a></li>
+          <li><a href="#careers" class="nav-link" data-action="open-careers-modal">Careers</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
-        <button class="btn btn-primary nav-cta" data-action="open-action-picker">
-          Get Started <span class="arrow">→</span>
+        <button class="btn btn-lime nav-cta" data-action="open-creator-modal">
+          Get Represented <span class="arrow">→</span>
         </button>
       </nav>
 
-      <!-- Mobile Menu Toggle Button -->
+      <!-- Mobile Hamburger Toggle -->
       <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false">
         <span class="bar"></span>
         <span class="bar"></span>
@@ -80,15 +69,15 @@
       <div class="mobile-drawer-inner">
         <ul class="mobile-nav-links">
           <li><a href="#hero" class="mobile-nav-link">Home</a></li>
-          <li><a href="#creators" class="mobile-nav-link">Creator Management</a></li>
-          <li><a href="#brands" class="mobile-nav-link">Brand Partnerships</a></li>
-          <li><a href="#careers" class="mobile-nav-link">Careers (Hiring)</a></li>
-          <li><a href="#about" class="mobile-nav-link">About Thorvon Talent</a></li>
+          <li><a href="#transformation" class="mobile-nav-link">What We Do</a></li>
+          <li><a href="#opportunities" class="mobile-nav-link">Opportunities</a></li>
+          <li><a href="#brands" class="mobile-nav-link" data-action="open-brand-modal">Brand Partnerships</a></li>
+          <li><a href="#careers" class="mobile-nav-link" data-action="open-careers-modal">Careers</a></li>
           <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
         </ul>
         <div class="mobile-cta-wrap">
-          <button class="btn btn-primary mobile-cta" data-action="open-action-picker">
-            Get Started <span class="arrow">→</span>
+          <button class="btn btn-lime mobile-cta" data-action="open-creator-modal">
+            Get Represented <span class="arrow">→</span>
           </button>
         </div>
       </div>
@@ -97,831 +86,286 @@
 
   <main>
     <!-- =======================================================================
-         Hero Section
+         Section 1 — Hero
+         Headline: "Your Talent. Our Network. Bigger Opportunities."
+         Supporting line: "Your brand deserves more than just content."
          ======================================================================= -->
     <section class="hero-section" id="hero">
       <div class="container hero-container">
         <div class="hero-content">
           <div class="eyebrow">
-            <span class="crosshair">+</span> A DIVISION OF THORVON MEDIA // TALENT &amp; RECRUITMENT
+            <span class="dot-indicator"></span> CREATOR MANAGEMENT // THORVON MEDIA
           </div>
 
-          <h1 class="hero-headline kinetic-heading" aria-label="Talent Deserves the Right Platform.">
-            <span class="word-mask"><span class="reveal-word" style="--w-idx: 0">Talent</span></span>
-            <span class="word-mask"><span class="reveal-word" style="--w-idx: 1">Deserves</span></span>
-            <span class="word-mask"><span class="reveal-word" style="--w-idx: 2">the</span></span>
-            <span class="word-mask"><span class="reveal-word" style="--w-idx: 3">Right</span></span>
-            <span class="word-mask"><span class="reveal-word" style="--w-idx: 4">Platform.</span></span>
+          <h1 class="hero-headline kinetic-heading" aria-label="Your Talent. Our Network. Bigger Opportunities.">
+            <span class="word-mask"><span class="reveal-word" style="--w-idx: 0">Your</span></span>
+            <span class="word-mask"><span class="reveal-word" style="--w-idx: 1">Talent.</span></span>
+            <span class="word-mask"><span class="reveal-word highlight-lime" style="--w-idx: 2">Our</span></span>
+            <span class="word-mask"><span class="reveal-word highlight-lime" style="--w-idx: 3">Network.</span></span>
+            <span class="word-mask"><span class="reveal-word" style="--w-idx: 4">Bigger</span></span>
+            <span class="word-mask"><span class="reveal-word" style="--w-idx: 5">Opportunities.</span></span>
           </h1>
 
-          <p class="hero-statement">
-            Thorvon Talent connects creators with opportunities, brands with the right voices, and ambitious professionals with opportunities to grow alongside Thorvon Media.
+          <p class="hero-supporting-line">
+            Your brand deserves more than just content.
           </p>
 
           <div class="hero-actions">
-            <button class="btn btn-primary" data-action="open-creator-modal">
-              Join as a Creator <span class="arrow">→</span>
+            <button class="btn btn-lime" data-action="open-creator-modal">
+              Get Represented <span class="arrow">→</span>
             </button>
-            <a href="#careers" class="btn btn-secondary">
-              Explore Opportunities
+            <a href="#transformation" class="btn btn-secondary">
+              See What We Do
             </a>
           </div>
         </div>
 
-        <!-- Division Highlights Grid -->
-        <div class="hero-grid-strip">
-          <div class="strip-item">
-            <span class="strip-num">01 // REPRESENTATION</span>
-            <h3 class="strip-title">Creator Management</h3>
-            <p class="strip-desc">Dedicated career management, outbound brand pitching, content strategy, and commercial negotiation for high-growth creators.</p>
+        <!-- Dramatic Cinematic Viewfinder Container -->
+        <div class="hero-visual-frame" aria-hidden="true">
+          <div class="frame-top-bar">
+            <div class="rec-badge">
+              <span class="rec-dot"></span> REC [4K 60FPS]
+            </div>
+            <div>SHUTTER 1/120 &bull; ISO 400</div>
           </div>
-          <div class="strip-item">
-            <span class="strip-num">02 // COLLABORATION</span>
-            <h3 class="strip-title">Brand Partnerships</h3>
-            <p class="strip-desc">Curating genuine creator partnerships and multi-platform campaign concepts that align with corporate marketing objectives.</p>
+
+          <div class="frame-center-content">
+            <div class="viewfinder-reticle">
+              <span class="viewfinder-cross">+</span>
+            </div>
+            <div class="frame-quote">
+              "We turn creative voice into an <span>enduring brand</span>."
+            </div>
           </div>
-          <div class="strip-item">
-            <span class="strip-num">03 // RECRUITMENT</span>
-            <h3 class="strip-title">Thorvon Careers</h3>
-            <p class="strip-desc">Verified vacancies for video clippers, motion designers, writers, social media managers, and operations talent joining Thorvon Media.</p>
+
+          <div class="frame-bottom-bar">
+            <div class="camera-metric">
+              <span>MANAGEMENT</span>
+              <strong>EXCLUSIVE ROSTER</strong>
+            </div>
+            <div class="camera-metric" style="text-align: right;">
+              <span>COMMERCIAL</span>
+              <strong>TIER-1 DEALS</strong>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- =======================================================================
-         Section B: Creator & Influencer Management
+         Section 2 — The Transformation
+         Less text. More emotion. Three short statements supported by visuals.
+         1. WE BUILD YOUR PRESENCE.
+         2. WE CONNECT YOU TO BRANDS.
+         3. WE HANDLE THE EXECUTION.
          ======================================================================= -->
-    <section class="section" id="creators">
+    <section class="transformation-section" id="transformation">
       <div class="container">
-        <div class="section-header">
+        <div class="section-intro-compact">
           <div class="eyebrow">
-            <span class="crosshair">+</span> CREATOR ECOSYSTEM // THORVON TALENT
+            <span class="dot-indicator"></span> THE TRANSFORMATION
           </div>
-          <h2 class="section-title">Built to Protect Your Time and Scale Your Reach.</h2>
-          <p class="section-tagline">
-            We work with influencers and digital creators across Instagram, YouTube, LinkedIn, and emerging platforms, handling commercial negotiations, distribution logistics, and growth strategy so you can focus entirely on creating.
-          </p>
+          <h2 class="section-compact-title">Engineered for Creative Growth.</h2>
         </div>
 
-        <!-- 6 Core Services Grid -->
-        <div class="creator-cards-grid">
-          <div class="service-card">
+        <div class="transformation-grid">
+          <!-- Pillar 1 -->
+          <div class="transform-card">
             <div>
-              <div class="card-num">
+              <div class="transform-num-badge">
                 <span>PILLAR // 01</span>
                 <span class="crosshair">+</span>
               </div>
-              <h3 class="service-card-title">Creator Representation &amp; Management</h3>
-              <p class="service-card-desc">
-                Dedicated representation managing inbound inquiries, rate cards, contractual protection, scheduling, and day-to-day administrative support with corporate rigor.
-              </p>
+              <div class="transform-content">
+                <h3 class="transform-headline">WE BUILD YOUR PRESENCE.</h3>
+                <p class="transform-sub">Social media strategy and management that make your brand stand out.</p>
+              </div>
+            </div>
+            <div class="transform-visual-mini">
+              <span>POSITIONING</span>
+              <span class="visual-mini-highlight">HIGH-RETENTION FEED</span>
             </div>
           </div>
 
-          <div class="service-card">
+          <!-- Pillar 2 -->
+          <div class="transform-card">
             <div>
-              <div class="card-num">
+              <div class="transform-num-badge">
                 <span>PILLAR // 02</span>
                 <span class="crosshair">+</span>
               </div>
-              <h3 class="service-card-title">Brand Deal Sourcing &amp; Coordination</h3>
-              <p class="service-card-desc">
-                Active outbound pitching to top-tier commercial brands, venture-backed companies, and consumer labels aligned with your authentic creator voice and values.
-              </p>
+              <div class="transform-content">
+                <h3 class="transform-headline">WE CONNECT YOU TO BRANDS.</h3>
+                <p class="transform-sub">Relevant partnerships and campaign opportunities that fit your identity.</p>
+              </div>
+            </div>
+            <div class="transform-visual-mini">
+              <span>SPONSORSHIPS</span>
+              <span class="visual-mini-highlight">ALIGNED COLLABORATIONS</span>
             </div>
           </div>
 
-          <div class="service-card">
+          <!-- Pillar 3 -->
+          <div class="transform-card">
             <div>
-              <div class="card-num">
+              <div class="transform-num-badge">
                 <span>PILLAR // 03</span>
                 <span class="crosshair">+</span>
               </div>
-              <h3 class="service-card-title">Influencer-Brand Partnerships</h3>
-              <p class="service-card-desc">
-                Structuring long-term brand ambassadorships, multi-month syndication retainers, and product integrations rather than low-value transactional posts.
-              </p>
-            </div>
-          </div>
-
-          <div class="service-card">
-            <div>
-              <div class="card-num">
-                <span>PILLAR // 04</span>
-                <span class="crosshair">+</span>
-              </div>
-              <h3 class="service-card-title">Content Strategy &amp; Growth Support</h3>
-              <p class="service-card-desc">
-                Retention curve analysis, viral hook engineering, cross-platform syndication tactics, and positioning guidance backed by Thorvon Media’s editorial insights.
-              </p>
-            </div>
-          </div>
-
-          <div class="service-card">
-            <div>
-              <div class="card-num">
-                <span>PILLAR // 05</span>
-                <span class="crosshair">+</span>
-              </div>
-              <h3 class="service-card-title">Social Media Management Support</h3>
-              <p class="service-card-desc">
-                Native publishing schedules, caption optimization, community engagement, and feed growth powered by Thorvon Media’s agency social media team.
-              </p>
-            </div>
-          </div>
-
-          <div class="service-card">
-            <div>
-              <div class="card-num">
-                <span>PILLAR // 06</span>
-                <span class="crosshair">+</span>
-              </div>
-              <h3 class="service-card-title">Production &amp; Post-Production Coordination</h3>
-              <p class="service-card-desc">
-                Direct access to Thorvon Media’s network of elite short-form clippers, sound designers, colorists, and thumbnail artists to produce premier final exports.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Onboarding Process Timeline -->
-        <div class="section-header" style="margin-bottom: 2rem;">
-          <div class="eyebrow">
-            <span class="crosshair">+</span> ONBOARDING ROADMAP // TRANSPARENT COLLABORATION
-          </div>
-          <h3 style="font-size: clamp(1.4rem, 2.4vw, 2rem);">How Creator Onboarding Works</h3>
-        </div>
-
-        <div class="process-timeline">
-          <div class="step-card">
-            <span class="step-indicator">STAGE // 01</span>
-            <h4 class="step-title">Application &amp; Vetting</h4>
-            <p class="step-desc">Submit your handles, niche, and goals. Our talent directors evaluate content quality, engagement patterns, and mutual philosophical fit.</p>
-          </div>
-          <div class="step-card">
-            <span class="step-indicator">STAGE // 02</span>
-            <h4 class="step-title">Alignment Session</h4>
-            <p class="step-desc">A confidential discovery conversation discussing your career vision, preferred brand categories, compensation targets, and creative boundaries.</p>
-          </div>
-          <div class="step-card">
-            <span class="step-indicator">STAGE // 03</span>
-            <h4 class="step-title">Representation Agreement</h4>
-            <p class="step-desc">Transparent legal terms with complete creative autonomy, zero predatory lock-in clauses, and clearly defined deliverables and commission structures.</p>
-          </div>
-          <div class="step-card">
-            <span class="step-indicator">STAGE // 04</span>
-            <h4 class="step-title">Active Management &amp; Pitching</h4>
-            <p class="step-desc">We build your media kit, initiate direct outreach to aligned brand decision-makers, and optimize your inbound partnership pipelines.</p>
-          </div>
-        </div>
-
-        <!-- Creator CTA Banner -->
-        <div class="creator-cta-banner">
-          <h3 class="banner-title">Ready for Professional Representation?</h3>
-          <p class="banner-desc">
-            Whether you are scaling past your first brand deal or need dedicated management to unlock high-ticket corporate partnerships, apply to join our roster.
-          </p>
-          <button class="btn btn-primary" data-action="open-creator-modal">
-            Apply for Creator Management <span class="arrow">→</span>
-          </button>
-          <p class="banner-notice">
-            Notice: Submitting an application does not guarantee acceptance or representation. Each creator profile is personally evaluated by our talent management team.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- =======================================================================
-         Section C: Brand Collaborations
-         ======================================================================= -->
-    <section class="section" id="brands">
-      <div class="container">
-        <div class="section-header">
-          <div class="eyebrow">
-            <span class="crosshair">+</span> BRAND PARTNERSHIPS // STRATEGIC CAMPAIGNS
-          </div>
-          <h2 class="section-title">Connect with Voices That Command Real Attention.</h2>
-          <p class="section-tagline">
-            We partner with modern brands, technology companies, and ambitious enterprises to conceptualize, staff, and execute high-impact creator campaigns that drive authentic market presence.
-          </p>
-        </div>
-
-        <div class="brand-layout-grid">
-          <div class="brand-overview">
-            <h3 style="font-size: clamp(1.4rem, 2.2vw, 1.85rem); margin-bottom: 1rem;">
-              Strategic Matchmaking, Not Transactional Spam.
-            </h3>
-            <p style="color: var(--color-text-secondary); line-height: 1.6; margin-bottom: 2rem;">
-              Modern audiences immediately recognize inauthentic influencer promotions. Thorvon Talent bridges the gap between your brand objectives and creators who have established trusted, organic communities.
-            </p>
-
-            <div class="brand-points">
-              <div class="brand-point-card">
-                <h4 class="brand-point-title">
-                  <span class="crosshair">+</span> Vetted Audience Resonance
-                </h4>
-                <p class="brand-point-desc">
-                  We look beyond vanity metrics. Every creator in our roster is analyzed for authentic engagement ratios, audience demographics, and genuine comment depth.
-                </p>
-              </div>
-
-              <div class="brand-point-card">
-                <h4 class="brand-point-title">
-                  <span class="crosshair">+</span> Concept Development &amp; Scripting Guidance
-                </h4>
-                <p class="brand-point-desc">
-                  We collaborate with your marketing team and the creator to develop storyline hooks and talking points that feel natural, entertaining, and persuasive.
-                </p>
-              </div>
-
-              <div class="brand-point-card">
-                <h4 class="brand-point-title">
-                  <span class="crosshair">+</span> Strict Timeline &amp; Deliverables Oversight
-                </h4>
-                <p class="brand-point-desc">
-                  Thorvon Talent manages contract enforcement, draft review cycles, compliance checkoffs, and exact publishing windows with corporate reliability.
-                </p>
-              </div>
-
-              <div class="brand-point-card">
-                <h4 class="brand-point-title">
-                  <span class="crosshair">+</span> Amplified Through Thorvon Media
-                </h4>
-                <p class="brand-point-desc">
-                  Campaign assets can be repurposed, re-edited into high-retention clips, or paired with strategic editorial PR through Thorvon Media's parent infrastructure.
-                </p>
+              <div class="transform-content">
+                <h3 class="transform-headline">WE HANDLE THE EXECUTION.</h3>
+                <p class="transform-sub">From content planning to publishing and platform management, we help take the operational burden off your shoulders.</p>
               </div>
             </div>
-          </div>
-
-          <!-- Brand Inquiry Card Form -->
-          <div class="brand-inquiry-box">
-            <h3 class="inquiry-box-title">Discuss a Collaboration</h3>
-            <p class="inquiry-box-subtitle">
-              Tell us about your brand and campaign objectives. Our business development team will review suitable creator matches and respond within 24 hours.
-            </p>
-
-            <form id="brandInlineForm" class="brand-form" data-form-type="brand">
-              <div class="form-grid">
-                <div class="form-group form-grid-full">
-                  <label class="form-label" for="brandName">Brand or Company Name <span class="req">*</span></label>
-                  <input type="text" id="brandName" name="brand_name" class="form-input" placeholder="e.g. Acme Technologies" required>
-                </div>
-
-                <div class="form-group">
-                  <label class="form-label" for="contactName">Contact Person <span class="req">*</span></label>
-                  <input type="text" id="contactName" name="contact_name" class="form-input" placeholder="e.g. Alex Vance" required>
-                </div>
-
-                <div class="form-group">
-                  <label class="form-label" for="workEmail">Work Email <span class="req">*</span></label>
-                  <input type="email" id="workEmail" name="work_email" class="form-input" placeholder="name@company.com" required>
-                </div>
-
-                <div class="form-group">
-                  <label class="form-label" for="brandWebsite">Website or Social Profile <span class="req">*</span></label>
-                  <input type="url" id="brandWebsite" name="brand_website" class="form-input" placeholder="https://yourbrand.com" required>
-                </div>
-
-                <div class="form-group">
-                  <label class="form-label" for="brandIndustry">Industry or Niche <span class="req">*</span></label>
-                  <select id="brandIndustry" name="industry" class="form-select" required>
-                    <option value="" disabled selected>Select Industry</option>
-                    <option value="Tech / SaaS / AI">Tech / SaaS / AI</option>
-                    <option value="Consumer Goods & D2C">Consumer Goods & D2C</option>
-                    <option value="Finance & Fintech">Finance & Fintech</option>
-                    <option value="Web3 & Digital Assets">Web3 & Digital Assets</option>
-                    <option value="Health & Wellness">Health & Wellness</option>
-                    <option value="Fashion & Lifestyle">Fashion & Lifestyle</option>
-                    <option value="Gaming & Entertainment">Gaming & Entertainment</option>
-                    <option value="B2B & Professional Services">B2B & Professional Services</option>
-                    <option value="Other">Other</option>
-                  </select>
-                </div>
-
-                <div class="form-group form-grid-full">
-                  <label class="form-label" for="campaignObjectives">Primary Campaign Objectives <span class="req">*</span></label>
-                  <select id="campaignObjectives" name="objectives" class="form-select" required>
-                    <option value="" disabled selected>Select Objective</option>
-                    <option value="Brand Awareness & Authority">Brand Awareness & Authority</option>
-                    <option value="Product Launch / Milestone">Product Launch / Milestone</option>
-                    <option value="Direct Response & Conversions">Direct Response & Conversions</option>
-                    <option value="Long-term Ambassador Partnership">Long-term Ambassador Partnership</option>
-                    <option value="Founder PR & Content Production">Founder PR & Content Production</option>
-                  </select>
-                </div>
-
-                <div class="form-group">
-                  <label class="form-label" for="targetAudience">Target Audience &amp; Geography <span class="req">*</span></label>
-                  <input type="text" id="targetAudience" name="target_audience" class="form-input" placeholder="e.g. Founders & Devs (US / Global)" required>
-                </div>
-
-                <div class="form-group">
-                  <label class="form-label" for="approxBudget">Approximate Budget (Optional)</label>
-                  <select id="approxBudget" name="budget" class="form-select">
-                    <option value="Not Disclosed" selected>Prefer to discuss on call</option>
-                    <option value="Under $5,000">Under $5,000</option>
-                    <option value="$5,000 – $15,000">$5,000 – $15,000</option>
-                    <option value="$15,000 – $35,000">$15,000 – $35,000</option>
-                    <option value="$35,000 – $75,000">$35,000 – $75,000</option>
-                    <option value="$75,000+">$75,000+</option>
-                  </select>
-                </div>
-
-                <div class="form-group form-grid-full">
-                  <label class="form-label" for="campaignDetails">Campaign Details &amp; Timeline <span class="req">*</span></label>
-                  <textarea id="campaignDetails" name="campaign_details" class="form-textarea" placeholder="Briefly describe what you are looking to promote, preferred creator types, and your target campaign launch date..." required></textarea>
-                </div>
-
-                <div class="form-group form-grid-full">
-                  <label class="form-checkbox-label">
-                    <input type="checkbox" name="consent" required checked>
-                    <span>I agree to have Thorvon Talent review this inquiry and connect regarding creator partnerships. Read our <a href="#" data-action="open-privacy-modal">privacy policy</a>.</span>
-                  </label>
-                </div>
-              </div>
-
-              <div class="form-actions" style="margin-top: 1.5rem; padding-top: 1.25rem;">
-                <p class="form-privacy-note">Submissions route directly to BD leadership at Thorvon Media.</p>
-                <button type="submit" class="btn btn-primary">
-                  Submit Brand Inquiry <span class="arrow">→</span>
-                </button>
-              </div>
-            </form>
+            <div class="transform-visual-mini">
+              <span>OPERATIONS</span>
+              <span class="visual-mini-highlight">ZERO ADMINISTRATIVE FRICTION</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- =======================================================================
-         Section D: Careers at Thorvon Media
+         Section 3 — Creator Opportunities
+         Headline: "Make Your Influence Mean More."
+         Supporting line: "Build your brand. Find your people. Unlock new opportunities."
+         CTA: Join Thorvon Talent
          ======================================================================= -->
-    <section class="section" id="careers">
+    <section class="opportunities-section" id="opportunities">
       <div class="container">
-        <div class="section-header">
-          <div class="eyebrow">
-            <span class="crosshair">+</span> TALENT RECRUITMENT // JOIN THORVON MEDIA
+        <div class="opportunity-card-banner">
+          <div>
+            <div class="eyebrow">
+              <span class="dot-indicator"></span> ELEVATE YOUR CAREER
+            </div>
+            <h2 class="opportunity-title">Make Your Influence Mean More.</h2>
+            <p class="opportunity-sub">
+              Build your brand. Find your people. Unlock new opportunities.
+            </p>
+            <button class="btn btn-lime" data-action="open-creator-modal">
+              Join Thorvon Talent <span class="arrow">→</span>
+            </button>
           </div>
-          <h2 class="section-title">Build with Us. Current Opportunities.</h2>
-          <p class="section-tagline">
-            Thorvon Media is actively expanding its high-performing creative and operations infrastructure. Explore verified open vacancies below and apply directly to join our remote team.
-          </p>
-        </div>
 
-        <!-- Category Filter Pills -->
-        <div class="careers-filter-bar">
-          <button class="filter-pill active" data-filter="all">All Roles (7)</button>
-          <button class="filter-pill" data-filter="video">Video &amp; Clipping</button>
-          <button class="filter-pill" data-filter="social">Social &amp; Growth</button>
-          <button class="filter-pill" data-filter="creative">Creative &amp; Design</button>
-          <button class="filter-pill" data-filter="management">Management &amp; BD</button>
-        </div>
+          <div class="opportunity-pillars">
+            <div class="pillar-item">
+              <span class="pillar-tag">DIRECTION // 01</span>
+              <h4 class="pillar-name">Professional Career Roadmap</h4>
+              <p class="pillar-desc">Long-term positioning that compounds your personal brand authority beyond individual viral posts.</p>
+            </div>
 
-        <!-- Verified Job Listings -->
-        <div class="job-listings-grid" id="jobListingsContainer">
+            <div class="pillar-item">
+              <span class="pillar-tag">DIRECTION // 02</span>
+              <h4 class="pillar-name">Ethical Rate Protection</h4>
+              <p class="pillar-desc">We negotiate your commercial value, review deliverable contracts, and safeguard your creative rights.</p>
+            </div>
+
+            <div class="pillar-item">
+              <span class="pillar-tag">DIRECTION // 03</span>
+              <h4 class="pillar-name">Complete Creative Autonomy</h4>
+              <p class="pillar-desc">Your voice remains yours. We handle the logistical heavy-lifting so you retain complete creative ownership.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         Section 4 — Final CTA
+         Headline: "Ready for What's Next?"
+         CTA: Let's Talk
+         ======================================================================= -->
+    <section class="final-cta-section" id="contact">
+      <div class="container">
+        <div class="final-cta-content">
+          <div class="eyebrow" style="justify-content: center;">
+            <span class="dot-indicator"></span> START THE CONVERSATION
+          </div>
           
-          <!-- Job 1: Clipper -->
-          <div class="job-card" data-category="video" data-role-id="clipper">
-            <div class="job-card-info">
-              <div class="job-meta-top">
-                <span class="badge-tag badge-cyan">Urgent Hiring</span>
-                <span class="job-dept">Video Editing &bull; Remote</span>
-                <span class="badge-tag badge-green">Full-time / Part-time</span>
-              </div>
-              <h3 class="job-title">Clipper (Short-Form Video Editor)</h3>
-              <p class="job-tagline">High-retention video cutting, pacing, kinetic typography, and viral clip extraction from long-form founder podcasts and media.</p>
-            </div>
-            <div class="job-card-actions">
-              <button class="btn btn-secondary job-action-btn" data-action="open-job-modal" data-role="clipper">
-                View Role Details <span class="arrow">→</span>
-              </button>
-            </div>
+          <h2 class="final-cta-headline kinetic-heading" aria-label="Ready for What's Next?">
+            <span class="word-mask"><span class="reveal-word" style="--w-idx: 0">Ready</span></span>
+            <span class="word-mask"><span class="reveal-word" style="--w-idx: 1">for</span></span>
+            <span class="word-mask"><span class="reveal-word highlight-lime" style="--w-idx: 2">What's</span></span>
+            <span class="word-mask"><span class="reveal-word highlight-lime" style="--w-idx: 3">Next?</span></span>
+          </h2>
+
+          <div class="final-cta-actions">
+            <button class="btn btn-lime" data-action="open-creator-modal" style="font-size: 1.05rem; padding: 1.05rem 2.25rem;">
+              Let's Talk <span class="arrow">→</span>
+            </button>
+            <a href="https://wa.me/917002889463" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              WhatsApp Us
+            </a>
           </div>
-
-          <!-- Job 2: Social Media Manager -->
-          <div class="job-card" data-category="social" data-role-id="social-media-manager">
-            <div class="job-card-info">
-              <div class="job-meta-top">
-                <span class="badge-tag badge-cyan">Urgent Hiring</span>
-                <span class="job-dept">Social Media &bull; Remote</span>
-                <span class="badge-tag badge-green">Full-time</span>
-              </div>
-              <h3 class="job-title">Social Media Manager</h3>
-              <p class="job-tagline">Omnichannel feed ownership, native distribution, and high-converting audience growth across Reddit, LinkedIn, YouTube, and Instagram.</p>
-            </div>
-            <div class="job-card-actions">
-              <button class="btn btn-secondary job-action-btn" data-action="open-job-modal" data-role="social-media-manager">
-                View Role Details <span class="arrow">→</span>
-              </button>
-            </div>
-          </div>
-
-          <!-- Job 3: Content Creator -->
-          <div class="job-card" data-category="creative" data-role-id="content-creator">
-            <div class="job-card-info">
-              <div class="job-meta-top">
-                <span class="badge-tag badge-cyan">Urgent Hiring</span>
-                <span class="job-dept">Creative &bull; Remote</span>
-                <span class="badge-tag badge-green">Full-time / Part-time</span>
-              </div>
-              <h3 class="job-title">Content Creator</h3>
-              <p class="job-tagline">Charismatic on-camera storytelling, creative scripting, and viral concept development translating complex ideas into magnetic media.</p>
-            </div>
-            <div class="job-card-actions">
-              <button class="btn btn-secondary job-action-btn" data-action="open-job-modal" data-role="content-creator">
-                View Role Details <span class="arrow">→</span>
-              </button>
-            </div>
-          </div>
-
-          <!-- Job 4: Brand Acquisition Head -->
-          <div class="job-card" data-category="management" data-role-id="brand-acquisition-head">
-            <div class="job-card-info">
-              <div class="job-meta-top">
-                <span class="badge-tag badge-blue">Leadership Role</span>
-                <span class="job-dept">Business Development &bull; Remote</span>
-                <span class="badge-tag badge-green">Full-time</span>
-              </div>
-              <h3 class="job-title">Creator &amp; Brand Acquisition Head</h3>
-              <p class="job-tagline">Leading creator talent scouting, structuring high-impact commercial partnerships, and accelerating Thorvon Media's client acquisition pipeline.</p>
-            </div>
-            <div class="job-card-actions">
-              <button class="btn btn-secondary job-action-btn" data-action="open-job-modal" data-role="brand-acquisition-head">
-                View Role Details <span class="arrow">→</span>
-              </button>
-            </div>
-          </div>
-
-          <!-- Job 5: Content Writers -->
-          <div class="job-card" data-category="creative" data-role-id="content-writers">
-            <div class="job-card-info">
-              <div class="job-meta-top">
-                <span class="badge-tag badge-blue">Open Position</span>
-                <span class="job-dept">Editorial &amp; PR &bull; Remote</span>
-                <span class="badge-tag badge-green">Full-time</span>
-              </div>
-              <h3 class="job-title">Content Writers</h3>
-              <p class="job-tagline">Clear, engaging writing for modern founders and fast-growing brands across newsletters, thought leadership articles, and media pitches.</p>
-            </div>
-            <div class="job-card-actions">
-              <button class="btn btn-secondary job-action-btn" data-action="open-job-modal" data-role="content-writers">
-                View Role Details <span class="arrow">→</span>
-              </button>
-            </div>
-          </div>
-
-          <!-- Job 6: Graphic Designers -->
-          <div class="job-card" data-category="creative" data-role-id="graphic-designers">
-            <div class="job-card-info">
-              <div class="job-meta-top">
-                <span class="badge-tag badge-blue">Open Position</span>
-                <span class="job-dept">Visual Design &bull; Remote</span>
-                <span class="badge-tag badge-green">Full-time</span>
-              </div>
-              <h3 class="job-title">Graphic Designers</h3>
-              <p class="job-tagline">Clean typography, brand identities, slide decks, and modern visual social assets that capture attention with minimalist precision.</p>
-            </div>
-            <div class="job-card-actions">
-              <button class="btn btn-secondary job-action-btn" data-action="open-job-modal" data-role="graphic-designers">
-                View Role Details <span class="arrow">→</span>
-              </button>
-            </div>
-          </div>
-
-          <!-- Job 7: Project Manager -->
-          <div class="job-card" data-category="management" data-role-id="project-manager">
-            <div class="job-card-info">
-              <div class="job-meta-top">
-                <span class="badge-tag badge-blue">Open Position</span>
-                <span class="job-dept">Operations &bull; Remote</span>
-                <span class="badge-tag badge-green">Full-time</span>
-              </div>
-              <h3 class="job-title">Project Manager</h3>
-              <p class="job-tagline">Organizing production timelines, managing communications across writers and video editors, and ensuring flawless client deliveries on schedule.</p>
-            </div>
-            <div class="job-card-actions">
-              <button class="btn btn-secondary job-action-btn" data-action="open-job-modal" data-role="project-manager">
-                View Role Details <span class="arrow">→</span>
-              </button>
-            </div>
-          </div>
-
-        </div>
-
-        <div style="margin-top: 3rem; text-align: center;">
-          <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 1.25rem;">
-            Don't see your exact role listed? We always review outstanding portfolios from creative and operational talent.
-          </p>
-          <button class="btn btn-secondary" data-action="open-job-apply-modal" data-prefill="Speculative / Open Application">
-            Submit Open Application <span class="arrow">→</span>
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- =======================================================================
-         Section E: About Thorvon Talent & Brand Architecture
-         ======================================================================= -->
-    <section class="section" id="about">
-      <div class="container">
-        <div class="section-header">
-          <div class="eyebrow">
-            <span class="crosshair">+</span> ORGANIZATIONAL ARCHITECTURE // DIVISION OVERVIEW
-          </div>
-          <h2 class="section-title">Built for Creators. Backed by Thorvon Media.</h2>
-        </div>
-
-        <div class="about-positioning-card">
-          <blockquote class="about-quote">
-            "Thorvon Talent is the talent and creator partnerships division of Thorvon Media, built to connect ambitious creators, brands, and professionals through meaningful opportunities."
-          </blockquote>
-
-          <div class="about-relationship-grid">
-            <div class="rel-box">
-              <div class="rel-box-eyebrow">PARENT BRAND</div>
-              <h3 class="rel-box-title">Thorvon Media</h3>
-              <ul class="rel-box-list">
-                <li>&bull; Strategic PR &amp; Editorial Placements</li>
-                <li>&bull; Founder Authority &amp; Reputation Engineering</li>
-                <li>&bull; Video Production &amp; Distribution Power</li>
-                <li>&bull; End-to-End Creative Agency Capabilities</li>
-              </ul>
-            </div>
-
-            <div class="rel-arrow">⇄</div>
-
-            <div class="rel-box">
-              <div class="rel-box-eyebrow">SPECIALIZED DIVISION</div>
-              <h3 class="rel-box-title">Thorvon Talent</h3>
-              <ul class="rel-box-list">
-                <li>&bull; Creator &amp; Influencer Representation</li>
-                <li>&bull; Outbound Brand Deal Sourcing &amp; Sponsorships</li>
-                <li>&bull; Influencer Campaign Strategy for Businesses</li>
-                <li>&bull; Centralized Creative &amp; Agency Recruitment</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- 4 Foundational Values -->
-        <div class="values-grid">
-          <div class="value-card">
-            <div class="value-card-num">PRINCIPLE // 01</div>
-            <h4 class="value-card-title">Professional Collaboration</h4>
-            <p class="value-card-desc">
-              We treat digital creator management with the same legal, commercial, and operational rigor expected in traditional entertainment and enterprise agency contracts.
-            </p>
-          </div>
-
-          <div class="value-card">
-            <div class="value-card-num">PRINCIPLE // 02</div>
-            <h4 class="value-card-title">Long-Term Relationships</h4>
-            <p class="value-card-desc">
-              We reject short-term transactional post deals. We build sustainable multi-year career roadmaps for creators and enduring partnerships for brands.
-            </p>
-          </div>
-
-          <div class="value-card">
-            <div class="value-card-num">PRINCIPLE // 03</div>
-            <h4 class="value-card-title">Creative Autonomy</h4>
-            <p class="value-card-desc">
-              A creator's authentic relationship with their audience is their most valuable asset. We protect editorial voice and creative integrity at every step.
-            </p>
-          </div>
-
-          <div class="value-card">
-            <div class="value-card-num">PRINCIPLE // 04</div>
-            <h4 class="value-card-title">Transparent Communication</h4>
-            <p class="value-card-desc">
-              Fast, direct, and completely honest dialogue. No opaque commissions, hidden fees, or ignored emails. Every creator and brand partner has direct access to leadership.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- =======================================================================
-         Section F: Contact Hub
-         ======================================================================= -->
-    <section class="section" id="contact">
-      <div class="container">
-        <div class="section-header">
-          <div class="eyebrow">
-            <span class="crosshair">+</span> DIRECT ROUTING // GET IN TOUCH
-          </div>
-          <h2 class="section-title">Start the Conversation.</h2>
-          <p class="section-tagline">
-            Choose the dedicated contact path below that matches your inquiry to connect directly with the appropriate team.
-          </p>
-        </div>
-
-        <!-- 4 Dedicated Contact Routing Cards -->
-        <div class="contact-grid">
-          <div class="contact-card" role="button" tabindex="0" data-action="open-creator-modal">
-            <div class="contact-card-top">
-              <span class="contact-channel-eyebrow">PATH 01 // CREATORS</span>
-              <span class="contact-arrow-icon">↗</span>
-            </div>
-            <div>
-              <h3 class="contact-card-name">Creator Management</h3>
-              <p class="contact-card-desc">Inquiries regarding talent representation, management services, and roster onboarding.</p>
-            </div>
-          </div>
-
-          <div class="contact-card" role="button" tabindex="0" data-action="open-brand-modal">
-            <div class="contact-card-top">
-              <span class="contact-channel-eyebrow">PATH 02 // BRANDS</span>
-              <span class="contact-arrow-icon">↗</span>
-            </div>
-            <div>
-              <h3 class="contact-card-name">Brand Partnerships</h3>
-              <p class="contact-card-desc">Discuss influencer marketing campaigns, creator matchmaking, and bespoke brand activations.</p>
-            </div>
-          </div>
-
-          <div class="contact-card" role="button" tabindex="0" data-action="open-job-apply-modal" data-prefill="General Career Application">
-            <div class="contact-card-top">
-              <span class="contact-channel-eyebrow">PATH 03 // CAREERS</span>
-              <span class="contact-arrow-icon">↗</span>
-            </div>
-            <div>
-              <h3 class="contact-card-name">Careers &amp; Recruitment</h3>
-              <p class="contact-card-desc">Submit your resume or portfolio for open creative, editorial, and operations vacancies.</p>
-            </div>
-          </div>
-
-          <a href="mailto:thorvonmedia@gmail.com?subject=Thorvon%20Talent%20General%20Inquiry" class="contact-card">
-            <div class="contact-card-top">
-              <span class="contact-channel-eyebrow">PATH 04 // GENERAL</span>
-              <span class="contact-arrow-icon">↗</span>
-            </div>
-            <div>
-              <h3 class="contact-card-name">General &amp; Press</h3>
-              <p class="contact-card-desc">Direct corporate correspondence, press inquiries, and parent brand communication.</p>
-            </div>
-          </a>
-        </div>
-
-        <!-- Direct Channels Row -->
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-bottom: 3.5rem;">
-          <a href="tel:+916000156191" class="strip-item" style="display: block;">
-            <span class="strip-num">TELEPHONE // DIRECT</span>
-            <div style="font-size: 1.1rem; font-weight: 700; color: #ffffff;">+91 60001 56191</div>
-            <p class="strip-desc" style="margin-top: 0.35rem;">Direct agency phone line for verified urgent inquiries.</p>
-          </a>
-
-          <a href="https://wa.me/917002889463" target="_blank" rel="noopener noreferrer" class="strip-item" style="display: block;">
-            <span class="strip-num">WHATSAPP // BUSINESS</span>
-            <div style="font-size: 1.1rem; font-weight: 700; color: #ffffff;">+91 70028 89463</div>
-            <p class="strip-desc" style="margin-top: 0.35rem;">Instant messaging for creator discussions and campaign briefs.</p>
-          </a>
-
-          <a href="mailto:thorvonmedia@gmail.com" class="strip-item" style="display: block;">
-            <span class="strip-num">OFFICIAL EMAIL // INBOX</span>
-            <div style="font-size: 1.1rem; font-weight: 700; color: #ffffff;">thorvonmedia@gmail.com</div>
-            <p class="strip-desc" style="margin-top: 0.35rem;">Central email communications for Thorvon Media &amp; Talent.</p>
-          </a>
-        </div>
-
-        <!-- Unified In-Page Quick Inquiry Form -->
-        <div class="contact-form-wrapper">
-          <div class="form-header-row">
-            <h3 class="form-header-title">Send a Direct Message</h3>
-            <p class="form-header-desc">
-              Fill in your details below and our team will route your inquiry to the appropriate talent, partnerships, or recruitment specialist.
-            </p>
-          </div>
-
-          <form id="generalContactForm" data-form-type="general">
-            <div class="form-grid">
-              <div class="form-group">
-                <label class="form-label" for="genName">Your Name <span class="req">*</span></label>
-                <input type="text" id="genName" name="name" class="form-input" placeholder="e.g. Jordan Smith" required>
-              </div>
-
-              <div class="form-group">
-                <label class="form-label" for="genEmail">Email Address <span class="req">*</span></label>
-                <input type="email" id="genEmail" name="email" class="form-input" placeholder="jordan@domain.com" required>
-              </div>
-
-              <div class="form-group">
-                <label class="form-label" for="genInquiryType">Inquiry Department <span class="req">*</span></label>
-                <select id="genInquiryType" name="department" class="form-select" required>
-                  <option value="" disabled selected>Select Department</option>
-                  <option value="Creator Management">Creator Management & Representation</option>
-                  <option value="Brand Collaborations">Brand Collaborations & Campaigns</option>
-                  <option value="Careers & Recruitment">Careers & Recruitment at Thorvon Media</option>
-                  <option value="General & Press">General & Press Inquiry</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label class="form-label" for="genSubject">Subject <span class="req">*</span></label>
-                <input type="text" id="genSubject" name="subject" class="form-input" placeholder="Brief subject line" required>
-              </div>
-
-              <div class="form-group form-grid-full">
-                <label class="form-label" for="genMessage">Message Details <span class="req">*</span></label>
-                <textarea id="genMessage" name="message" class="form-textarea" placeholder="Provide context on your request, timeline, or relevant links..." required></textarea>
-              </div>
-
-              <div class="form-group form-grid-full">
-                <label class="form-checkbox-label">
-                  <input type="checkbox" name="consent" required checked>
-                  <span>I agree to allow Thorvon Talent to process my contact details to reply to this message.</span>
-                </label>
-              </div>
-            </div>
-
-            <div class="form-actions">
-              <p class="form-privacy-note">All submissions are confidential and protected under our privacy policy.</p>
-              <button type="submit" class="btn btn-primary">
-                Send Message <span class="arrow">→</span>
-              </button>
-            </div>
-          </form>
         </div>
       </div>
     </section>
   </main>
 
   <!-- =======================================================================
-       Site Footer
+       Minimal Site Footer
        ======================================================================= -->
   <footer class="site-footer">
-    <div class="container">
-      <div class="footer-top">
-        <div class="footer-brand-col">
+    <div class="container footer-inner">
+      <div class="footer-top-row">
+        <div class="footer-brand-info">
           <a href="#top" class="brand-group" aria-label="Thorvon Talent Home">
             <img src="assets/logo-white.png" alt="Thorvon Media" class="brand-logo-img">
-            <span class="division-badge">TALENT</span>
+            <span class="division-badge-lime">TALENT</span>
           </a>
-          <p class="footer-brand-desc">
-            A talent, creator management, and recruitment division operating under Thorvon Media.
+          <p class="footer-brand-statement">
+            A creator management division of Thorvon Media. Elevating digital creators, artists, and influencers through strategic representation.
           </p>
-          <div class="parent-brand-callout">
-            <span class="crosshair">+</span> OPERATING DIVISION OF THORVON MEDIA
+        </div>
+
+        <div class="footer-links-group">
+          <div class="footer-nav-col">
+            <span class="footer-nav-heading">Platform</span>
+            <a href="#transformation" class="footer-nav-link">What We Do</a>
+            <a href="#opportunities" class="footer-nav-link">Creator Growth</a>
+            <a href="#" class="footer-nav-link" data-action="open-creator-modal">Get Represented</a>
           </div>
-        </div>
 
-        <div>
-          <h4 class="footer-col-title">Navigation</h4>
-          <ul class="footer-links-list">
-            <li><a href="#hero" class="footer-link">Home</a></li>
-            <li><a href="#creators" class="footer-link">Creator Management</a></li>
-            <li><a href="#brands" class="footer-link">Brand Partnerships</a></li>
-            <li><a href="#careers" class="footer-link">Careers at Thorvon</a></li>
-            <li><a href="#about" class="footer-link">About Thorvon Talent</a></li>
-            <li><a href="#contact" class="footer-link">Contact Hub</a></li>
-          </ul>
-        </div>
+          <div class="footer-nav-col">
+            <span class="footer-nav-heading">Partnerships &amp; Team</span>
+            <a href="#" class="footer-nav-link" data-action="open-brand-modal">Brand Collaborations</a>
+            <a href="#" class="footer-nav-link" data-action="open-careers-modal">Careers at Thorvon</a>
+            <a href="mailto:thorvonmgmt@gmail.com" class="footer-nav-link">thorvonmgmt@gmail.com</a>
+          </div>
 
-        <div>
-          <h4 class="footer-col-title">Active Vacancies</h4>
-          <ul class="footer-links-list">
-            <li><a href="#careers" class="footer-link" data-action="open-job-modal" data-role="clipper">Clipper (Short-Form)</a></li>
-            <li><a href="#careers" class="footer-link" data-action="open-job-modal" data-role="social-media-manager">Social Media Manager</a></li>
-            <li><a href="#careers" class="footer-link" data-action="open-job-modal" data-role="content-creator">Content Creator</a></li>
-            <li><a href="#careers" class="footer-link" data-action="open-job-modal" data-role="brand-acquisition-head">Acquisition Head</a></li>
-            <li><a href="#careers" class="footer-link" data-action="open-job-modal" data-role="graphic-designers">Graphic Designer</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="footer-col-title">Direct Inquiries</h4>
-          <ul class="footer-links-list">
-            <li><a href="mailto:thorvonmedia@gmail.com" class="footer-link">thorvonmedia@gmail.com</a></li>
-            <li><a href="mailto:thorvonmgmt@gmail.com" class="footer-link">thorvonmgmt@gmail.com</a></li>
-            <li><a href="tel:+916000156191" class="footer-link">+91 60001 56191</a></li>
-            <li><a href="https://wa.me/917002889463" target="_blank" rel="noopener noreferrer" class="footer-link">WhatsApp Business</a></li>
-          </ul>
+          <div class="footer-nav-col">
+            <span class="footer-nav-heading">Direct Channels</span>
+            <a href="https://wa.me/917002889463" target="_blank" rel="noopener noreferrer" class="footer-nav-link">WhatsApp Business ↗</a>
+            <a href="tel:+916000156191" class="footer-nav-link">+91 60001 56191</a>
+            <a href="https://instagram.com/thorvonmedia" target="_blank" rel="noopener noreferrer" class="footer-nav-link">Instagram ↗</a>
+          </div>
         </div>
       </div>
 
-      <div class="footer-bottom">
+      <div class="footer-bottom-row">
         <div>
           &copy; 2026 Thorvon Media. All rights reserved. Thorvon Talent is an operating division of Thorvon Media.
         </div>
-        <div class="footer-legal-links">
-          <a href="#" class="footer-legal-link" data-action="open-privacy-modal">Privacy Policy &amp; Consent</a>
-          <a href="#" class="footer-legal-link" data-action="open-privacy-modal">Data Protection Notice</a>
-          <a href="#top" class="footer-legal-link">Back to Top ↑</a>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="#" class="footer-nav-link" data-action="open-privacy-modal">Privacy &amp; Data Consent</a>
+          <a href="#top" class="footer-nav-link">Back to Top ↑</a>
         </div>
       </div>
     </div>
   </footer>
 
   <!-- =======================================================================
-       MODAL 1: Creator Management Application Modal
+       MODAL 1: Streamlined Creator Application Experience
+       Fields: Name, Email/Contact, Primary Platform, Profile Link, Niche, Intro
        ======================================================================= -->
   <div class="thorvon-modal-backdrop" id="creatorModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="creatorModalTitle">
     <div class="thorvon-modal-container">
       <div class="modal-header">
         <div class="modal-title-group">
           <div class="modal-eyebrow">CREATOR ONBOARDING // APPLICATION</div>
-          <h2 class="modal-title" id="creatorModalTitle">Apply for Creator Management</h2>
-          <p class="modal-desc">Tell us about your platforms, niche, and growth goals. Submissions are reviewed individually by our talent directors.</p>
+          <h2 class="modal-title" id="creatorModalTitle">Get Represented</h2>
+          <p class="modal-desc">Tell us a bit about your work. Our talent management team reviews every submission personally.</p>
         </div>
         <button class="modal-close-btn" data-action="close-modal" aria-label="Close dialog">&times;</button>
       </div>
@@ -929,87 +373,67 @@
       <form id="creatorAppForm" data-form-type="creator">
         <div class="form-grid">
           <div class="form-group">
-            <label class="form-label" for="creatorName">Full Name <span class="req">*</span></label>
-            <input type="text" id="creatorName" name="full_name" class="form-input" placeholder="e.g. Sarah Jenkins" required>
+            <label class="form-label" for="creatorName">Your Name <span class="req">*</span></label>
+            <input type="text" id="creatorName" name="name" class="form-input" placeholder="e.g. Jordan Vance" required>
           </div>
 
           <div class="form-group">
-            <label class="form-label" for="creatorEmail">Email Address <span class="req">*</span></label>
-            <input type="email" id="creatorEmail" name="email" class="form-input" placeholder="sarah@example.com" required>
+            <label class="form-label" for="creatorContact">Email or Preferred Contact <span class="req">*</span></label>
+            <input type="text" id="creatorContact" name="contact" class="form-input" placeholder="email@domain.com or @handle" required>
           </div>
 
           <div class="form-group">
-            <label class="form-label" for="creatorInstagram">Instagram Profile URL / Handle <span class="req">*</span></label>
-            <input type="text" id="creatorInstagram" name="instagram" class="form-input" placeholder="@yourhandle or instagram.com/handle" required>
+            <label class="form-label" for="creatorPlatform">Primary Social Platform <span class="req">*</span></label>
+            <select id="creatorPlatform" name="platform" class="form-select" required>
+              <option value="" disabled selected>Select Primary Platform</option>
+              <option value="Instagram">Instagram</option>
+              <option value="YouTube">YouTube</option>
+              <option value="TikTok">TikTok</option>
+              <option value="LinkedIn">LinkedIn</option>
+              <option value="X / Twitter">X / Twitter</option>
+              <option value="Podcast / Multi-channel">Podcast / Multi-channel</option>
+              <option value="Other">Other Platform</option>
+            </select>
           </div>
 
           <div class="form-group">
-            <label class="form-label" for="creatorYouTube">YouTube or Other Social Profiles</label>
-            <input type="text" id="creatorYouTube" name="other_profiles" class="form-input" placeholder="youtube.com/@channel or LinkedIn">
+            <label class="form-label" for="creatorHandle">Social Profile Link / Handle <span class="req">*</span></label>
+            <input type="text" id="creatorHandle" name="profile_url" class="form-input" placeholder="instagram.com/yourhandle" required>
           </div>
 
-          <div class="form-group">
-            <label class="form-label" for="creatorNiche">Primary Content Niche <span class="req">*</span></label>
+          <div class="form-group form-grid-full">
+            <label class="form-label" for="creatorNiche">Content Niche / Focus <span class="req">*</span></label>
             <select id="creatorNiche" name="niche" class="form-select" required>
-              <option value="" disabled selected>Select Primary Niche</option>
+              <option value="" disabled selected>Select Content Niche</option>
               <option value="Tech, AI & Gadgets">Tech, AI &amp; Gadgets</option>
-              <option value="Business, Finance & Entrepreneurship">Business, Finance &amp; Entrepreneurship</option>
-              <option value="Lifestyle, Travel & Culture">Lifestyle, Travel &amp; Culture</option>
+              <option value="Business, Finance & Startups">Business, Finance &amp; Startups</option>
+              <option value="Lifestyle, Fashion & Travel">Lifestyle, Fashion &amp; Travel</option>
               <option value="Fitness, Health & Wellness">Fitness, Health &amp; Wellness</option>
-              <option value="Gaming & Streaming">Gaming &amp; Streaming</option>
-              <option value="Design, Art & Creative">Design, Art &amp; Creative</option>
+              <option value="Design, Art & Photography">Design, Art &amp; Photography</option>
+              <option value="Gaming & Esports">Gaming &amp; Esports</option>
               <option value="Comedy & Entertainment">Comedy &amp; Entertainment</option>
-              <option value="Education & Knowledge">Education &amp; Knowledge</option>
-              <option value="Other">Other Niche</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="creatorAudience">Current Combined Audience Size <span class="req">*</span></label>
-            <select id="creatorAudience" name="audience_size" class="form-select" required>
-              <option value="" disabled selected>Select Audience Range</option>
-              <option value="10,000 – 25,000">10,000 – 25,000</option>
-              <option value="25,000 – 50,000">25,000 – 50,000</option>
-              <option value="50,000 – 100,000">50,000 – 100,000</option>
-              <option value="100,000 – 250,000">100,000 – 250,000</option>
-              <option value="250,000 – 500,000">250,000 – 500,000</option>
-              <option value="500,000 – 1,000,000">500,000 – 1,000,000</option>
-              <option value="1,000,000+">1,000,000+</option>
+              <option value="Education & Commentary">Education &amp; Commentary</option>
+              <option value="Other">Other</option>
             </select>
           </div>
 
           <div class="form-group form-grid-full">
-            <label class="form-label" for="creatorLocation">Location (City &amp; Country) <span class="req">*</span></label>
-            <input type="text" id="creatorLocation" name="location" class="form-input" placeholder="e.g. London, United Kingdom or Mumbai, India" required>
+            <label class="form-label" for="creatorIntro">Short Introduction (Optional)</label>
+            <textarea id="creatorIntro" name="introduction" class="form-textarea" placeholder="Tell us briefly about your audience, your current goals, or what you are looking for in a management partner..."></textarea>
           </div>
 
           <div class="form-group form-grid-full">
-            <label class="form-label" for="creatorIntro">Short Introduction &amp; Career Goals <span class="req">*</span></label>
-            <textarea id="creatorIntro" name="intro_goals" class="form-textarea" placeholder="Tell us briefly about what you are creating, your audience demographics, and what you are looking for in a management partnership..." required></textarea>
-          </div>
-
-          <div class="form-group form-grid-full">
-            <label class="form-label" for="creatorAdditional">Additional Information / Portfolio or Media Kit Link (Optional)</label>
-            <input type="url" id="creatorAdditional" name="media_kit_link" class="form-input" placeholder="https://link-to-mediakit-or-drive.com">
-          </div>
-
-          <div class="form-group form-grid-full">
-            <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--color-border); border-radius: 10px; padding: 1rem; margin-bottom: 0.5rem;">
-              <p style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.5;">
-                <strong style="color: #ffffff;">Important Notice:</strong> Submitting this application does not guarantee acceptance or representation. Thorvon Talent accepts a limited roster of creators to maintain high-touch management quality.
-              </p>
-            </div>
             <label class="form-checkbox-label">
               <input type="checkbox" name="consent" required checked>
-              <span>I confirm the information provided is accurate and authorize Thorvon Talent to contact me regarding representation opportunities.</span>
+              <span>I confirm the details provided are accurate and authorize Thorvon Talent to contact me regarding creator representation.</span>
             </label>
           </div>
         </div>
 
         <div class="form-actions">
-          <p class="form-privacy-note">Applications are held in strict confidence.</p>
-          <button type="submit" class="btn btn-primary">
-            Submit Creator Application <span class="arrow">→</span>
+          <p class="form-privacy-note">Applications are confidential and reviewed within 24–48 hours.</p>
+          <button type="submit" class="btn btn-lime">
+            Submit Application <span class="arrow">→</span>
           </button>
         </div>
       </form>
@@ -1017,103 +441,59 @@
   </div>
 
   <!-- =======================================================================
-       MODAL 2: Brand Collaboration Modal
+       MODAL 2: Brand Collaborations (Secondary Pathway)
+       Focused on starting a partnership conversation.
        ======================================================================= -->
   <div class="thorvon-modal-backdrop" id="brandModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="brandModalTitle">
     <div class="thorvon-modal-container">
       <div class="modal-header">
         <div class="modal-title-group">
-          <div class="modal-eyebrow">BRAND PARTNERSHIPS // INQUIRY</div>
-          <h2 class="modal-title" id="brandModalTitle">Discuss a Creator Collaboration</h2>
-          <p class="modal-desc">Connect with our business development team to discuss creator matches, campaign briefs, and sponsorship packages.</p>
+          <div class="modal-eyebrow">BRAND PARTNERSHIPS // COLLABORATION</div>
+          <h2 class="modal-title" id="brandModalTitle">Discuss a Partnership</h2>
+          <p class="modal-desc">Connect with our business development team to discuss creator matches, campaign concepts, and sponsorship integrations.</p>
         </div>
         <button class="modal-close-btn" data-action="close-modal" aria-label="Close dialog">&times;</button>
       </div>
 
       <form id="brandModalForm" data-form-type="brand">
         <div class="form-grid">
-          <div class="form-group form-grid-full">
+          <div class="form-group">
             <label class="form-label" for="bmBrandName">Brand / Company Name <span class="req">*</span></label>
-            <input type="text" id="bmBrandName" name="brand_name" class="form-input" placeholder="e.g. Apex Health" required>
+            <input type="text" id="bmBrandName" name="brand_name" class="form-input" placeholder="e.g. Apex Studio" required>
           </div>
 
           <div class="form-group">
             <label class="form-label" for="bmContactName">Contact Person <span class="req">*</span></label>
-            <input type="text" id="bmContactName" name="contact_name" class="form-input" placeholder="e.g. David Miller" required>
+            <input type="text" id="bmContactName" name="contact_name" class="form-input" placeholder="e.g. Rachel Adams" required>
           </div>
 
           <div class="form-group">
             <label class="form-label" for="bmWorkEmail">Work Email <span class="req">*</span></label>
-            <input type="email" id="bmWorkEmail" name="work_email" class="form-input" placeholder="david@apexhealth.com" required>
+            <input type="email" id="bmWorkEmail" name="work_email" class="form-input" placeholder="rachel@apexstudio.com" required>
           </div>
 
           <div class="form-group">
-            <label class="form-label" for="bmBrandWebsite">Website or Social Profile <span class="req">*</span></label>
-            <input type="url" id="bmBrandWebsite" name="brand_website" class="form-input" placeholder="https://apexhealth.com" required>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="bmIndustry">Industry / Niche <span class="req">*</span></label>
-            <select id="bmIndustry" name="industry" class="form-select" required>
-              <option value="" disabled selected>Select Industry</option>
-              <option value="Tech / SaaS / AI">Tech / SaaS / AI</option>
-              <option value="Consumer Goods & D2C">Consumer Goods &amp; D2C</option>
-              <option value="Finance & Fintech">Finance &amp; Fintech</option>
-              <option value="Web3 & Digital Assets">Web3 &amp; Digital Assets</option>
-              <option value="Health & Wellness">Health &amp; Wellness</option>
-              <option value="Fashion & Lifestyle">Fashion &amp; Lifestyle</option>
-              <option value="Gaming & Entertainment">Gaming &amp; Entertainment</option>
-              <option value="B2B & Professional Services">B2B &amp; Professional Services</option>
-              <option value="Other">Other</option>
-            </select>
+            <label class="form-label" for="bmWebsite">Website or Social Profile <span class="req">*</span></label>
+            <input type="url" id="bmWebsite" name="website" class="form-input" placeholder="https://apexstudio.com" required>
           </div>
 
           <div class="form-group form-grid-full">
-            <label class="form-label" for="bmObjectives">Campaign Objectives <span class="req">*</span></label>
-            <select id="bmObjectives" name="objectives" class="form-select" required>
-              <option value="" disabled selected>Select Primary Objective</option>
-              <option value="Brand Awareness & Authority">Brand Awareness &amp; Authority</option>
-              <option value="Product Launch / Milestone">Product Launch / Milestone</option>
-              <option value="Direct Response & Conversions">Direct Response &amp; Conversions</option>
-              <option value="Long-term Ambassador Partnership">Long-term Ambassador Partnership</option>
-              <option value="Founder PR & Content Production">Founder PR &amp; Content Production</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="bmTargetAudience">Target Audience &amp; Region <span class="req">*</span></label>
-            <input type="text" id="bmTargetAudience" name="target_audience" class="form-input" placeholder="e.g. US, UK, Tier 1 tech enthusiasts" required>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="bmBudget">Approximate Budget (Optional)</label>
-            <select id="bmBudget" name="budget" class="form-select">
-              <option value="Discuss on call" selected>Prefer to discuss on call</option>
-              <option value="Under $5,000">Under $5,000</option>
-              <option value="$5,000 – $15,000">$5,000 – $15,000</option>
-              <option value="$15,000 – $35,000">$15,000 – $35,000</option>
-              <option value="$35,000 – $75,000">$35,000 – $75,000</option>
-              <option value="$75,000+">$75,000+</option>
-            </select>
-          </div>
-
-          <div class="form-group form-grid-full">
-            <label class="form-label" for="bmCampaignDetails">Campaign Details &amp; Timeline <span class="req">*</span></label>
-            <textarea id="bmCampaignDetails" name="campaign_details" class="form-textarea" placeholder="Detail your product, target campaign dates, preferred creator formats, and deliverables..." required></textarea>
+            <label class="form-label" for="bmBrief">Campaign Objectives &amp; Desired Creators <span class="req">*</span></label>
+            <textarea id="bmBrief" name="campaign_brief" class="form-textarea" placeholder="Describe the product or campaign, target audience, and preferred creator niches..." required></textarea>
           </div>
 
           <div class="form-group form-grid-full">
             <label class="form-checkbox-label">
               <input type="checkbox" name="consent" required checked>
-              <span>I consent to Thorvon Talent processing this brief to coordinate creator partnership proposals.</span>
+              <span>I consent to Thorvon Talent processing this inquiry to discuss creator partnership proposals.</span>
             </label>
           </div>
         </div>
 
         <div class="form-actions">
-          <p class="form-privacy-note">Submissions reach our business development leads directly.</p>
-          <button type="submit" class="btn btn-primary">
-            Submit Brand Inquiry <span class="arrow">→</span>
+          <p class="form-privacy-note">Submissions route directly to BD leadership at thorvonmedia@gmail.com.</p>
+          <button type="submit" class="btn btn-lime">
+            Send Inquiry <span class="arrow">→</span>
           </button>
         </div>
       </form>
@@ -1121,134 +501,209 @@
   </div>
 
   <!-- =======================================================================
-       MODAL 3: Job Detail & Application Modal (Verified Thorvon Roles)
+       MODAL 3: Careers at Thorvon Media (Secondary Pathway)
+       Verified open vacancies at Thorvon Media, separate from creator onboarding.
        ======================================================================= -->
-  <div class="thorvon-modal-backdrop" id="jobModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="jobModalTitle">
-    <div class="thorvon-modal-container">
+  <div class="thorvon-modal-backdrop" id="careersModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="careersModalTitle">
+    <div class="thorvon-modal-container careers-modal-container">
       <div class="modal-header">
         <div class="modal-title-group">
-          <div class="modal-eyebrow" id="jobModalDept">THORVON MEDIA CAREERS</div>
-          <h2 class="modal-title" id="jobModalTitle">Role Title</h2>
+          <div class="modal-eyebrow">THORVON MEDIA RECRUITMENT</div>
+          <h2 class="modal-title" id="careersModalTitle">Careers at Thorvon Media</h2>
+          <p class="modal-desc">Explore verified open vacancies within our creative and operations teams. Remote opportunities.</p>
         </div>
         <button class="modal-close-btn" data-action="close-modal" aria-label="Close dialog">&times;</button>
       </div>
 
-      <!-- Job Specs Container -->
-      <div id="jobViewDetails">
-        <div class="job-detail-top-strip">
-          <span class="badge-tag badge-cyan" id="jobModalBadge">URGENT HIRING</span>
-          <span class="badge-tag badge-blue" id="jobModalType">REMOTE &bull; FULL-TIME</span>
-        </div>
-
-        <p class="job-modal-tagline" id="jobModalTagline"></p>
-        <p class="job-modal-desc" id="jobModalDesc"></p>
-
-        <div class="job-modal-block">
-          <h4 class="job-block-heading">WHAT YOU'LL DO</h4>
-          <ul class="job-block-list" id="jobModalResponsibilities"></ul>
-        </div>
-
-        <div class="job-modal-block">
-          <h4 class="job-block-heading">REQUIREMENTS</h4>
-          <ul class="job-block-list" id="jobModalRequirements"></ul>
-        </div>
-
-        <div class="job-detail-footer">
-          <div class="compensation-note">
-            <strong>Compensation:</strong> Competitive retainer / project-based compensation, finalized upon interview.
+      <!-- Verified Positions List -->
+      <div class="career-cards-list" id="careersModalList">
+        
+        <!-- Role 1 -->
+        <div class="job-item-card" data-role="clipper">
+          <div>
+            <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.35rem;">
+              <span class="badge-tag badge-lime">Urgent Hiring</span>
+              <span style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--color-text-muted);">REMOTE &bull; FULL-TIME / PART-TIME</span>
+            </div>
+            <h4 class="job-item-title">Clipper (Short-Form Video Editor)</h4>
+            <p class="job-item-desc">High-retention video cutting, pacing, kinetic typography, and viral clip extraction.</p>
           </div>
-          <button class="btn btn-primary" id="jobProceedToApplyBtn">
-            Apply for this Position <span class="arrow">→</span>
+          <button class="btn btn-secondary" style="padding: 0.55rem 1.15rem; font-size: 0.85rem;" data-action="view-job-details" data-role="clipper">
+            Details &amp; Apply →
+          </button>
+        </div>
+
+        <!-- Role 2 -->
+        <div class="job-item-card" data-role="social-media-manager">
+          <div>
+            <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.35rem;">
+              <span class="badge-tag badge-lime">Urgent Hiring</span>
+              <span style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--color-text-muted);">REMOTE &bull; FULL-TIME</span>
+            </div>
+            <h4 class="job-item-title">Social Media Manager</h4>
+            <p class="job-item-desc">Omnichannel feed ownership, native distribution, and high-converting audience growth.</p>
+          </div>
+          <button class="btn btn-secondary" style="padding: 0.55rem 1.15rem; font-size: 0.85rem;" data-action="view-job-details" data-role="social-media-manager">
+            Details &amp; Apply →
+          </button>
+        </div>
+
+        <!-- Role 3 -->
+        <div class="job-item-card" data-role="content-creator">
+          <div>
+            <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.35rem;">
+              <span class="badge-tag badge-lime">Urgent Hiring</span>
+              <span style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--color-text-muted);">REMOTE &bull; FULL-TIME / PART-TIME</span>
+            </div>
+            <h4 class="job-item-title">Content Creator (On-Camera)</h4>
+            <p class="job-item-desc">Charismatic on-camera storytelling, creative scripting, and viral concept development.</p>
+          </div>
+          <button class="btn btn-secondary" style="padding: 0.55rem 1.15rem; font-size: 0.85rem;" data-action="view-job-details" data-role="content-creator">
+            Details &amp; Apply →
+          </button>
+        </div>
+
+        <!-- Role 4 -->
+        <div class="job-item-card" data-role="brand-acquisition-head">
+          <div>
+            <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.35rem;">
+              <span class="badge-tag badge-outline">Leadership Role</span>
+              <span style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--color-text-muted);">REMOTE &bull; FULL-TIME</span>
+            </div>
+            <h4 class="job-item-title">Creator &amp; Brand Acquisition Head</h4>
+            <p class="job-item-desc">Leading creator talent scouting, strategic brand partnerships, and client acquisition.</p>
+          </div>
+          <button class="btn btn-secondary" style="padding: 0.55rem 1.15rem; font-size: 0.85rem;" data-action="view-job-details" data-role="brand-acquisition-head">
+            Details &amp; Apply →
+          </button>
+        </div>
+
+        <!-- Role 5 -->
+        <div class="job-item-card" data-role="content-writers">
+          <div>
+            <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.35rem;">
+              <span class="badge-tag badge-outline">Open Position</span>
+              <span style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--color-text-muted);">REMOTE &bull; FULL-TIME</span>
+            </div>
+            <h4 class="job-item-title">Content Writers</h4>
+            <p class="job-item-desc">Clear, engaging writing for modern founders, press pitches, and newsletters.</p>
+          </div>
+          <button class="btn btn-secondary" style="padding: 0.55rem 1.15rem; font-size: 0.85rem;" data-action="view-job-details" data-role="content-writers">
+            Details &amp; Apply →
+          </button>
+        </div>
+
+        <!-- Role 6 -->
+        <div class="job-item-card" data-role="graphic-designers">
+          <div>
+            <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.35rem;">
+              <span class="badge-tag badge-outline">Open Position</span>
+              <span style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--color-text-muted);">REMOTE &bull; FULL-TIME</span>
+            </div>
+            <h4 class="job-item-title">Graphic Designers</h4>
+            <p class="job-item-desc">Clean typography, social graphics, brand kits, and slide decks that stop the scroll.</p>
+          </div>
+          <button class="btn btn-secondary" style="padding: 0.55rem 1.15rem; font-size: 0.85rem;" data-action="view-job-details" data-role="graphic-designers">
+            Details &amp; Apply →
+          </button>
+        </div>
+
+        <!-- Role 7 -->
+        <div class="job-item-card" data-role="project-manager">
+          <div>
+            <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.35rem;">
+              <span class="badge-tag badge-outline">Open Position</span>
+              <span style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--color-text-muted);">REMOTE &bull; FULL-TIME</span>
+            </div>
+            <h4 class="job-item-title">Project Manager</h4>
+            <p class="job-item-desc">Organizing creative timelines, keeping editors aligned, and ensuring seamless client delivery.</p>
+          </div>
+          <button class="btn btn-secondary" style="padding: 0.55rem 1.15rem; font-size: 0.85rem;" data-action="view-job-details" data-role="project-manager">
+            Details &amp; Apply →
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- =======================================================================
+       MODAL 4: Job Application & Details Sub-Modal
+       ======================================================================= -->
+  <div class="thorvon-modal-backdrop" id="jobDetailModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="jobDetailModalTitle">
+    <div class="thorvon-modal-container">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <div class="modal-eyebrow" id="jobDetailDept">THORVON MEDIA CAREERS</div>
+          <h2 class="modal-title" id="jobDetailModalTitle">Role Details</h2>
+        </div>
+        <button class="modal-close-btn" data-action="close-modal" aria-label="Close dialog">&times;</button>
+      </div>
+
+      <div id="jobViewPane">
+        <p id="jobDetailTagline" style="font-size: 1.1rem; font-weight: 600; color: #ffffff; margin-bottom: 0.85rem; line-height: 1.5;"></p>
+        <p id="jobDetailDesc" style="color: var(--color-text-secondary); line-height: 1.6; margin-bottom: 1.75rem; font-size: 0.93rem;"></p>
+
+        <div style="margin-bottom: 1.5rem;">
+          <h4 style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--color-lime); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.65rem;">RESPONSIBILITIES</h4>
+          <ul id="jobDetailResponsibilities" style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem; color: #e2e8f0;"></ul>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h4 style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--color-lime); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.65rem;">REQUIREMENTS</h4>
+          <ul id="jobDetailRequirements" style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem; color: #e2e8f0;"></ul>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 1.25rem; border-top: 1px solid var(--color-border); flex-wrap: wrap; gap: 1rem;">
+          <button type="button" class="btn-text" data-action="back-to-careers-list">← Back to Vacancies</button>
+          <button type="button" class="btn btn-lime" id="jobProceedApplyBtn">
+            Apply for this Role <span class="arrow">→</span>
           </button>
         </div>
       </div>
 
-      <!-- Embedded Job Application Form (Revealed when clicking Apply) -->
-      <div id="jobApplyFormWrap" style="display: none; padding-top: 1rem; border-top: 1px solid var(--color-border); margin-top: 1.5rem;">
+      <!-- Application Form View -->
+      <div id="jobFormPane" style="display: none;">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
-          <h3 style="font-size: 1.25rem; font-weight: 700;">Submit Your Application</h3>
-          <button type="button" class="btn-text" id="jobBackToDetailsBtn">← Back to Role Details</button>
+          <h3 style="font-size: 1.2rem; font-weight: 700;">Submit Job Application</h3>
+          <button type="button" class="btn-text" id="jobBackToPaneBtn">← View Role Details</button>
         </div>
 
-        <form id="jobApplicationForm" data-form-type="career">
-          <input type="hidden" id="jobApplyRoleHidden" name="role_applied" value="">
+        <form id="jobAppForm" data-form-type="career">
+          <input type="hidden" id="jobRoleHidden" name="role_name" value="">
 
           <div class="form-grid">
             <div class="form-group">
-              <label class="form-label" for="jobApplicantName">Full Name <span class="req">*</span></label>
-              <input type="text" id="jobApplicantName" name="applicant_name" class="form-input" placeholder="e.g. Marcus Miller" required>
+              <label class="form-label" for="jaName">Full Name <span class="req">*</span></label>
+              <input type="text" id="jaName" name="name" class="form-input" placeholder="e.g. Marcus Miller" required>
             </div>
 
             <div class="form-group">
-              <label class="form-label" for="jobApplicantEmail">Email Address <span class="req">*</span></label>
-              <input type="email" id="jobApplicantEmail" name="applicant_email" class="form-input" placeholder="marcus@example.com" required>
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="jobApplicantPhone">Contact Number (Optional)</label>
-              <input type="tel" id="jobApplicantPhone" name="applicant_phone" class="form-input" placeholder="+1 (555) 000-0000">
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="jobRoleSelect">Role Applied For <span class="req">*</span></label>
-              <select id="jobRoleSelect" name="role_display" class="form-select" required>
-                <option value="Clipper (Short-Form Video Editor)">Clipper (Short-Form Video Editor)</option>
-                <option value="Social Media Manager">Social Media Manager</option>
-                <option value="Content Creator">Content Creator</option>
-                <option value="Creator & Brand Acquisition Head">Creator & Brand Acquisition Head</option>
-                <option value="Content Writers">Content Writers</option>
-                <option value="Graphic Designers">Graphic Designers</option>
-                <option value="Project Manager">Project Manager</option>
-                <option value="Speculative / Open Application">Speculative / Open Application</option>
-              </select>
+              <label class="form-label" for="jaEmail">Email Address <span class="req">*</span></label>
+              <input type="email" id="jaEmail" name="email" class="form-input" placeholder="marcus@example.com" required>
             </div>
 
             <div class="form-group form-grid-full">
-              <label class="form-label" for="jobPortfolioUrl">Portfolio, Drive, or LinkedIn URL <span class="req">*</span></label>
-              <input type="url" id="jobPortfolioUrl" name="portfolio_url" class="form-input" placeholder="https://yourportfolio.com or drive.google.com/..." required>
+              <label class="form-label" for="jaPortfolio">Portfolio, Drive, or LinkedIn URL <span class="req">*</span></label>
+              <input type="url" id="jaPortfolio" name="portfolio" class="form-input" placeholder="https://portfolio.com or drive.google.com/..." required>
             </div>
 
             <div class="form-group form-grid-full">
-              <label class="form-label" for="jobResumeLink">Resume / CV Link (Google Drive / Notion / Dropbox) <span class="req">*</span></label>
-              <input type="url" id="jobResumeLink" name="resume_url" class="form-input" placeholder="https://drive.google.com/file/d/... (ensure link sharing is set to viewable)" required>
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="jobExperienceYears">Years of Relevant Experience <span class="req">*</span></label>
-              <select id="jobExperienceYears" name="experience_years" class="form-select" required>
-                <option value="" disabled selected>Select Experience</option>
-                <option value="1+ Year">1+ Year</option>
-                <option value="2-3 Years">2–3 Years</option>
-                <option value="4-5 Years">4–5 Years</option>
-                <option value="5+ Years">5+ Years</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="jobAvailability">Availability to Start <span class="req">*</span></label>
-              <select id="jobAvailability" name="availability" class="form-select" required>
-                <option value="Immediately" selected>Immediately</option>
-                <option value="1-2 Weeks">1–2 Weeks notice</option>
-                <option value="1 Month">1 Month notice</option>
-              </select>
-            </div>
-
-            <div class="form-group form-grid-full">
-              <label class="form-label" for="jobCoverIntro">Short Introduction &amp; Why Thorvon <span class="req">*</span></label>
-              <textarea id="jobCoverIntro" name="cover_intro" class="form-textarea" placeholder="Briefly introduce yourself, your best work achievements, and why you are excited to join Thorvon Media..." required></textarea>
+              <label class="form-label" for="jaIntro">Short Introduction &amp; Experience <span class="req">*</span></label>
+              <textarea id="jaIntro" name="introduction" class="form-textarea" placeholder="Briefly highlight your relevant experience and why you are interested in this position..." required></textarea>
             </div>
 
             <div class="form-group form-grid-full">
               <label class="form-checkbox-label">
                 <input type="checkbox" name="consent" required checked>
-                <span>I consent to Thorvon Media processing my resume and personal data for recruitment purposes in accordance with the <a href="#" data-action="open-privacy-modal">privacy policy</a>. Applicant data remains confidential and protected from public access.</span>
+                <span>I consent to Thorvon Media reviewing my application for recruitment purposes. Candidate information remains confidential.</span>
               </label>
             </div>
           </div>
 
           <div class="form-actions">
-            <p class="form-privacy-note">Applications route to thorvonmgmt@gmail.com.</p>
-            <button type="submit" class="btn btn-primary">
+            <p class="form-privacy-note">Submissions route to thorvonmgmt@gmail.com.</p>
+            <button type="submit" class="btn btn-lime">
               Submit Job Application <span class="arrow">→</span>
             </button>
           </div>
@@ -1258,155 +713,67 @@
   </div>
 
   <!-- =======================================================================
-       MODAL 4: Quick Action / Get Started Navigator
-       ======================================================================= -->
-  <div class="thorvon-modal-backdrop" id="actionPickerModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="actionPickerTitle">
-    <div class="thorvon-modal-container" style="max-width: 620px;">
-      <div class="modal-header">
-        <div class="modal-title-group">
-          <div class="modal-eyebrow">WELCOME // GET STARTED</div>
-          <h2 class="modal-title" id="actionPickerTitle">How can we assist you?</h2>
-          <p class="modal-desc">Select your objective to be directed to the right team immediately.</p>
-        </div>
-        <button class="modal-close-btn" data-action="close-modal" aria-label="Close dialog">&times;</button>
-      </div>
-
-      <div style="display: flex; flex-direction: column; gap: 1rem;">
-        <div class="contact-card" role="button" tabindex="0" data-action="open-creator-modal" style="min-height: unset; cursor: pointer;">
-          <div style="display: flex; justify-content: space-between; align-items: center;">
-            <div>
-              <div class="contact-channel-eyebrow">I AM A CREATOR</div>
-              <h3 style="font-size: 1.15rem; font-weight: 700; color: #ffffff; margin-top: 0.2rem;">Join as a Creator</h3>
-              <p style="font-size: 0.85rem; color: var(--color-text-secondary);">Apply for professional representation and brand deal sourcing.</p>
-            </div>
-            <span class="contact-arrow-icon">→</span>
-          </div>
-        </div>
-
-        <div class="contact-card" role="button" tabindex="0" data-action="open-brand-modal" style="min-height: unset; cursor: pointer;">
-          <div style="display: flex; justify-content: space-between; align-items: center;">
-            <div>
-              <div class="contact-channel-eyebrow">I AM A BRAND OR AGENCY</div>
-              <h3 style="font-size: 1.15rem; font-weight: 700; color: #ffffff; margin-top: 0.2rem;">Discuss a Brand Collaboration</h3>
-              <p style="font-size: 0.85rem; color: var(--color-text-secondary);">Access vetted creators and launch strategic influencer campaigns.</p>
-            </div>
-            <span class="contact-arrow-icon">→</span>
-          </div>
-        </div>
-
-        <div class="contact-card" role="button" tabindex="0" data-action="open-job-apply-modal" data-prefill="Open Recruitment Application" style="min-height: unset; cursor: pointer;">
-          <div style="display: flex; justify-content: space-between; align-items: center;">
-            <div>
-              <div class="contact-channel-eyebrow">I AM A JOB APPLICANT</div>
-              <h3 style="font-size: 1.15rem; font-weight: 700; color: #ffffff; margin-top: 0.2rem;">Careers at Thorvon Media</h3>
-              <p style="font-size: 0.85rem; color: var(--color-text-secondary);">Apply for verified editing, social, design, and operations roles.</p>
-            </div>
-            <span class="contact-arrow-icon">→</span>
-          </div>
-        </div>
-
-        <a href="#contact" class="contact-card" data-action="close-modal-and-scroll" style="min-height: unset;">
-          <div style="display: flex; justify-content: space-between; align-items: center;">
-            <div>
-              <div class="contact-channel-eyebrow">GENERAL / PRESS</div>
-              <h3 style="font-size: 1.15rem; font-weight: 700; color: #ffffff; margin-top: 0.2rem;">Direct Correspondence</h3>
-              <p style="font-size: 0.85rem; color: var(--color-text-secondary);">Call, WhatsApp, or send a general message to our team.</p>
-            </div>
-            <span class="contact-arrow-icon">↓</span>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- =======================================================================
        MODAL 5: Privacy Policy & Data Consent Modal
        ======================================================================= -->
   <div class="thorvon-modal-backdrop" id="privacyModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="privacyModalTitle">
-    <div class="thorvon-modal-container" style="max-width: 720px;">
+    <div class="thorvon-modal-container">
       <div class="modal-header">
         <div class="modal-title-group">
-          <div class="modal-eyebrow">LEGAL &amp; COMPLIANCE // PRIVACY</div>
+          <div class="modal-eyebrow">LEGAL &amp; COMPLIANCE</div>
           <h2 class="modal-title" id="privacyModalTitle">Privacy Policy &amp; Data Consent</h2>
-          <p class="modal-desc">How Thorvon Talent and Thorvon Media protect your information.</p>
         </div>
         <button class="modal-close-btn" data-action="close-modal" aria-label="Close dialog">&times;</button>
       </div>
 
-      <div class="policy-content">
-        <div>
-          <h4>1. Purpose and Data Collection</h4>
-          <p>
-            Thorvon Talent operates as a business division of Thorvon Media. When you interact with our website, submit a creator application, request a brand collaboration, or apply for an employment vacancy, we collect relevant information (such as your name, contact information, social profile URLs, and resume links) solely to evaluate and process your request.
-          </p>
-        </div>
-
-        <div>
-          <h4>2. Protection of Applicant Data &amp; Resumes</h4>
-          <p>
-            Candidate resumes, contact details, and application materials are strictly restricted to authorized recruitment and leadership personnel at Thorvon Media. We never sell, rent, or publicly display applicant information or portfolios without your explicit consent.
-          </p>
-        </div>
-
-        <div>
-          <h4>3. Creator Confidentiality</h4>
-          <p>
-            Information submitted by content creators regarding current audience statistics, proprietary brand deals, rates, and personal contact handles is treated under strict confidentiality. We do not distribute your private media kit or contact details to third parties without prior consultation.
-          </p>
-        </div>
-
-        <div>
-          <h4>4. Brand Inquiries &amp; Non-Disclosure</h4>
-          <p>
-            Brand campaign briefs, budget indications, and proposed product launch details shared through our forms are handled confidentially by our business development team.
-          </p>
-        </div>
-
-        <div>
-          <h4>5. Data Retention &amp; Inquiries</h4>
-          <p>
-            You may request the deletion or update of any submitted details at any time by contacting us directly at <a href="mailto:thorvonmedia@gmail.com" style="color: #ffffff; text-decoration: underline;">thorvonmedia@gmail.com</a>.
-          </p>
-        </div>
+      <div style="display: flex; flex-direction: column; gap: 1.25rem; font-size: 0.92rem; color: var(--color-text-secondary); line-height: 1.6;">
+        <p>
+          Thorvon Talent operates as a specialized creator management division of Thorvon Media. We collect submitted details (name, social profiles, email handles, and portfolio links) exclusively to evaluate creator representation fit, coordinate brand partnerships, or process job applications.
+        </p>
+        <p>
+          <strong>Confidentiality:</strong> Creator metrics, contact handles, and candidate resumes are kept strictly confidential and will never be sold, rented, or made public without explicit authorization.
+        </p>
+        <p>
+          For questions or data deletion requests, contact us at <a href="mailto:thorvonmedia@gmail.com" style="color: var(--color-lime); text-decoration: underline;">thorvonmedia@gmail.com</a>.
+        </p>
       </div>
 
       <div style="padding-top: 1.5rem; border-top: 1px solid var(--color-border); margin-top: 1.5rem; text-align: right;">
-        <button class="btn btn-primary" data-action="close-modal">Understood</button>
+        <button class="btn btn-lime" data-action="close-modal">Understood</button>
       </div>
     </div>
   </div>
 
   <!-- =======================================================================
-       MODAL 6: Direct Email Failsafe & Confirmation Dispatch Modal
+       MODAL 6: Confirmation & Direct Dispatch Backup
        ======================================================================= -->
   <div class="thorvon-modal-backdrop" id="dispatchModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="dispatchModalTitle">
-    <div class="thorvon-modal-container" style="max-width: 600px;">
+    <div class="thorvon-modal-container" style="max-width: 580px;">
       <div class="modal-header">
         <div class="modal-title-group">
-          <div class="modal-eyebrow" id="dispatchEyebrow">SUBMISSION COMPLETE</div>
-          <h2 class="modal-title" id="dispatchModalTitle">Inquiry Received</h2>
+          <div class="modal-eyebrow" id="dispatchEyebrow">SUBMISSION RECEIVED</div>
+          <h2 class="modal-title" id="dispatchModalTitle">Thank You</h2>
         </div>
         <button class="modal-close-btn" data-action="close-modal" aria-label="Close dialog">&times;</button>
       </div>
 
       <div style="display: flex; flex-direction: column; gap: 1.25rem;">
         <p id="dispatchModalMessage" style="color: var(--color-text-secondary); line-height: 1.6;">
-          Your inquiry has been successfully generated. Our team will review your information and respond within 24–48 hours.
+          Your application has been received. Our talent management team will review your profile and reach out within 24–48 hours.
         </p>
 
-        <div id="dispatchFailsafeBox" style="display: none; background: #000000; border: 1px solid var(--color-border); border-radius: 12px; padding: 1.25rem;">
+        <div id="dispatchFailsafeBox" style="display: none; background: #060709; border: 1px solid var(--color-border); border-radius: 12px; padding: 1.25rem;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
-            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-text-muted); text-transform: uppercase;">Direct Dispatch Backup</span>
+            <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--color-lime); text-transform: uppercase;">Direct Dispatch Backup</span>
             <button type="button" class="btn-text" id="copyDispatchBtn" style="padding: 0.2rem 0.5rem; font-size: 0.8rem;">Copy Summary</button>
           </div>
-          <pre id="dispatchSummaryPre" style="font-family: var(--font-mono); font-size: 0.8rem; color: #e2e8f0; white-space: pre-wrap; max-height: 160px; overflow-y: auto;"></pre>
+          <pre id="dispatchSummaryPre" style="font-family: var(--font-mono); font-size: 0.8rem; color: #e2e8f0; white-space: pre-wrap; max-height: 140px; overflow-y: auto;"></pre>
         </div>
 
         <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: flex-end; margin-top: 1rem;">
           <a href="#" id="dispatchMailtoBtn" class="btn btn-secondary" style="display: none;">
             Open Email Client ↗
           </a>
-          <button class="btn btn-primary" data-action="close-modal">
+          <button class="btn btn-lime" data-action="close-modal">
             Done
           </button>
         </div>
@@ -1414,9 +781,7 @@
     </div>
   </div>
 
-  <!-- =======================================================================
-       Floating Toast Notifications Container
-       ======================================================================= -->
+  <!-- Toast Container -->
   <div class="toast-container" id="toastContainer" aria-live="polite"></div>
 
   <script src="script.js"></script>
