@@ -643,6 +643,27 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
+    // Select Niche and Apply (Clickable Cards from Image 3)
+    const nicheCard = e.target.closest('[data-action="select-niche-and-apply"]');
+    if (nicheCard) {
+      e.preventDefault();
+      if (mobileDrawer && mobileDrawer.classList.contains('is-open')) toggleMobile();
+      const niche = nicheCard.getAttribute('data-niche');
+      const nicheSelect = document.getElementById('creatorNiche');
+      if (nicheSelect && niche) {
+        nicheSelect.value = niche;
+      }
+      ModalController.open('creatorModal');
+      const nameInput = document.getElementById('creatorName');
+      if (nameInput) {
+        setTimeout(() => nameInput.focus(), 150);
+      }
+      if (niche) {
+        showToast('Niche Selected', `${niche} pre-selected. Tell us about your channel below.`, 'info');
+      }
+      return;
+    }
+
     // Open Creator Modal
     const creatorBtn = e.target.closest('[data-action="open-creator-modal"]');
     if (creatorBtn) {
@@ -721,11 +742,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // I. Keyboard Escape key
+  // I. Keyboard Accessibility (Escape + Enter/Space on cards)
   window.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
-      if (mobileDrawer.classList.contains('is-open')) toggleMobile();
+      if (mobileDrawer && mobileDrawer.classList.contains('is-open')) toggleMobile();
       ModalController.closeAll();
+    } else if (e.key === 'Enter' || e.key === ' ') {
+      const activeEl = document.activeElement;
+      if (activeEl && activeEl.getAttribute && activeEl.getAttribute('data-action') === 'select-niche-and-apply') {
+        e.preventDefault();
+        activeEl.click();
+      }
     }
   });
 
