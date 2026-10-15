@@ -788,4 +788,53 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // L. Interactive Three-Pillar Section Controller
+  function initThreePillars() {
+    const pillarCards = document.querySelectorAll('.pillar-card');
+    if (!pillarCards.length) return;
+
+    pillarCards.forEach((card) => {
+      card.addEventListener('click', (e) => {
+        // Prevent toggle if clicking a link or button with its own action
+        if (e.target.closest('a') || (e.target.closest('button') && !e.target.closest('.pillar-toggle-indicator'))) {
+          return;
+        }
+
+        const isCurrentlyActive = card.classList.contains('is-active');
+
+        if (isCurrentlyActive) {
+          // Collapse active pillar
+          card.classList.remove('is-active');
+          card.setAttribute('aria-expanded', 'false');
+          const toggleText = card.querySelector('.toggle-text');
+          if (toggleText) toggleText.textContent = 'Services';
+        } else {
+          // Deactivate all pillars
+          pillarCards.forEach((c) => {
+            c.classList.remove('is-active');
+            c.setAttribute('aria-expanded', 'false');
+            const tText = c.querySelector('.toggle-text');
+            if (tText) tText.textContent = 'Services';
+          });
+          // Activate clicked pillar
+          card.classList.add('is-active');
+          card.setAttribute('aria-expanded', 'true');
+          const toggleText = card.querySelector('.toggle-text');
+          if (toggleText) toggleText.textContent = 'Close';
+        }
+      });
+
+      // Keyboard accessibility
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          card.click();
+        }
+      });
+    });
+  }
+
+  initThreePillars();
 });
+
