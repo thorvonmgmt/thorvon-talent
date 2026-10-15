@@ -99,84 +99,86 @@
          ======================================================================= -->
     <section class="metrics-widget-section" id="audienceMetrics" aria-label="Audience and Distribution Metrics">
       <div class="container">
-        <div class="metrics-widget-card">
-          <!-- Widget Header: Verification Badge, Reporting Period & Audit Metadata -->
-          <div class="metrics-widget-header">
-            <div class="metrics-badge">
-              <span class="metrics-badge-dot"></span>
-              <span class="metrics-badge-text" id="metricsBadgeText">Audience &amp; Distribution Verified Telemetry</span>
+        <div class="telemetry-hud" id="telemetryHud">
+          <!-- Futuristic HUD Top Bar -->
+          <div class="hud-top-bar">
+            <div class="hud-status-badge">
+              <span class="hud-pulse-radar">
+                <span class="radar-ring"></span>
+                <span class="radar-dot"></span>
+              </span>
+              <span class="hud-status-text" id="metricsBadgeText">TELEMETRY STREAM // VERIFIED NETWORK DATA</span>
             </div>
-            <div class="metrics-period-meta">
-              <span class="metrics-meta-item">
-                <span class="meta-label">Reporting Period:</span>
-                <span class="meta-val" id="metricsReportingPeriod">Last 28 Days (Sep 15 – Oct 12, 2026)</span>
-              </span>
-              <span class="metrics-meta-sep">•</span>
-              <span class="metrics-meta-item">
-                <span class="meta-label">Updated:</span>
-                <span class="meta-val" id="metricsLastUpdated">October 13, 2026</span>
-              </span>
+            <div class="hud-meta-group">
+              <span class="hud-meta-pill" id="metricsReportingPeriod">28D WINDOW: SEP 15 – OCT 12, 2026</span>
+              <span class="hud-meta-sep">//</span>
+              <span class="hud-meta-pill" id="metricsLastUpdated">AUDITED: OCT 13, 2026</span>
             </div>
           </div>
 
-          <!-- 4 Primary Metric Cards Grid -->
-          <div class="metrics-grid" id="metricsCardsGrid">
-            <!-- Card 1: Collective follower base -->
-            <div class="metric-card" data-metric-id="collective_followers">
-              <span class="metric-eyebrow">Collective Follower Base</span>
-              <div class="metric-number-wrap">
-                <span class="metric-number" data-target="2450000" data-format="abbreviated" data-suffix="+">2.4M+</span>
+          <!-- Futuristic 4-Metric Grid (Desktop: 4 Columns | Mobile: 2x2 Compact HUD) -->
+          <div class="hud-metrics-grid" id="metricsCardsGrid">
+            <!-- Metric 01 -->
+            <div class="hud-metric-cell" data-metric-id="collective_followers">
+              <div class="hud-cell-header">
+                <span class="hud-cell-tag">01 // AUDIENCE</span>
+                <span class="hud-corner-mark">+</span>
               </div>
-              <p class="metric-desc">Cross-platform audience across YouTube, Instagram, and LinkedIn</p>
+              <div class="hud-metric-val" data-target="2450000" data-format="abbreviated" data-suffix="+">2.4M+</div>
+              <div class="hud-cell-label">Collective Follower Base</div>
+              <div class="hud-cell-sub">Cross-platform YouTube, IG &amp; LinkedIn</div>
             </div>
 
-            <!-- Card 2: Aggregated reported reach over last 28 days -->
-            <div class="metric-card" data-metric-id="reported_reach">
-              <span class="metric-eyebrow">28-Day Aggregated Reach</span>
-              <div class="metric-number-wrap">
-                <span class="metric-number" data-target="14800000" data-format="abbreviated" data-suffix="+">14.8M+</span>
+            <!-- Metric 02 -->
+            <div class="hud-metric-cell" data-metric-id="reported_reach">
+              <div class="hud-cell-header">
+                <span class="hud-cell-tag">02 // 28D REACH</span>
+                <span class="hud-corner-mark">+</span>
               </div>
-              <p class="metric-desc">Aggregated gross platform reach reported across the roster</p>
+              <div class="hud-metric-val" data-target="14800000" data-format="abbreviated" data-suffix="+">14.8M+</div>
+              <div class="hud-cell-label">28-Day Aggregated Reach</div>
+              <div class="hud-cell-sub">Gross platform impressions across roster</div>
             </div>
 
-            <!-- Card 3: Represented creator talents -->
-            <div class="metric-card" data-metric-id="creator_talents">
-              <span class="metric-eyebrow">Represented Creator Talents</span>
-              <div class="metric-number-wrap">
-                <span class="metric-number" data-target="18" data-format="integer" data-suffix="">18</span>
+            <!-- Metric 03 -->
+            <div class="hud-metric-cell" data-metric-id="creator_talents">
+              <div class="hud-cell-header">
+                <span class="hud-cell-tag">03 // TALENT</span>
+                <span class="hud-corner-mark">+</span>
               </div>
-              <p class="metric-desc">Voices, podcast hosts, and specialists under management</p>
+              <div class="hud-metric-val" data-target="18" data-format="integer" data-suffix="">18</div>
+              <div class="hud-cell-label">Represented Creators</div>
+              <div class="hud-cell-sub">Voices &amp; podcast hosts under management</div>
             </div>
 
-            <!-- Card 4: Active partner media pages -->
-            <div class="metric-card" data-metric-id="partner_pages">
-              <span class="metric-eyebrow">Active Partner Media Pages</span>
-              <div class="metric-number-wrap">
-                <span class="metric-number" data-target="34" data-format="integer" data-suffix="+">34+</span>
+            <!-- Metric 04 -->
+            <div class="hud-metric-cell" data-metric-id="partner_pages">
+              <div class="hud-cell-header">
+                <span class="hud-cell-tag">04 // DISTRIBUTION</span>
+                <span class="hud-corner-mark">+</span>
               </div>
-              <p class="metric-desc">Thorvon Media distribution pages &amp; community channels</p>
+              <div class="hud-metric-val" data-target="34" data-format="integer" data-suffix="+">34+</div>
+              <div class="hud-cell-label">Partner Media Pages</div>
+              <div class="hud-cell-sub">Thorvon Media publisher network</div>
             </div>
           </div>
 
-          <!-- Combined Network Engagement Summary (Last 28 Days) -->
-          <div class="metrics-engagement-summary" id="metricsEngagementSummary">
-            <div class="engagement-summary-stats">
-              <div class="engagement-stat-item">
-                <span class="engagement-stat-label">Compatible Network Interactions</span>
-                <span class="engagement-stat-value" id="metricsInteractions" data-target="782000" data-format="abbreviated" data-suffix="+">782K+</span>
+          <!-- Sleek Combined Engagement Footer Bar -->
+          <div class="hud-footer-bar" id="metricsEngagementSummary">
+            <div class="hud-engagement-cluster">
+              <div class="hud-stat-chip">
+                <span class="hud-chip-label">INTERACTIONS (28D)</span>
+                <span class="hud-chip-val" id="metricsInteractions" data-target="782000" data-format="abbreviated" data-suffix="+">782K+</span>
               </div>
-              <div class="engagement-stat-item">
-                <span class="engagement-stat-label">Reach-Based Engagement Rate</span>
-                <span class="engagement-stat-value highlight-lime" id="metricsEngagementRate" data-target="5.28" data-format="percentage">5.28%</span>
+              <div class="hud-chip-divider"></div>
+              <div class="hud-stat-chip">
+                <span class="hud-chip-label">REACH ENGAGEMENT</span>
+                <span class="hud-chip-val highlight-lime" id="metricsEngagementRate" data-target="5.28" data-format="percentage">5.28%</span>
               </div>
             </div>
-            <div class="engagement-summary-note">
-              <p class="engagement-note-accounts" id="metricsAccountScope">
-                <strong>Roster Scope:</strong> 18 represented creator rosters + 34 Thorvon Media distribution partner pages.
-              </p>
-              <p class="engagement-note-disclaimer" id="metricsDisclaimer">
-                Figures are compiled from authentic, native platform analytics across active creator accounts. Reach denotes gross platform exposures across the 28-day window and does not represent an unduplicated unique audience count.
-              </p>
+            <div class="hud-audit-note">
+              <span class="hud-note-scope" id="metricsAccountScope">Scope: 18 creators + 34 distribution channels.</span>
+              <span class="hud-note-disclaimer" id="metricsDisclaimer">Gross reach over 28d; non-unique. Verified telemetry.</span>
             </div>
           </div>
         </div>

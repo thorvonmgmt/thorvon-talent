@@ -264,12 +264,12 @@ const AudienceMetricsController = {
     // B. Apply Primary 4 Cards from Config
     if (Array.isArray(config.cards)) {
       config.cards.forEach((card) => {
-        const cardEl = document.querySelector(`.metric-card[data-metric-id="${card.id}"]`);
+        const cardEl = document.querySelector(`.metric-card[data-metric-id="${card.id}"], .hud-metric-cell[data-metric-id="${card.id}"]`);
         if (!cardEl) return;
 
-        const numEl = cardEl.querySelector('.metric-number');
-        const eyebrowEl = cardEl.querySelector('.metric-eyebrow');
-        const descEl = cardEl.querySelector('.metric-desc');
+        const numEl = cardEl.querySelector('.metric-number, .hud-metric-val');
+        const eyebrowEl = cardEl.querySelector('.metric-eyebrow, .hud-cell-label');
+        const descEl = cardEl.querySelector('.metric-desc, .hud-cell-sub');
 
         if (eyebrowEl && card.label) eyebrowEl.textContent = card.label;
         if (descEl && card.description) descEl.textContent = card.description;
