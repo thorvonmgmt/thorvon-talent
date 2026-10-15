@@ -22,10 +22,10 @@
   <meta name="twitter:description" content="Your brand deserves more than just content. Less reading. More experiencing.">
   <meta name="twitter:image" content="assets/logo-white.png">
 
-  <!-- Apple-Grade Typography: Manrope & Inter (No Monospace) -->
+  <!-- Opraah-Style Editorial Typography: Bricolage Grotesque & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Favicon & Touch Icons -->
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
@@ -33,7 +33,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
   <link rel="shortcut icon" href="favicon.ico">
 
-  <link rel="stylesheet" href="styles.css?v=3.5">
+  <link rel="stylesheet" href="styles.css?v=4.0">
   <style>
     /* Instant Static Footer Enforcement (Bypasses any browser cache) */
     .site-footer {
@@ -140,10 +140,10 @@
       <!-- Minimal Navigation -->
       <nav class="site-nav" aria-label="Primary Navigation">
         <ul class="nav-links">
-          <li><a href="#talent-worth" class="nav-link">Creators</a></li>
-          <li><a href="#journey" class="nav-link">The Journey</a></li>
-          <li><a href="#brands" class="nav-link" data-action="open-brand-modal">Brand Partnerships</a></li>
-          <li><a href="#careers" class="nav-link" data-action="open-careers-modal">Careers</a></li>
+          <li><a href="#services" class="nav-link">What We Do</a></li>
+          <li><a href="#talent-worth" class="nav-link">Talent</a></li>
+          <li><a href="#choose" class="nav-link">Partnerships</a></li>
+          <li><a href="#careers" class="nav-link">Careers</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
         <button class="btn btn-lime nav-cta" data-action="open-creator-modal">
@@ -163,10 +163,10 @@
       <div class="mobile-drawer-inner">
         <ul class="mobile-nav-links">
           <li><a href="#hero" class="mobile-nav-link">Home</a></li>
-          <li><a href="#talent-worth" class="mobile-nav-link">Talent Worth Representing</a></li>
-          <li><a href="#journey" class="mobile-nav-link">The Journey</a></li>
-          <li><a href="#brands" class="mobile-nav-link" data-action="open-brand-modal">Brand Partnerships</a></li>
-          <li><a href="#careers" class="mobile-nav-link" data-action="open-careers-modal">Careers (Hiring)</a></li>
+          <li><a href="#services" class="mobile-nav-link">What We Do</a></li>
+          <li><a href="#talent-worth" class="mobile-nav-link">Talent</a></li>
+          <li><a href="#choose" class="mobile-nav-link">Partnerships</a></li>
+          <li><a href="#careers" class="mobile-nav-link">Careers</a></li>
           <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
         </ul>
         <div class="mobile-cta-wrap">
@@ -180,12 +180,7 @@
 
   <main>
     <!-- =======================================================================
-         Section 1 — Hero Section (Uncluttered, Confident, Clean)
-         First thing the visitor experiences.
-         Headline matching reference image:
-         Line 1: Your Talent. Our (Our in lime)
-         Line 2: Network. Bigger (Network. in lime)
-         Line 3: Opportunities. (in white)
+         Section 1 — Hero Section (Opraah Agency Polish: Less Text, Bold Impact)
          ======================================================================= -->
     <section class="hero-section" id="hero">
       <div class="container">
@@ -210,15 +205,15 @@
           </h1>
 
           <p class="hero-supporting-line">
-            Your brand deserves more than just content.
+            Creator management, brand partnerships, and short-form distribution for category-defining talent.
           </p>
 
           <div class="hero-actions">
             <button class="btn btn-lime" data-action="open-creator-modal">
               Get Represented <span class="arrow">→</span>
             </button>
-            <a href="#talent-worth" class="btn btn-secondary">
-              See What We Represent
+            <a href="#services" class="btn btn-secondary">
+              What We Do
             </a>
           </div>
         </div>
@@ -226,20 +221,137 @@
     </section>
 
     <!-- =======================================================================
-         Section 2 — "Talent worth representing." (Exact Match to User Image 3)
-         Clickable Niche Cards: Podcasts & Media, Business & Finance,
-         Education & Infotainment, Beauty & Lifestyle, Comedy & Entertainment
+         Section 2 — Infinite Brand & Platform Marquee (Opraah Signature Ticker)
+         ======================================================================= -->
+    <section class="marquee-section" aria-label="Partner Platforms & Brands">
+      <div class="marquee-label">
+        <span>Trusted across leading creator platforms &amp; digital networks</span>
+      </div>
+      <div class="marquee-slider">
+        <div class="marquee-track">
+          <div class="marquee-item"><span class="marquee-dot"></span> YouTube</div>
+          <div class="marquee-item"><span class="marquee-dot"></span> Spotify</div>
+          <div class="marquee-item"><span class="marquee-dot"></span> Apple Podcasts</div>
+          <div class="marquee-item"><span class="marquee-dot"></span> Netflix</div>
+          <div class="marquee-item"><span class="marquee-dot"></span> Amazon</div>
+          <div class="marquee-item"><span class="marquee-dot"></span> Meta</div>
+          <div class="marquee-item"><span class="marquee-dot"></span> LinkedIn</div>
+          <div class="marquee-item"><span class="marquee-dot"></span> Discord</div>
+          <div class="marquee-item"><span class="marquee-dot"></span> Substack</div>
+          <!-- Loop duplicate for continuous ticker -->
+          <div class="marquee-item" aria-hidden="true"><span class="marquee-dot"></span> YouTube</div>
+          <div class="marquee-item" aria-hidden="true"><span class="marquee-dot"></span> Spotify</div>
+          <div class="marquee-item" aria-hidden="true"><span class="marquee-dot"></span> Apple Podcasts</div>
+          <div class="marquee-item" aria-hidden="true"><span class="marquee-dot"></span> Netflix</div>
+          <div class="marquee-item" aria-hidden="true"><span class="marquee-dot"></span> Amazon</div>
+          <div class="marquee-item" aria-hidden="true"><span class="marquee-dot"></span> Meta</div>
+          <div class="marquee-item" aria-hidden="true"><span class="marquee-dot"></span> LinkedIn</div>
+          <div class="marquee-item" aria-hidden="true"><span class="marquee-dot"></span> Discord</div>
+          <div class="marquee-item" aria-hidden="true"><span class="marquee-dot"></span> Substack</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         Section 3 — What We Do (4-Pillar Agency Bento Grid)
+         ======================================================================= -->
+    <section class="what-we-do-section" id="services">
+      <div class="container">
+        <div class="section-header-compact">
+          <div class="eyebrow">
+            <span class="dot-indicator"></span> What We Do
+          </div>
+          <h2 class="section-headline">Everything you need to turn influence into enterprise.</h2>
+        </div>
+
+        <div class="bento-grid">
+          <!-- 01 Creator Management -->
+          <div class="bento-card">
+            <div class="bento-card-top">
+              <span class="bento-num">01 // MANAGEMENT</span>
+              <span class="bento-tag">360° Representation</span>
+            </div>
+            <h3 class="bento-title">Creator Management</h3>
+            <p class="bento-desc">
+              Your career is the brief. We protect your vision, manage operations, negotiate contracts, and establish long-term category equity.
+            </p>
+            <div class="bento-pills">
+              <span class="mini-pill">Career Architecture</span>
+              <span class="mini-pill">Deal Defense</span>
+              <span class="mini-pill">Legal Protection</span>
+            </div>
+          </div>
+
+          <!-- 02 Brand Partnerships -->
+          <div class="bento-card">
+            <div class="bento-card-top">
+              <span class="bento-num">02 // PARTNERSHIPS</span>
+              <span class="bento-tag">Commercial Growth</span>
+            </div>
+            <h3 class="bento-title">Brand Partnerships</h3>
+            <p class="bento-desc">
+              The right creator. The right brief. High-impact commercial alignments that feel organic, protect audience trust, and convert.
+            </p>
+            <div class="bento-pills">
+              <span class="mini-pill">Sponsorship Retainers</span>
+              <span class="mini-pill">Vetted Partners</span>
+              <span class="mini-pill">End-to-End Delivery</span>
+            </div>
+          </div>
+
+          <!-- 03 Content & Clipping -->
+          <div class="bento-card">
+            <div class="bento-card-top">
+              <span class="bento-num">03 // PRODUCTION</span>
+              <span class="bento-tag">Post-Production</span>
+            </div>
+            <h3 class="bento-title">Clipping &amp; Short-Form</h3>
+            <p class="bento-desc">
+              From raw footage to viral shorts. Our dedicated video editors turn podcasts and interviews into high-retention compound reach.
+            </p>
+            <div class="bento-pills">
+              <span class="mini-pill">Retention Hooks</span>
+              <span class="mini-pill">Kinetic Captions</span>
+              <span class="mini-pill">Shorts &amp; Reels</span>
+            </div>
+          </div>
+
+          <!-- 04 Network Syndication -->
+          <div class="bento-card">
+            <div class="bento-card-top">
+              <span class="bento-num">04 // DISTRIBUTION</span>
+              <span class="bento-tag">Media Footprint</span>
+            </div>
+            <h3 class="bento-title">Network Distribution</h3>
+            <p class="bento-desc">
+              Cross-platform syndication across podcast feeds, YouTube, LinkedIn, and media channels powered by Thorvon Media infrastructure.
+            </p>
+            <div class="bento-pills">
+              <span class="mini-pill">Omnichannel Feeds</span>
+              <span class="mini-pill">Podcast Networks</span>
+              <span class="mini-pill">Editorial PR</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         Section 4 — Talent Worth Representing (Clickable Niche Showcase)
          ======================================================================= -->
     <section class="talent-worth-section" id="talent-worth">
       <div class="container">
         <div class="talent-worth-header">
+          <div class="eyebrow">
+            <span class="dot-indicator"></span> Talent Roster
+          </div>
           <h2 class="talent-worth-title">Talent worth representing.</h2>
           <p class="talent-worth-subtitle">
-            We work with distinctive voices, ambitious creators, and influential personalities shaping their industries.
+            We work with distinctive voices and category authorities shaping modern digital media.
           </p>
         </div>
 
-        <!-- 2-Column Clickable Cards Grid (Exact structure from Image 3) -->
+        <!-- 2-Column Clickable Cards Grid -->
         <div class="talent-cards-grid">
           
           <!-- Card 1: Podcasts & Media -->
@@ -252,7 +364,7 @@
               </svg>
             </div>
             <h3 class="niche-card-title">Podcasts &amp; Media</h3>
-            <p class="niche-card-desc">Voices that move people.</p>
+            <p class="niche-card-desc">Voices shaping modern culture and long-form discourse.</p>
           </div>
 
           <!-- Card 2: Business & Finance -->
@@ -264,19 +376,19 @@
               </svg>
             </div>
             <h3 class="niche-card-title">Business &amp; Finance</h3>
-            <p class="niche-card-desc">Expertise that builds trust.</p>
+            <p class="niche-card-desc">Executive insights and expertise that commands trust.</p>
           </div>
 
-          <!-- Card 3: Education & Infotainment -->
-          <div class="talent-niche-card" role="button" tabindex="0" data-action="select-niche-and-apply" data-niche="Education & Infotainment" aria-label="Apply for representation in Education &amp; Infotainment">
+          <!-- Card 3: Tech & Innovation -->
+          <div class="talent-niche-card" role="button" tabindex="0" data-action="select-niche-and-apply" data-niche="Education & Infotainment" aria-label="Apply for representation in Tech &amp; Innovation">
             <div class="niche-icon-wrap">
               <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-2.04"/>
                 <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-2.04"/>
               </svg>
             </div>
-            <h3 class="niche-card-title">Education &amp; Infotainment</h3>
-            <p class="niche-card-desc">Ideas that travel further.</p>
+            <h3 class="niche-card-title">Tech &amp; Innovation</h3>
+            <p class="niche-card-desc">Builders, engineers, and thinkers decoding tomorrow.</p>
           </div>
 
           <!-- Card 4: Beauty & Lifestyle -->
@@ -287,7 +399,7 @@
               </svg>
             </div>
             <h3 class="niche-card-title">Beauty &amp; Lifestyle</h3>
-            <p class="niche-card-desc">Brands that shape taste.</p>
+            <p class="niche-card-desc">Aesthetics and taste that define modern cultural trends.</p>
           </div>
 
           <!-- Card 5: Comedy & Entertainment -->
@@ -301,17 +413,17 @@
               </svg>
             </div>
             <h3 class="niche-card-title">Comedy &amp; Entertainment</h3>
-            <p class="niche-card-desc">Personalities that capture attention.</p>
+            <p class="niche-card-desc">Personalities that capture and sustain high-volume attention.</p>
           </div>
 
         </div>
 
-        <!-- Section Footer from Image 3 -->
+        <!-- Section Footer -->
         <div class="talent-worth-footer">
           <p class="craft-possibilities-text">
             Your craft. Our representation. Bigger possibilities.
           </p>
-          <a href="#journey" class="scroll-arrow-btn" aria-label="Scroll to Journey">
+          <a href="#choose" class="scroll-arrow-btn" aria-label="Scroll to Partnerships">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <line x1="12" y1="5" x2="12" y2="19"></line>
               <polyline points="19 12 12 19 5 12"></polyline>
@@ -322,133 +434,76 @@
     </section>
 
     <!-- =======================================================================
-         Section 3 — Interactive Creator Journey
-         01 — Build Your Presence
-         02 — Find Your Opportunities
-         03 — Focus on Your Craft
+         Section 5 — Opraah-Style Split: "Let's make something worth talking about."
          ======================================================================= -->
-    <section class="journey-section" id="journey">
+    <section class="choose-section" id="choose">
       <div class="container">
-        <div class="section-header-compact">
-          <div class="eyebrow">
-            <span class="dot-indicator"></span> Interactive Creator Journey
+        <div class="section-header-centered">
+          <div class="eyebrow" style="justify-content: center;">
+            <span class="dot-indicator"></span> Choose Your Pathway
           </div>
-          <h2 class="section-headline">From Content Creator to Category Authority.</h2>
+          <h2 class="section-headline">Let's make something worth talking about.</h2>
         </div>
 
-        <!-- Interactive Journey Tabs -->
-        <div class="journey-tabs" role="tablist" aria-label="Creator Journey Stages">
-          <button class="journey-tab-btn active" role="tab" aria-selected="true" data-stage="0" id="stageTab0">
-            <span class="tab-stage-num">STAGE 01</span>
-            <span class="tab-stage-title">Build Your Presence</span>
-          </button>
-
-          <button class="journey-tab-btn" role="tab" aria-selected="false" data-stage="1" id="stageTab1">
-            <span class="tab-stage-num">STAGE 02</span>
-            <span class="tab-stage-title">Find Your Opportunities</span>
-          </button>
-
-          <button class="journey-tab-btn" role="tab" aria-selected="false" data-stage="2" id="stageTab2">
-            <span class="tab-stage-num">STAGE 03</span>
-            <span class="tab-stage-title">Focus on Your Craft</span>
-          </button>
-        </div>
-
-        <!-- Dynamic Stage Presentation Card -->
-        <div class="journey-display-card" id="journeyDisplayCard">
-          <div class="journey-content-pane">
-            <span class="journey-stage-badge" id="journeyStageBadge">STAGE 01 &bull; REPUTATION ARCHITECTURE</span>
-            <h3 class="journey-stage-heading" id="journeyStageHeading">Build Your Presence</h3>
-            <p class="journey-stage-desc" id="journeyStageDesc">
-              Social media management, content strategy, and stronger personal branding that position you as an unmistakable voice in your niche.
-            </p>
-            <div style="margin-top: 1rem;">
-              <button class="btn btn-lime" data-action="open-creator-modal" style="padding: 0.75rem 1.5rem; font-size: 0.95rem;">
-                Get Started <span class="arrow">→</span>
-              </button>
+        <div class="choose-grid">
+          <!-- Card A: For Creators -->
+          <div class="choose-card">
+            <div>
+              <div class="choose-card-badge">FOR CREATORS</div>
+              <h3 class="choose-card-title">Ready to scale beyond content?</h3>
+              <p class="choose-card-desc">
+                Partner with an elite management team that handles operations, brand retainers, and short-form clipping while you focus on creating.
+              </p>
             </div>
-          </div>
-
-          <div class="journey-visual-pane">
-            <div class="journey-metric-row">
-              <span class="metric-label">Content Strategy</span>
-              <span class="metric-val" id="journeyMetric1">Retention Pacing</span>
-            </div>
-            <div class="journey-metric-row">
-              <span class="metric-label">Feed Optimization</span>
-              <span class="metric-val" id="journeyMetric2">Omnichannel</span>
-            </div>
-            <div class="journey-metric-row">
-              <span class="metric-label">Brand Positioning</span>
-              <span class="metric-val" id="journeyMetric3">Authority First</span>
-            </div>
-            <div class="journey-metric-row" style="border-bottom: none; padding-bottom: 0;">
-              <span class="metric-label">Operational Support</span>
-              <span class="metric-val" id="journeyMetric4">Thorvon Media</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- =======================================================================
-         Section 4 — Brand Partnership Experience
-         Headline: "The Right Creator. The Right Opportunity."
-         CTA: Explore Partnerships
-         ======================================================================= -->
-    <section class="brand-experience-section" id="brands">
-      <div class="container">
-        <div class="brand-experience-banner">
-          <div>
-            <div class="eyebrow">
-              <span class="dot-indicator"></span> Brand Collaboration Architecture
-            </div>
-            <h2 class="brand-exp-title">The Right Creator. The Right Opportunity.</h2>
-            <p class="brand-exp-sub">
-              We connect forward-thinking brands with creators whose authentic connection with their audience generates genuine brand authority.
-            </p>
-            <button class="btn btn-lime" data-action="open-brand-modal">
-              Explore Partnerships <span class="arrow">→</span>
+            <button class="btn btn-lime" data-action="open-creator-modal">
+              Apply for Representation <span class="arrow">→</span>
             </button>
           </div>
 
-          <div class="brand-points-list">
-            <div class="brand-point-box">
-              <h4 class="brand-point-name">
-                <span class="crosshair">+</span> Vetted Audience Relevance
-              </h4>
-              <p class="brand-point-detail">
-                Zero vanity metrics. Every creator in our roster is analyzed for authentic engagement ratios, audience demographics, and genuine comment depth.
+          <!-- Card B: For Brands -->
+          <div class="choose-card">
+            <div>
+              <div class="choose-card-badge brand-badge">FOR BRANDS</div>
+              <h3 class="choose-card-title">Looking for authentic creator partnerships?</h3>
+              <p class="choose-card-desc">
+                Connect your brand with verified category authorities. Zero vanity metrics—only genuine audience alignment and proven campaign ROI.
               </p>
             </div>
-
-            <div class="brand-point-box">
-              <h4 class="brand-point-name">
-                <span class="crosshair">+</span> End-to-End Campaign Oversight
-              </h4>
-              <p class="brand-point-detail">
-                We handle deliverable contracts, content review cycles, compliance checkoffs, and publishing timelines with agency rigor.
-              </p>
-            </div>
-
-            <div class="brand-point-box">
-              <h4 class="brand-point-name">
-                <span class="crosshair">+</span> Backed by Thorvon Media
-              </h4>
-              <p class="brand-point-detail">
-                Sponsorship content can be paired with editorial PR, viral clipping, and high-impact distribution powered by our parent infrastructure.
-              </p>
-            </div>
+            <button class="btn btn-secondary" data-action="open-brand-modal">
+              Work With Our Talent <span class="arrow">→</span>
+            </button>
           </div>
         </div>
       </div>
     </section>
 
     <!-- =======================================================================
-         Section 5 — Interactive Final CTA
-         Headline: "Your Next Chapter Starts Here."
-         Supporting text: "Bring your talent. Let's build what's next."
-         CTA: Join Thorvon Talent
+         Section 6 — Hiring Banner ("By the way, we are hiring!")
+         ======================================================================= -->
+    <section class="hiring-strip-section" id="careers">
+      <div class="container">
+        <div class="hiring-strip">
+          <div class="hiring-strip-info">
+            <div class="hiring-badge"><span class="dot-indicator"></span> WE'RE HIRING</div>
+            <h3 class="hiring-title">By the way, we are growing our agency team.</h3>
+            <div class="hiring-roles">
+              <span class="role-pill">Video Clippers</span>
+              <span class="role-pill">Social Media Managers</span>
+              <span class="role-pill">Brand Acquisition</span>
+              <span class="role-pill">Content Writers</span>
+            </div>
+          </div>
+          <div class="hiring-strip-action">
+            <button class="btn btn-secondary" data-action="open-careers-modal">
+              View Open Roles <span class="arrow">→</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         Section 7 — Minimal Final CTA
          ======================================================================= -->
     <section class="final-cta-section" id="contact">
       <div class="container">

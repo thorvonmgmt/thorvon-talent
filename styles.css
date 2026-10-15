@@ -40,9 +40,9 @@
   --color-lime-subtle: rgba(204, 255, 0, 0.08);
   --color-lime-border: rgba(204, 255, 0, 0.28);
 
-  /* Apple-Grade Typography Stack — Clean Sans-Serif Everywhere */
-  --font-primary: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", "Manrope", sans-serif;
-  --font-heading: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Manrope", "Inter", sans-serif;
+  /* Opraah-Style Editorial Typography Stack */
+  --font-primary: "Inter", -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+  --font-heading: "Bricolage Grotesque", -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
 
   /* Restrained, purposeful easing */
   --ease-apple: cubic-bezier(0.16, 1, 0.3, 1);
@@ -568,11 +568,11 @@ ul {
 }
 
 .hero-headline {
-  font-family: var(--font-primary);
-  font-size: clamp(2.6rem, 5.8vw, 5.4rem);
-  font-weight: 850;
-  letter-spacing: -0.04em;
-  line-height: 1.05;
+  font-family: var(--font-heading);
+  font-size: clamp(2.8rem, 6.4vw, 5.8rem);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 1.02;
   margin-bottom: 1.75rem;
   color: #ffffff;
 }
@@ -726,220 +726,326 @@ ul {
 }
 
 /* --------------------------------------------------------------------------
-   Section 3 — Interactive Creator Journey
-   01 — Build Your Presence
-   02 — Find Your Opportunities
-   03 — Focus on Your Craft
+   Infinite Brand & Partner Marquee (Opraah Agency Ticker)
    -------------------------------------------------------------------------- */
-.journey-section {
-  padding: clamp(5rem, 10vw, 8.5rem) 0;
+.marquee-section {
+  padding: 2.25rem 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  background: rgba(14, 16, 21, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.marquee-label {
+  text-align: center;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.marquee-slider {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+}
+
+.marquee-track {
+  display: flex;
+  align-items: center;
+  gap: clamp(2.5rem, 5vw, 4.5rem);
+  width: max-content;
+  animation: marquee-scroll 32s linear infinite;
+  will-change: transform;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.marquee-item {
+  font-family: var(--font-heading);
+  font-size: clamp(1.15rem, 2.2vw, 1.5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #7b889b;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  white-space: nowrap;
+  transition: color var(--transition-fast);
+}
+
+.marquee-item:hover {
+  color: #ffffff;
+}
+
+.marquee-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-lime);
+  display: inline-block;
+  opacity: 0.7;
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Section: What We Do (4-Pillar Agency Bento Grid)
+   -------------------------------------------------------------------------- */
+.what-we-do-section {
+  padding: clamp(5rem, 9vw, 8rem) 0;
   border-bottom: 1px solid var(--color-border);
   position: relative;
 }
 
 .section-header-compact {
-  max-width: 760px;
-  margin-bottom: clamp(2.5rem, 5vw, 3.75rem);
+  max-width: 820px;
+  margin-bottom: clamp(2.75rem, 5vw, 4rem);
 }
 
 .section-headline {
-  font-size: clamp(2.2rem, 4.4vw, 3.6rem);
+  font-family: var(--font-heading);
+  font-size: clamp(2.3rem, 4.6vw, 3.8rem);
   font-weight: 800;
-  letter-spacing: -0.035em;
-  margin-top: 0.5rem;
+  letter-spacing: -0.04em;
+  line-height: 1.08;
+  margin-top: 0.65rem;
   color: #ffffff;
 }
 
-/* Journey Stage Selector Tabs */
-.journey-tabs {
+.bento-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem;
-  margin-bottom: 3rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
 }
 
-.journey-tab-btn {
+.bento-card {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
-  border-radius: 16px;
-  padding: 1.4rem 1.6rem;
-  text-align: left;
-  cursor: pointer;
-  transition: all var(--transition-smooth);
+  border-radius: 20px;
+  padding: clamp(2rem, 3.5vw, 2.75rem);
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-}
-
-.journey-tab-btn:hover {
-  border-color: rgba(204, 255, 0, 0.3);
-  background: var(--color-surface-hover);
-}
-
-.journey-tab-btn.active {
-  border-color: var(--color-lime);
-  background: var(--color-surface-card);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6), 0 0 25px rgba(204, 255, 0, 0.08);
-}
-
-.tab-stage-num {
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: var(--color-text-muted);
-  letter-spacing: 0.05em;
-  transition: color var(--transition-fast);
-}
-
-.journey-tab-btn.active .tab-stage-num {
-  color: var(--color-lime);
-}
-
-.tab-stage-title {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #ffffff;
-  letter-spacing: -0.02em;
-}
-
-/* Journey Dynamic Presentation Card */
-.journey-display-card {
-  background: linear-gradient(145deg, #0e1117 0%, #131722 100%);
-  border: 1px solid var(--color-border-strong);
-  border-radius: 24px;
-  padding: clamp(2.25rem, 5vw, 3.75rem);
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 3.5rem;
-  align-items: center;
-  min-height: 380px;
+  transition: all var(--transition-smooth);
   position: relative;
   overflow: hidden;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
 }
 
-.journey-content-pane {
-  display: flex;
-  flex-direction: column;
-  gap: 1.15rem;
+.bento-card:hover {
+  border-color: var(--color-lime-border);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.65), 0 0 30px rgba(204, 255, 0, 0.06);
 }
 
-.journey-stage-badge {
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: var(--color-lime);
-  letter-spacing: 0.05em;
-}
-
-.journey-stage-heading {
-  font-size: clamp(2rem, 3.4vw, 2.7rem);
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  line-height: 1.1;
-  color: #ffffff;
-}
-
-.journey-stage-desc {
-  font-size: clamp(1.1rem, 1.8vw, 1.3rem);
-  color: var(--color-text-secondary);
-  line-height: 1.55;
-  max-width: 580px;
-}
-
-.journey-visual-pane {
-  background: #080a0e;
-  border: 1px solid var(--color-border);
-  border-radius: 18px;
-  padding: 1.85rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.4rem;
-}
-
-.journey-metric-row {
+.bento-card-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 0.75rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  margin-bottom: 1.25rem;
 }
 
-.metric-label {
-  font-size: 0.95rem;
-  color: var(--color-text-muted);
-}
-
-.metric-val {
-  font-size: 1rem;
+.bento-num {
+  font-family: var(--font-primary);
+  font-size: 0.82rem;
   font-weight: 700;
   color: var(--color-lime);
+  letter-spacing: 0.08em;
+}
+
+.bento-tag {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.bento-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.65rem, 2.6vw, 2.15rem);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  color: #ffffff;
+  margin-bottom: 0.85rem;
+  line-height: 1.15;
+}
+
+.bento-desc {
+  font-size: 1.05rem;
+  color: var(--color-text-secondary);
+  line-height: 1.55;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.bento-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.mini-pill {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #cbd5e1;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  padding: 0.3rem 0.75rem;
+  border-radius: 8px;
 }
 
 /* --------------------------------------------------------------------------
-   Section 4 — Brand Partnerships Experience
-   "The Right Creator. The Right Opportunity."
+   Section: Choose Dual Split (Opraah Signature: "For Creators" vs "For Brands")
    -------------------------------------------------------------------------- */
-.brand-experience-section {
-  padding: clamp(5rem, 10vw, 8.5rem) 0;
+.choose-section {
+  padding: clamp(5rem, 9vw, 8rem) 0;
   border-bottom: 1px solid var(--color-border);
   position: relative;
 }
 
-.brand-experience-banner {
-  background: radial-gradient(circle at 85% 30%, rgba(204, 255, 0, 0.05) 0%, transparent 60%),
-              linear-gradient(150deg, #10131b 0%, #08090d 100%);
-  border: 1px solid var(--color-border-strong);
-  border-radius: 24px;
-  padding: clamp(2.5rem, 6vw, 4.5rem);
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 3.5rem;
-  align-items: center;
+.section-header-centered {
+  max-width: 760px;
+  margin: 0 auto clamp(3rem, 5vw, 4.25rem);
+  text-align: center;
 }
 
-.brand-exp-title {
-  font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+.choose-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem;
+}
+
+.choose-card {
+  background: linear-gradient(150deg, #0e1117 0%, #131722 100%);
+  border: 1px solid var(--color-border-strong);
+  border-radius: 24px;
+  padding: clamp(2.5rem, 5vw, 3.5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 380px;
+  transition: all var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+.choose-card:hover {
+  border-color: var(--color-lime-border);
+  transform: translateY(-4px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.75), 0 0 35px rgba(204, 255, 0, 0.07);
+}
+
+.choose-card-badge {
+  font-size: 0.8rem;
   font-weight: 800;
-  letter-spacing: -0.04em;
-  line-height: 1.08;
-  margin-bottom: 1.5rem;
+  letter-spacing: 0.1em;
+  color: var(--color-lime);
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.choose-card-badge.brand-badge {
   color: #ffffff;
 }
 
-.brand-exp-sub {
-  font-size: clamp(1.15rem, 2vw, 1.45rem);
+.choose-card-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.85rem, 3.2vw, 2.5rem);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.15;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.choose-card-desc {
+  font-size: 1.1rem;
   color: var(--color-text-secondary);
   line-height: 1.55;
   margin-bottom: 2.25rem;
-  max-width: 580px;
+  max-width: 460px;
 }
 
-.brand-points-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+/* --------------------------------------------------------------------------
+   Section: Hiring Callout Strip ("By the way, we are hiring!")
+   -------------------------------------------------------------------------- */
+.hiring-strip-section {
+  padding: clamp(3.5rem, 6vw, 4.75rem) 0;
+  border-bottom: 1px solid var(--color-border);
+  background: rgba(14, 16, 21, 0.35);
+  position: relative;
 }
 
-.brand-point-box {
+.hiring-strip {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
-  border-radius: 14px;
-  padding: 1.5rem;
-}
-
-.brand-point-name {
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: #ffffff;
-  margin-bottom: 0.4rem;
+  border-radius: 22px;
+  padding: clamp(2rem, 3.5vw, 2.75rem) clamp(2rem, 4vw, 3.25rem);
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
-.brand-point-detail {
-  font-size: 0.95rem;
-  color: var(--color-text-secondary);
-  line-height: 1.5;
+.hiring-strip-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  max-width: 680px;
+}
+
+.hiring-badge {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-lime);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.hiring-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+}
+
+.hiring-roles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 0.35rem;
+}
+
+.role-pill {
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: #e2e8f0;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
 }
 
 /* --------------------------------------------------------------------------
@@ -1423,19 +1529,8 @@ ul {
    Responsive Media Queries & Accessibility
    -------------------------------------------------------------------------- */
 @media (max-width: 1080px) {
-  .journey-tabs {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
-  .journey-display-card {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
-
-  .brand-experience-banner {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
+  .choose-grid {
+    gap: 1.25rem;
   }
 }
 
@@ -1448,8 +1543,29 @@ ul {
     display: flex;
   }
 
+  .bento-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .choose-grid {
+    grid-template-columns: 1fr;
+  }
+
   .talent-cards-grid {
     grid-template-columns: 1fr;
+  }
+
+  .hiring-strip {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hiring-strip-action {
+    width: 100%;
+  }
+
+  .hiring-strip-action .btn {
+    width: 100%;
   }
 }
 
