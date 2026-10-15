@@ -33,7 +33,94 @@
   <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
   <link rel="shortcut icon" href="favicon.ico">
 
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=3.5">
+  <style>
+    /* Instant Static Footer Enforcement (Bypasses any browser cache) */
+    .site-footer {
+      background-color: #000000 !important;
+      border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+      padding: clamp(3.5rem, 6vw, 5rem) 0 2.5rem !important;
+      position: relative;
+    }
+    .footer-inner {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      gap: clamp(2.5rem, 4vw, 3.25rem) !important;
+    }
+    .footer-brand-info {
+      max-width: 540px !important;
+    }
+    .footer-brand-info .brand-group {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 0.75rem !important;
+    }
+    .footer-brand-info .brand-logo-img {
+      height: 28px !important;
+      width: auto !important;
+    }
+    .footer-brand-statement {
+      font-size: 1.05rem !important;
+      color: #94a3b8 !important;
+      margin-top: 1.15rem !important;
+      line-height: 1.5 !important;
+      font-weight: 400 !important;
+      max-width: 520px !important;
+    }
+    .footer-links-group {
+      display: flex !important;
+      align-items: flex-start !important;
+      gap: clamp(3rem, 7vw, 6.5rem) !important;
+      flex-wrap: wrap !important;
+      width: 100% !important;
+    }
+    .footer-nav-col {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 1.1rem !important;
+      min-width: 170px !important;
+    }
+    .footer-nav-heading {
+      font-size: 0.78rem !important;
+      font-weight: 700 !important;
+      color: #5c708a !important;
+      letter-spacing: 0.08em !important;
+      text-transform: uppercase !important;
+      margin-bottom: 0.25rem !important;
+    }
+    .footer-nav-link {
+      font-size: 1.05rem !important;
+      color: #d2dbe5 !important;
+      line-height: 1.35 !important;
+      font-weight: 450 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 0.4rem !important;
+      text-decoration: none !important;
+    }
+    .footer-nav-link:hover {
+      color: #b8ff00 !important;
+    }
+    .footer-bottom-row {
+      display: flex !important;
+      justify-content: space-between !important;
+      align-items: center !important;
+      flex-wrap: wrap !important;
+      gap: 1.25rem !important;
+      padding-top: 2rem !important;
+      border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
+      font-size: 0.85rem !important;
+      color: #64748b !important;
+      width: 100% !important;
+    }
+    @media (max-width: 480px) {
+      .footer-links-group {
+        flex-direction: column !important;
+        gap: 2rem !important;
+      }
+    }
+  </style>
 </head>
 <body>
   <!-- Top Scroll Progress Line (Electric Lime) -->
@@ -400,38 +487,38 @@
        ======================================================================= -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div class="footer-top-row">
-        <div class="footer-brand-info">
-          <a href="#top" class="brand-group" aria-label="Thorvon Talent Home">
-            <img src="assets/logo-white.png" alt="Thorvon Media" class="brand-logo-img">
-            <span class="division-badge-lime">TALENT</span>
-          </a>
-          <p class="footer-brand-statement">
-            A creator management and talent partnerships division operating under Thorvon Media.
-          </p>
+      <!-- 1. Brand Block on Top -->
+      <div class="footer-brand-info">
+        <a href="#top" class="brand-group" aria-label="Thorvon Talent Home">
+          <img src="assets/logo-white.png" alt="Thorvon Media" class="brand-logo-img">
+          <span class="division-badge-lime">TALENT</span>
+        </a>
+        <p class="footer-brand-statement">
+          A creator management and talent partnerships division operating under Thorvon Media.
+        </p>
+      </div>
+
+      <!-- 2. Static 3-Column Navigation Block Directly Underneath -->
+      <div class="footer-links-group">
+        <div class="footer-nav-col">
+          <span class="footer-nav-heading">Platform</span>
+          <a href="#talent-worth" class="footer-nav-link">Talent Represented</a>
+          <a href="#journey" class="footer-nav-link">The Journey</a>
+          <a href="#" class="footer-nav-link" data-action="open-creator-modal">Get Represented</a>
         </div>
 
-        <div class="footer-links-group">
-          <div class="footer-nav-col">
-            <span class="footer-nav-heading">Platform</span>
-            <a href="#talent-worth" class="footer-nav-link">Talent Represented</a>
-            <a href="#journey" class="footer-nav-link">The Journey</a>
-            <a href="#" class="footer-nav-link" data-action="open-creator-modal">Get Represented</a>
-          </div>
+        <div class="footer-nav-col">
+          <span class="footer-nav-heading">Secondary Portals</span>
+          <a href="#" class="footer-nav-link" data-action="open-brand-modal">Brand Partnerships</a>
+          <a href="#" class="footer-nav-link" data-action="open-careers-modal">Careers at Thorvon</a>
+          <a href="mailto:thorvonmedia@gmail.com" class="footer-nav-link">thorvonmedia@gmail.com</a>
+        </div>
 
-          <div class="footer-nav-col">
-            <span class="footer-nav-heading">Secondary Portals</span>
-            <a href="#" class="footer-nav-link" data-action="open-brand-modal">Brand Partnerships</a>
-            <a href="#" class="footer-nav-link" data-action="open-careers-modal">Careers at Thorvon</a>
-            <a href="mailto:thorvonmedia@gmail.com?cc=thorvonmgmt@gmail.com" class="footer-nav-link">thorvonmgmt@gmail.com</a>
-          </div>
-
-          <div class="footer-nav-col">
-            <span class="footer-nav-heading">Direct Channels</span>
-            <a href="https://wa.me/916000156191" target="_blank" rel="noopener noreferrer" class="footer-nav-link">WhatsApp Business &#8599;</a>
-            <a href="tel:+916000156191" class="footer-nav-link">+91 60001 56191</a>
-            <a href="https://instagram.com/thorvonmedia" target="_blank" rel="noopener noreferrer" class="footer-nav-link">Instagram &#8599;</a>
-          </div>
+        <div class="footer-nav-col">
+          <span class="footer-nav-heading">Direct Channels</span>
+          <a href="https://wa.me/917002889463" target="_blank" rel="noopener noreferrer" class="footer-nav-link">WhatsApp Business &#8599;</a>
+          <a href="tel:+916000156191" class="footer-nav-link">+91 60001 56191</a>
+          <a href="https://instagram.com/thorvonmedia" target="_blank" rel="noopener noreferrer" class="footer-nav-link">Instagram &#8599;</a>
         </div>
       </div>
 
