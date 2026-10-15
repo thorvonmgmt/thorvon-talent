@@ -93,9 +93,102 @@
 
   <main>
     <!-- =======================================================================
+         Audience & Distribution Metrics Widget (Thorvon Talent)
+         Positioned directly below the navigation bar and before homepage hero.
+         All metrics maintained centrally in metrics-config.js.
+         ======================================================================= -->
+    <section class="metrics-widget-section" id="audienceMetrics" aria-label="Audience and Distribution Metrics">
+      <div class="container">
+        <div class="metrics-widget-card">
+          <!-- Widget Header: Verification Badge, Reporting Period & Audit Metadata -->
+          <div class="metrics-widget-header">
+            <div class="metrics-badge">
+              <span class="metrics-badge-dot"></span>
+              <span class="metrics-badge-text" id="metricsBadgeText">Audience &amp; Distribution Verified Telemetry</span>
+            </div>
+            <div class="metrics-period-meta">
+              <span class="metrics-meta-item">
+                <span class="meta-label">Reporting Period:</span>
+                <span class="meta-val" id="metricsReportingPeriod">Last 28 Days (Sep 15 – Oct 12, 2026)</span>
+              </span>
+              <span class="metrics-meta-sep">•</span>
+              <span class="metrics-meta-item">
+                <span class="meta-label">Updated:</span>
+                <span class="meta-val" id="metricsLastUpdated">October 13, 2026</span>
+              </span>
+            </div>
+          </div>
+
+          <!-- 4 Primary Metric Cards Grid -->
+          <div class="metrics-grid" id="metricsCardsGrid">
+            <!-- Card 1: Collective follower base -->
+            <div class="metric-card" data-metric-id="collective_followers">
+              <span class="metric-eyebrow">Collective Follower Base</span>
+              <div class="metric-number-wrap">
+                <span class="metric-number" data-target="2450000" data-format="abbreviated" data-suffix="+">2.4M+</span>
+              </div>
+              <p class="metric-desc">Cross-platform audience across YouTube, Instagram, and LinkedIn</p>
+            </div>
+
+            <!-- Card 2: Aggregated reported reach over last 28 days -->
+            <div class="metric-card" data-metric-id="reported_reach">
+              <span class="metric-eyebrow">28-Day Aggregated Reach</span>
+              <div class="metric-number-wrap">
+                <span class="metric-number" data-target="14800000" data-format="abbreviated" data-suffix="+">14.8M+</span>
+              </div>
+              <p class="metric-desc">Aggregated gross platform reach reported across the roster</p>
+            </div>
+
+            <!-- Card 3: Represented creator talents -->
+            <div class="metric-card" data-metric-id="creator_talents">
+              <span class="metric-eyebrow">Represented Creator Talents</span>
+              <div class="metric-number-wrap">
+                <span class="metric-number" data-target="18" data-format="integer" data-suffix="">18</span>
+              </div>
+              <p class="metric-desc">Voices, podcast hosts, and specialists under management</p>
+            </div>
+
+            <!-- Card 4: Active partner media pages -->
+            <div class="metric-card" data-metric-id="partner_pages">
+              <span class="metric-eyebrow">Active Partner Media Pages</span>
+              <div class="metric-number-wrap">
+                <span class="metric-number" data-target="34" data-format="integer" data-suffix="+">34+</span>
+              </div>
+              <p class="metric-desc">Thorvon Media distribution pages &amp; community channels</p>
+            </div>
+          </div>
+
+          <!-- Combined Network Engagement Summary (Last 28 Days) -->
+          <div class="metrics-engagement-summary" id="metricsEngagementSummary">
+            <div class="engagement-summary-stats">
+              <div class="engagement-stat-item">
+                <span class="engagement-stat-label">Compatible Network Interactions</span>
+                <span class="engagement-stat-value" id="metricsInteractions" data-target="782000" data-format="abbreviated" data-suffix="+">782K+</span>
+              </div>
+              <div class="engagement-stat-item">
+                <span class="engagement-stat-label">Reach-Based Engagement Rate</span>
+                <span class="engagement-stat-value highlight-lime" id="metricsEngagementRate" data-target="5.28" data-format="percentage">5.28%</span>
+              </div>
+            </div>
+            <div class="engagement-summary-note">
+              <p class="engagement-note-accounts" id="metricsAccountScope">
+                <strong>Roster Scope:</strong> 18 represented creator rosters + 34 Thorvon Media distribution partner pages.
+              </p>
+              <p class="engagement-note-disclaimer" id="metricsDisclaimer">
+                Figures are compiled from authentic, native platform analytics across active creator accounts. Reach denotes gross platform exposures across the 28-day window and does not represent an unduplicated unique audience count.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
          Section 1 — Hero Section (Uncluttered, Confident, Clean)
-         Headline: "Your Talent. Our Network. Bigger Opportunities."
-         Supporting text: "Your brand deserves more than just content."
+         Headline matching reference image:
+         Line 1: Your Talent. Our (Our in lime)
+         Line 2: Network. Bigger (Network. in lime)
+         Line 3: Opportunities. (in white)
          ======================================================================= -->
     <section class="hero-section" id="hero">
       <div class="container">
@@ -105,12 +198,18 @@
           </div>
 
           <h1 class="hero-headline kinetic-heading" aria-label="Your Talent. Our Network. Bigger Opportunities.">
-            <span class="word-mask"><span class="reveal-word" style="--w-idx: 0">Your</span></span>
-            <span class="word-mask"><span class="reveal-word" style="--w-idx: 1">Talent.</span></span>
-            <span class="word-mask"><span class="reveal-word highlight-lime" style="--w-idx: 2">Our</span></span>
-            <span class="word-mask"><span class="reveal-word highlight-lime" style="--w-idx: 3">Network.</span></span>
-            <span class="word-mask"><span class="reveal-word" style="--w-idx: 4">Bigger</span></span>
-            <span class="word-mask"><span class="reveal-word" style="--w-idx: 5">Opportunities.</span></span>
+            <span class="hero-title-line">
+              <span class="word-mask"><span class="reveal-word" style="--w-idx: 0">Your</span></span>
+              <span class="word-mask"><span class="reveal-word" style="--w-idx: 1">Talent.</span></span>
+              <span class="word-mask"><span class="reveal-word highlight-lime" style="--w-idx: 2">Our</span></span>
+            </span>
+            <span class="hero-title-line">
+              <span class="word-mask"><span class="reveal-word highlight-lime" style="--w-idx: 3">Network.</span></span>
+              <span class="word-mask"><span class="reveal-word" style="--w-idx: 4">Bigger</span></span>
+            </span>
+            <span class="hero-title-line">
+              <span class="word-mask"><span class="reveal-word" style="--w-idx: 5">Opportunities.</span></span>
+            </span>
           </h1>
 
           <p class="hero-supporting-line">
@@ -865,6 +964,8 @@
   <!-- Toast Notification Container -->
   <div class="toast-container" id="toastContainer" aria-live="polite"></div>
 
+  <!-- Metrics Configuration Data & Controller -->
+  <script src="metrics-config.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
