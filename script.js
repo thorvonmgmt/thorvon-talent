@@ -17,19 +17,18 @@
 // 1. Core Configuration & Channels
 // --------------------------------------------------------------------------
 const AppConfig = {
-  // Web3Forms API Key for automated submission delivery
-  // Replace with your free key from web3forms.com, or leave for instant mailto fallback
-  WEB3FORMS_ACCESS_KEY: 'YOUR_WEB3FORMS_ACCESS_KEY',
+  FORMSUBMIT_ENDPOINT: 'https://formsubmit.co/ajax/thorvonmedia@gmail.com',
 
   CONTACT: {
     PHONE: '+916000156191',
     PHONE_DISPLAY: '+91 60001 56191',
     PHONE_LINK: 'tel:+916000156191',
-    WHATSAPP: '+917002889463',
-    WHATSAPP_DISPLAY: '+91 70028 89463',
-    WHATSAPP_LINK: 'https://wa.me/917002889463',
+    WHATSAPP: '+916000156191',
+    WHATSAPP_DISPLAY: '+91 60001 56191',
+    WHATSAPP_LINK: 'https://wa.me/916000156191',
     EMAIL_PRIMARY: 'thorvonmedia@gmail.com',
-    EMAIL_RECRUITMENT: 'thorvonmgmt@gmail.com',
+    EMAIL_RECRUITMENT: 'thorvonmedia@gmail.com',
+    EMAIL_ENTRIES: 'thorvonmedia@gmail.com',
     INSTAGRAM_LINK: 'https://instagram.com/thorvonmedia'
   }
 };
@@ -350,14 +349,15 @@ async function handleFormSubmit(form, formType) {
 
   if (submitBtn) {
     submitBtn.disabled = true;
-    submitBtn.innerHTML = 'Submitting... <span class="arrow">⌛</span>';
+    submitBtn.innerHTML = 'Transmitting... <span class="arrow">⌛</span>';
   }
 
   const formData = new FormData(form);
   const data = Object.fromEntries(formData.entries());
 
-  let targetEmail = AppConfig.CONTACT.EMAIL_RECRUITMENT;
-  let subjectPrefix = 'Thorvon Talent';
+  // All entries strictly route to thorvonmedia@gmail.com
+  const targetEmail = AppConfig.CONTACT.EMAIL_ENTRIES || 'thorvonmedia@gmail.com';
+  let subjectPrefix = 'Thorvon Talent Entry';
   let formattedSummary = '';
 
   const timestamp = new Date().toLocaleString('en-US', {
@@ -367,7 +367,6 @@ async function handleFormSubmit(form, formType) {
   }) + ' UTC';
 
   if (formType === 'creator') {
-    targetEmail = AppConfig.CONTACT.EMAIL_RECRUITMENT;
     subjectPrefix = `Creator Application: ${data.name || 'Creator'}`;
     formattedSummary = [
       'THORVON TALENT — CREATOR APPLICATION',
@@ -378,10 +377,10 @@ async function handleFormSubmit(form, formType) {
       `Profile Link / Handle: ${data.profile_url || 'N/A'}`,
       `Content Niche: ${data.niche || 'N/A'}`,
       `Introduction: ${data.introduction || 'None provided'}`,
+      `Target Inbox: ${targetEmail}`,
       `Submitted: ${timestamp}`
     ].join('\n');
   } else if (formType === 'brand') {
-    targetEmail = AppConfig.CONTACT.EMAIL_PRIMARY;
     subjectPrefix = `Brand Partnership: ${data.brand_name || 'Brand'}`;
     formattedSummary = [
       'THORVON TALENT — BRAND PARTNERSHIP INQUIRY',
@@ -391,10 +390,10 @@ async function handleFormSubmit(form, formType) {
       `Work Email: ${data.work_email || 'N/A'}`,
       `Website: ${data.website || 'N/A'}`,
       `Campaign Brief: ${data.campaign_brief || 'N/A'}`,
+      `Target Inbox: ${targetEmail}`,
       `Submitted: ${timestamp}`
     ].join('\n');
   } else if (formType === 'career') {
-    targetEmail = AppConfig.CONTACT.EMAIL_RECRUITMENT;
     subjectPrefix = `Job Application: ${data.role_name || 'Role'} — ${data.name || 'Candidate'}`;
     formattedSummary = [
       'THORVON MEDIA — JOB APPLICATION',
@@ -404,6 +403,7 @@ async function handleFormSubmit(form, formType) {
       `Email Address: ${data.email || 'N/A'}`,
       `Portfolio Link: ${data.portfolio || 'N/A'}`,
       `Introduction: ${data.introduction || 'N/A'}`,
+      `Target Inbox: ${targetEmail}`,
       `Submitted: ${timestamp}`
     ].join('\n');
   }
@@ -413,31 +413,31 @@ async function handleFormSubmit(form, formType) {
   const mailtoUrl = `mailto:${targetEmail}?subject=${mailtoSubject}&body=${mailtoBody}`;
 
   let deliverySuccess = false;
-  const hasKey = AppConfig.WEB3FORMS_ACCESS_KEY && AppConfig.WEB3FORMS_ACCESS_KEY !== 'YOUR_WEB3FORMS_ACCESS_KEY';
 
-  if (hasKey) {
-    try {
-      const response = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify({
-          access_key: AppConfig.WEB3FORMS_ACCESS_KEY,
-          from_name: 'Thorvon Talent',
-          subject: subjectPrefix,
-          email: data.contact || data.work_email || data.email || targetEmail,
-          name: data.name || data.contact_name || 'Visitor',
-          message: formattedSummary
-        })
-      });
+  // 1. Direct automated background delivery via FormSubmit
+  try {
+    const response = await fetch(`https://formsubmit.co/ajax/${targetEmail}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        _subject: subjectPrefix,
+        _template: 'table',
+        _captcha: 'false',
+        _replyto: data.contact || data.work_email || data.email || targetEmail,
+        ...data,
+        summary: formattedSummary
+      })
+    });
 
-      const res = await response.json();
-      if (res.success) deliverySuccess = true;
-    } catch (err) {
-      console.warn('[Web3Forms Delivery Fallback]:', err);
+    const res = await response.json();
+    if (res.success === true || res.success === 'true') {
+      deliverySuccess = true;
     }
+  } catch (err) {
+    console.warn('[FormSubmit Notice]:', err);
   }
 
   if (submitBtn) {
@@ -456,18 +456,18 @@ async function handleFormSubmit(form, formType) {
   const mailtoBtn = document.getElementById('dispatchMailtoBtn');
 
   if (deliverySuccess) {
-    showToast('Application Transmitted', 'Your details have been received by Thorvon Talent.', 'success');
+    showToast('Entry Received', `Your submission has been securely delivered to ${targetEmail}.`, 'success');
     if (dispatchTitle) dispatchTitle.textContent = 'Application Received';
     if (dispatchMsg) {
-      dispatchMsg.textContent = `Thank you. Our talent management team will review your application and respond if there is a suitable opportunity.`;
+      dispatchMsg.textContent = `Thank you. Your submission has been securely delivered to ${targetEmail}. Our talent management team will review your application and respond within 24–48 hours.`;
     }
     if (failsafeBox) failsafeBox.style.display = 'none';
     if (mailtoBtn) mailtoBtn.style.display = 'none';
   } else {
-    showToast('Inquiry Formatted', 'Ready for direct transmission to our inbox.', 'info');
+    showToast('Entry Formatted', `Routing to ${targetEmail}.`, 'info');
     if (dispatchTitle) dispatchTitle.textContent = 'Application Ready to Send';
     if (dispatchMsg) {
-      dispatchMsg.textContent = `Your application has been formatted for our executive inbox at ${targetEmail}. Click below to transmit via your email client or copy the summary.`;
+      dispatchMsg.textContent = `Your entry has been formatted for our inbox at ${targetEmail}. Transmit via your email client below or copy the summary.`;
     }
     if (failsafeBox) failsafeBox.style.display = 'block';
     if (preEl) preEl.textContent = formattedSummary;
