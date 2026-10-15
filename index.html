@@ -139,87 +139,6 @@
     </section>
 
     <!-- =======================================================================
-         Section 2 — Verified Network Reach & Audience
-         Clean, minimalist, mobile-friendly telemetry strip proving "Our Network".
-         Maintained in metrics-config.js.
-         ======================================================================= -->
-    <section class="metrics-widget-section" id="audienceMetrics" aria-label="Audience and Distribution Metrics">
-      <div class="container">
-        <div class="telemetry-hud" id="telemetryHud">
-          <!-- Clean HUD Top Bar -->
-          <div class="hud-top-bar">
-            <div class="hud-status-badge">
-              <span class="hud-pulse-radar">
-                <span class="radar-ring"></span>
-                <span class="radar-dot"></span>
-              </span>
-              <span class="hud-status-text" id="metricsBadgeText">Verified Network Telemetry</span>
-            </div>
-            <div class="hud-meta-group">
-              <span class="hud-meta-pill" id="metricsReportingPeriod">Last 28 Days (Sep 15 – Oct 12, 2026)</span>
-              <span class="hud-meta-sep">•</span>
-              <span class="hud-meta-pill" id="metricsLastUpdated">Updated Oct 13, 2026</span>
-            </div>
-          </div>
-
-          <!-- 4 Metrics Grid: Desktop 4 Cols | Mobile 2x2 Clean Cards -->
-          <div class="hud-metrics-grid" id="metricsCardsGrid">
-            <!-- Metric 01 -->
-            <div class="hud-metric-cell" data-metric-id="collective_followers">
-              <span class="hud-cell-tag">Audience</span>
-              <div class="hud-metric-val" data-target="2450000" data-format="abbreviated" data-suffix="+">2.4M+</div>
-              <div class="hud-cell-label">Collective Follower Base</div>
-              <div class="hud-cell-sub">Cross-platform YouTube, IG &amp; LinkedIn</div>
-            </div>
-
-            <!-- Metric 02 -->
-            <div class="hud-metric-cell" data-metric-id="reported_reach">
-              <span class="hud-cell-tag">Reach (28D)</span>
-              <div class="hud-metric-val" data-target="14800000" data-format="abbreviated" data-suffix="+">14.8M+</div>
-              <div class="hud-cell-label">Aggregated Gross Reach</div>
-              <div class="hud-cell-sub">Platform impressions across roster</div>
-            </div>
-
-            <!-- Metric 03 -->
-            <div class="hud-metric-cell" data-metric-id="creator_talents">
-              <span class="hud-cell-tag">Roster</span>
-              <div class="hud-metric-val" data-target="18" data-format="integer" data-suffix="">18</div>
-              <div class="hud-cell-label">Represented Creators</div>
-              <div class="hud-cell-sub">Managed voices &amp; category leaders</div>
-            </div>
-
-            <!-- Metric 04 -->
-            <div class="hud-metric-cell" data-metric-id="partner_pages">
-              <span class="hud-cell-tag">Distribution</span>
-              <div class="hud-metric-val" data-target="34" data-format="integer" data-suffix="+">34+</div>
-              <div class="hud-cell-label">Partner Media Pages</div>
-              <div class="hud-cell-sub">Thorvon Media publisher network</div>
-            </div>
-          </div>
-
-          <!-- Clean Engagement Summary Footer -->
-          <div class="hud-footer-bar" id="metricsEngagementSummary">
-            <div class="hud-engagement-cluster">
-              <div class="hud-stat-chip">
-                <span class="hud-chip-label">Interactions (28d):</span>
-                <span class="hud-chip-val" id="metricsInteractions" data-target="782000" data-format="abbreviated" data-suffix="+">782K+</span>
-              </div>
-              <div class="hud-chip-divider"></div>
-              <div class="hud-stat-chip">
-                <span class="hud-chip-label">Engagement Rate:</span>
-                <span class="hud-chip-val highlight-lime" id="metricsEngagementRate" data-target="5.28" data-format="percentage">5.28%</span>
-              </div>
-            </div>
-            <div class="hud-audit-note">
-              <span class="hud-note-scope" id="metricsAccountScope">18 represented creators + 34 Thorvon distribution channels.</span>
-              <span class="hud-note-disclaimer" id="metricsDisclaimer">Gross reach over 28 days; not unique visitors.</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- =======================================================================
          Section 2 — "Talent worth representing." (Exact Match to User Image 3)
          Clickable Niche Cards: Podcasts & Media, Business & Finance,
          Education & Infotainment, Beauty & Lifestyle, Comedy & Entertainment
@@ -548,12 +467,12 @@
         <div class="form-grid">
           <div class="form-group">
             <label class="form-label" for="creatorName">Full Name <span class="req">*</span></label>
-            <input type="text" id="creatorName" name="name" class="form-input" placeholder="e.g. Jordan Vance" required>
+            <input type="text" id="creatorName" name="name" class="form-input" placeholder="" required>
           </div>
 
           <div class="form-group">
             <label class="form-label" for="creatorContact">Email or Preferred Contact <span class="req">*</span></label>
-            <input type="text" id="creatorContact" name="contact" class="form-input" placeholder="email@domain.com or @handle" required>
+            <input type="text" id="creatorContact" name="contact" class="form-input" placeholder="" required>
           </div>
 
           <div class="form-group">
@@ -572,7 +491,7 @@
 
           <div class="form-group">
             <label class="form-label" for="creatorHandle">Profile Link / Handle <span class="req">*</span></label>
-            <input type="text" id="creatorHandle" name="profile_url" class="form-input" placeholder="instagram.com/yourhandle" required>
+            <input type="text" id="creatorHandle" name="profile_url" class="form-input" placeholder="" required>
           </div>
 
           <div class="form-group form-grid-full">
@@ -590,7 +509,7 @@
 
           <div class="form-group form-grid-full">
             <label class="form-label" for="creatorIntro">Short Introduction (Optional)</label>
-            <textarea id="creatorIntro" name="introduction" class="form-textarea" placeholder="Tell us briefly about your audience, your current milestones, or what you want from professional representation..."></textarea>
+            <textarea id="creatorIntro" name="introduction" class="form-textarea" placeholder=""></textarea>
           </div>
 
           <div class="form-group form-grid-full">
@@ -630,27 +549,27 @@
         <div class="form-grid">
           <div class="form-group">
             <label class="form-label" for="bmBrandName">Brand / Company Name <span class="req">*</span></label>
-            <input type="text" id="bmBrandName" name="brand_name" class="form-input" placeholder="e.g. Acme Studio" required>
+            <input type="text" id="bmBrandName" name="brand_name" class="form-input" placeholder="" required>
           </div>
 
           <div class="form-group">
             <label class="form-label" for="bmContactName">Contact Person <span class="req">*</span></label>
-            <input type="text" id="bmContactName" name="contact_name" class="form-input" placeholder="e.g. Rachel Adams" required>
+            <input type="text" id="bmContactName" name="contact_name" class="form-input" placeholder="" required>
           </div>
 
           <div class="form-group">
             <label class="form-label" for="bmWorkEmail">Work Email <span class="req">*</span></label>
-            <input type="email" id="bmWorkEmail" name="work_email" class="form-input" placeholder="rachel@acmestudio.com" required>
+            <input type="email" id="bmWorkEmail" name="work_email" class="form-input" placeholder="" required>
           </div>
 
           <div class="form-group">
             <label class="form-label" for="bmWebsite">Website or Social Profile <span class="req">*</span></label>
-            <input type="url" id="bmWebsite" name="website" class="form-input" placeholder="https://acmestudio.com" required>
+            <input type="url" id="bmWebsite" name="website" class="form-input" placeholder="" required>
           </div>
 
           <div class="form-group form-grid-full">
             <label class="form-label" for="bmBrief">Campaign Objectives &amp; Target Creators <span class="req">*</span></label>
-            <textarea id="bmBrief" name="campaign_brief" class="form-textarea" placeholder="Describe the product or campaign, target audience, and preferred creator niches..." required></textarea>
+            <textarea id="bmBrief" name="campaign_brief" class="form-textarea" placeholder="" required></textarea>
           </div>
 
           <div class="form-group form-grid-full">
@@ -846,22 +765,22 @@
           <div class="form-grid">
             <div class="form-group">
               <label class="form-label" for="jaName">Full Name <span class="req">*</span></label>
-              <input type="text" id="jaName" name="name" class="form-input" placeholder="e.g. Marcus Miller" required>
+              <input type="text" id="jaName" name="name" class="form-input" placeholder="" required>
             </div>
 
             <div class="form-group">
               <label class="form-label" for="jaEmail">Email Address <span class="req">*</span></label>
-              <input type="email" id="jaEmail" name="email" class="form-input" placeholder="marcus@example.com" required>
+              <input type="email" id="jaEmail" name="email" class="form-input" placeholder="" required>
             </div>
 
             <div class="form-group form-grid-full">
               <label class="form-label" for="jaPortfolio">Portfolio, Drive, or LinkedIn URL <span class="req">*</span></label>
-              <input type="url" id="jaPortfolio" name="portfolio" class="form-input" placeholder="https://portfolio.com or drive.google.com/..." required>
+              <input type="url" id="jaPortfolio" name="portfolio" class="form-input" placeholder="" required>
             </div>
 
             <div class="form-group form-grid-full">
               <label class="form-label" for="jaIntro">Short Introduction &amp; Experience <span class="req">*</span></label>
-              <textarea id="jaIntro" name="introduction" class="form-textarea" placeholder="Briefly highlight your relevant experience and why you are interested in this position..." required></textarea>
+              <textarea id="jaIntro" name="introduction" class="form-textarea" placeholder="" required></textarea>
             </div>
 
             <div class="form-group form-grid-full">
@@ -955,8 +874,6 @@
   <!-- Toast Notification Container -->
   <div class="toast-container" id="toastContainer" aria-live="polite"></div>
 
-  <!-- Metrics Configuration Data & Controller -->
-  <script src="metrics-config.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
