@@ -22,10 +22,10 @@
   <meta name="twitter:description" content="Your brand deserves more than just content. Less reading. More experiencing.">
   <meta name="twitter:image" content="assets/logo-white.png">
 
-  <!-- Thorvon Media Typography: Manrope & Inter (Apple-Inspired Polish) -->
+  <!-- Opraah-Style Editorial Typography: Bricolage Grotesque & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Favicon & Touch Icons -->
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
@@ -33,7 +33,94 @@
   <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
   <link rel="shortcut icon" href="favicon.ico">
 
-  <link rel="stylesheet" href="styles.css?v=5.0">
+  <link rel="stylesheet" href="styles.css?v=4.0">
+  <style>
+    /* Instant Static Footer Enforcement (Bypasses any browser cache) */
+    .site-footer {
+      background-color: #000000 !important;
+      border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+      padding: clamp(3.5rem, 6vw, 5rem) 0 2.5rem !important;
+      position: relative;
+    }
+    .footer-inner {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      gap: clamp(2.5rem, 4vw, 3.25rem) !important;
+    }
+    .footer-brand-info {
+      max-width: 540px !important;
+    }
+    .footer-brand-info .brand-group {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 0.75rem !important;
+    }
+    .footer-brand-info .brand-logo-img {
+      height: 28px !important;
+      width: auto !important;
+    }
+    .footer-brand-statement {
+      font-size: 1.05rem !important;
+      color: #94a3b8 !important;
+      margin-top: 1.15rem !important;
+      line-height: 1.5 !important;
+      font-weight: 400 !important;
+      max-width: 520px !important;
+    }
+    .footer-links-group {
+      display: flex !important;
+      align-items: flex-start !important;
+      gap: clamp(3rem, 7vw, 6.5rem) !important;
+      flex-wrap: wrap !important;
+      width: 100% !important;
+    }
+    .footer-nav-col {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 1.1rem !important;
+      min-width: 170px !important;
+    }
+    .footer-nav-heading {
+      font-size: 0.78rem !important;
+      font-weight: 700 !important;
+      color: #5c708a !important;
+      letter-spacing: 0.08em !important;
+      text-transform: uppercase !important;
+      margin-bottom: 0.25rem !important;
+    }
+    .footer-nav-link {
+      font-size: 1.05rem !important;
+      color: #d2dbe5 !important;
+      line-height: 1.35 !important;
+      font-weight: 450 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 0.4rem !important;
+      text-decoration: none !important;
+    }
+    .footer-nav-link:hover {
+      color: #b8ff00 !important;
+    }
+    .footer-bottom-row {
+      display: flex !important;
+      justify-content: space-between !important;
+      align-items: center !important;
+      flex-wrap: wrap !important;
+      gap: 1.25rem !important;
+      padding-top: 2rem !important;
+      border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
+      font-size: 0.85rem !important;
+      color: #64748b !important;
+      width: 100% !important;
+    }
+    @media (max-width: 480px) {
+      .footer-links-group {
+        flex-direction: column !important;
+        gap: 2rem !important;
+      }
+    }
+  </style>
 </head>
 <body>
   <!-- Top Scroll Progress Line (Electric Lime) -->
@@ -55,8 +142,8 @@
         <ul class="nav-links">
           <li><a href="#services" class="nav-link">What We Do</a></li>
           <li><a href="#talent-worth" class="nav-link">Talent</a></li>
-          <li><a href="#" class="nav-link" data-action="open-brand-modal">Brand Partnerships</a></li>
-          <li><a href="#" class="nav-link" data-action="open-careers-modal">Careers</a></li>
+          <li><a href="#choose" class="nav-link">Partnerships</a></li>
+          <li><a href="#careers" class="nav-link">Careers</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
         <button class="btn btn-lime nav-cta" data-action="open-creator-modal">
@@ -78,8 +165,8 @@
           <li><a href="#hero" class="mobile-nav-link">Home</a></li>
           <li><a href="#services" class="mobile-nav-link">What We Do</a></li>
           <li><a href="#talent-worth" class="mobile-nav-link">Talent</a></li>
-          <li><a href="#" class="mobile-nav-link" data-action="open-brand-modal">Brand Partnerships</a></li>
-          <li><a href="#" class="mobile-nav-link" data-action="open-careers-modal">Careers</a></li>
+          <li><a href="#choose" class="mobile-nav-link">Partnerships</a></li>
+          <li><a href="#careers" class="mobile-nav-link">Careers</a></li>
           <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
         </ul>
         <div class="mobile-cta-wrap">
@@ -93,11 +180,7 @@
 
   <main>
     <!-- =======================================================================
-         Section 1 — Hero Section (Simplified, Natural, Premium Messaging)
-         Headline: Your Talent. Better Opportunities.
-         Supporting: We manage your presence, represent your interests, and help you pursue the right opportunities.
-         Primary CTA: Get Represented
-         Secondary CTA: Let's Talk
+         Section 1 — Hero Section (Opraah Agency Polish: Less Text, Bold Impact)
          ======================================================================= -->
     <section class="hero-section" id="hero">
       <div class="container">
@@ -106,27 +189,31 @@
             <span class="dot-indicator"></span> Creator Management &bull; Thorvon Media
           </div>
 
-          <h1 class="hero-headline kinetic-heading" aria-label="Your Talent. Better Opportunities.">
+          <h1 class="hero-headline kinetic-heading" aria-label="Your Talent. Our Network. Bigger Opportunities.">
             <span class="hero-title-line">
               <span class="word-mask"><span class="reveal-word" style="--w-idx: 0">Your</span></span>
-              <span class="word-mask"><span class="reveal-word highlight-lime" style="--w-idx: 1">Talent.</span></span>
+              <span class="word-mask"><span class="reveal-word" style="--w-idx: 1">Talent.</span></span>
+              <span class="word-mask"><span class="reveal-word highlight-lime" style="--w-idx: 2">Our</span></span>
             </span>
             <span class="hero-title-line">
-              <span class="word-mask"><span class="reveal-word" style="--w-idx: 2">Better</span></span>
-              <span class="word-mask"><span class="reveal-word highlight-lime" style="--w-idx: 3">Opportunities.</span></span>
+              <span class="word-mask"><span class="reveal-word highlight-lime" style="--w-idx: 3">Network.</span></span>
+              <span class="word-mask"><span class="reveal-word" style="--w-idx: 4">Bigger</span></span>
+            </span>
+            <span class="hero-title-line">
+              <span class="word-mask"><span class="reveal-word" style="--w-idx: 5">Opportunities.</span></span>
             </span>
           </h1>
 
           <p class="hero-supporting-line">
-            We manage your presence, represent your interests, and help you pursue the right opportunities.
+            Creator management, brand partnerships, and short-form distribution for category-defining talent.
           </p>
 
           <div class="hero-actions">
             <button class="btn btn-lime" data-action="open-creator-modal">
               Get Represented <span class="arrow">→</span>
             </button>
-            <a href="#contact" class="btn btn-secondary">
-              Let's Talk
+            <a href="#services" class="btn btn-secondary">
+              What We Do
             </a>
           </div>
         </div>
@@ -134,7 +221,7 @@
     </section>
 
     <!-- =======================================================================
-         Section 2 — Infinite Brand & Platform Marquee (Apple-Grade Agency Ticker)
+         Section 2 — Infinite Brand & Platform Marquee (Opraah Signature Ticker)
          ======================================================================= -->
     <section class="marquee-section" aria-label="Partner Platforms & Brands">
       <div class="marquee-label">
@@ -166,12 +253,7 @@
     </section>
 
     <!-- =======================================================================
-         Section 3 — What We Do (The 4 Core Functions)
-         01: Account Management
-         02: Profile Assistance
-         03: Dedicated Talent Manager
-         04: Support for New IPs
-         No demo / example boxes.
+         Section 3 — What We Do (4-Pillar Agency Bento Grid)
          ======================================================================= -->
     <section class="what-we-do-section" id="services">
       <div class="container">
@@ -179,77 +261,76 @@
           <div class="eyebrow">
             <span class="dot-indicator"></span> What We Do
           </div>
-          <h2 class="section-headline">Four core services built around your growth.</h2>
+          <h2 class="section-headline">Everything you need to turn influence into enterprise.</h2>
         </div>
 
-        <div class="services-grid">
-          <!-- 01 Account Management -->
-          <div class="service-card">
-            <div class="service-card-header">
-              <span class="service-num">01</span>
-              <div class="service-icon-wrap">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="2" y="3" width="20" height="14" rx="2"/>
-                  <line x1="8" y1="21" x2="16" y2="21"/>
-                  <line x1="12" y1="17" x2="12" y2="21"/>
-                </svg>
-              </div>
+        <div class="bento-grid">
+          <!-- 01 Creator Management -->
+          <div class="bento-card">
+            <div class="bento-card-top">
+              <span class="bento-num">01 // MANAGEMENT</span>
+              <span class="bento-tag">360° Representation</span>
             </div>
-            <h3 class="service-title">Account Management</h3>
-            <p class="service-desc">
-              We manage your social media accounts and help maintain a consistent, professional online presence.
+            <h3 class="bento-title">Creator Management</h3>
+            <p class="bento-desc">
+              Your career is the brief. We protect your vision, manage operations, negotiate contracts, and establish long-term category equity.
             </p>
+            <div class="bento-pills">
+              <span class="mini-pill">Career Architecture</span>
+              <span class="mini-pill">Deal Defense</span>
+              <span class="mini-pill">Legal Protection</span>
+            </div>
           </div>
 
-          <!-- 02 Profile Assistance -->
-          <div class="service-card">
-            <div class="service-card-header">
-              <span class="service-num">02</span>
-              <div class="service-icon-wrap">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
-                  <circle cx="12" cy="7" r="4"/>
-                </svg>
-              </div>
+          <!-- 02 Brand Partnerships -->
+          <div class="bento-card">
+            <div class="bento-card-top">
+              <span class="bento-num">02 // PARTNERSHIPS</span>
+              <span class="bento-tag">Commercial Growth</span>
             </div>
-            <h3 class="service-title">Profile Assistance</h3>
-            <p class="service-desc">
-              When needed, we assist with running your profiles, coordinating content, and managing day-to-day social media activities.
+            <h3 class="bento-title">Brand Partnerships</h3>
+            <p class="bento-desc">
+              The right creator. The right brief. High-impact commercial alignments that feel organic, protect audience trust, and convert.
             </p>
+            <div class="bento-pills">
+              <span class="mini-pill">Sponsorship Retainers</span>
+              <span class="mini-pill">Vetted Partners</span>
+              <span class="mini-pill">End-to-End Delivery</span>
+            </div>
           </div>
 
-          <!-- 03 Dedicated Talent Manager -->
-          <div class="service-card">
-            <div class="service-card-header">
-              <span class="service-num">03</span>
-              <div class="service-icon-wrap">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
-                  <circle cx="9" cy="7" r="4"/>
-                  <path d="m16 11 2 2 4-4"/>
-                </svg>
-              </div>
+          <!-- 03 Content & Clipping -->
+          <div class="bento-card">
+            <div class="bento-card-top">
+              <span class="bento-num">03 // PRODUCTION</span>
+              <span class="bento-tag">Post-Production</span>
             </div>
-            <h3 class="service-title">Dedicated Talent Manager</h3>
-            <p class="service-desc">
-              Every represented creator has a dedicated manager who works on their behalf to identify, negotiate, and pursue suitable brand deals and commercial opportunities.
+            <h3 class="bento-title">Clipping &amp; Short-Form</h3>
+            <p class="bento-desc">
+              From raw footage to viral shorts. Our dedicated video editors turn podcasts and interviews into high-retention compound reach.
             </p>
+            <div class="bento-pills">
+              <span class="mini-pill">Retention Hooks</span>
+              <span class="mini-pill">Kinetic Captions</span>
+              <span class="mini-pill">Shorts &amp; Reels</span>
+            </div>
           </div>
 
-          <!-- 04 Support for New IPs -->
-          <div class="service-card">
-            <div class="service-card-header">
-              <span class="service-num">04</span>
-              <div class="service-icon-wrap">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-              </div>
+          <!-- 04 Network Syndication -->
+          <div class="bento-card">
+            <div class="bento-card-top">
+              <span class="bento-num">04 // DISTRIBUTION</span>
+              <span class="bento-tag">Media Footprint</span>
             </div>
-            <h3 class="service-title">Support for New IPs</h3>
-            <p class="service-desc">
-              When creators develop a new intellectual property (IP), original content format, show, podcast, or creative venture, we support its development and help explore relevant opportunities.
+            <h3 class="bento-title">Network Distribution</h3>
+            <p class="bento-desc">
+              Cross-platform syndication across podcast feeds, YouTube, LinkedIn, and media channels powered by Thorvon Media infrastructure.
             </p>
+            <div class="bento-pills">
+              <span class="mini-pill">Omnichannel Feeds</span>
+              <span class="mini-pill">Podcast Networks</span>
+              <span class="mini-pill">Editorial PR</span>
+            </div>
           </div>
         </div>
       </div>
@@ -342,7 +423,7 @@
           <p class="craft-possibilities-text">
             Your craft. Our representation. Bigger possibilities.
           </p>
-          <a href="#representation" class="scroll-arrow-btn" aria-label="Scroll to Representation">
+          <a href="#choose" class="scroll-arrow-btn" aria-label="Scroll to Partnerships">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <line x1="12" y1="5" x2="12" y2="19"></line>
               <polyline points="19 12 12 19 5 12"></polyline>
@@ -353,54 +434,99 @@
     </section>
 
     <!-- =======================================================================
-         Section 5 — Creator Acquisition Priority Callout
+         Section 5 — Opraah-Style Split: "Let's make something worth talking about."
          ======================================================================= -->
-    <section class="creator-focus-section" id="representation">
+    <section class="choose-section" id="choose">
       <div class="container">
-        <div class="creator-focus-card">
-          <div class="creator-focus-content">
-            <div class="eyebrow">
-              <span class="dot-indicator"></span> Representation Architecture
+        <div class="section-header-centered">
+          <div class="eyebrow" style="justify-content: center;">
+            <span class="dot-indicator"></span> Choose Your Pathway
+          </div>
+          <h2 class="section-headline">Let's make something worth talking about.</h2>
+        </div>
+
+        <div class="choose-grid">
+          <!-- Card A: For Creators -->
+          <div class="choose-card">
+            <div>
+              <div class="choose-card-badge">FOR CREATORS</div>
+              <h3 class="choose-card-title">Ready to scale beyond content?</h3>
+              <p class="choose-card-desc">
+                Partner with an elite management team that handles operations, brand retainers, and short-form clipping while you focus on creating.
+              </p>
             </div>
-            <h2 class="creator-focus-headline">Built for creators who value their time and vision.</h2>
-            <p class="creator-focus-desc">
-              From day-to-day profile assistance and contract negotiations to launching new original intellectual properties, our team works on your behalf to secure the right commercial opportunities.
-            </p>
-            <div class="creator-focus-actions">
-              <button class="btn btn-lime" data-action="open-creator-modal">
-                Get Represented <span class="arrow">→</span>
-              </button>
-              <a href="#contact" class="btn btn-secondary">
-                Let's Talk
-              </a>
+            <button class="btn btn-lime" data-action="open-creator-modal">
+              Apply for Representation <span class="arrow">→</span>
+            </button>
+          </div>
+
+          <!-- Card B: For Brands -->
+          <div class="choose-card">
+            <div>
+              <div class="choose-card-badge brand-badge">FOR BRANDS</div>
+              <h3 class="choose-card-title">Looking for authentic creator partnerships?</h3>
+              <p class="choose-card-desc">
+                Connect your brand with verified category authorities. Zero vanity metrics—only genuine audience alignment and proven campaign ROI.
+              </p>
             </div>
+            <button class="btn btn-secondary" data-action="open-brand-modal">
+              Work With Our Talent <span class="arrow">→</span>
+            </button>
           </div>
         </div>
       </div>
     </section>
 
     <!-- =======================================================================
-         Section 6 — Direct Communication ("Let's Talk")
+         Section 6 — Hiring Banner ("By the way, we are hiring!")
+         ======================================================================= -->
+    <section class="hiring-strip-section" id="careers">
+      <div class="container">
+        <div class="hiring-strip">
+          <div class="hiring-strip-info">
+            <div class="hiring-badge"><span class="dot-indicator"></span> WE'RE HIRING</div>
+            <h3 class="hiring-title">By the way, we are growing our agency team.</h3>
+            <div class="hiring-roles">
+              <span class="role-pill">Video Clippers</span>
+              <span class="role-pill">Social Media Managers</span>
+              <span class="role-pill">Brand Acquisition</span>
+              <span class="role-pill">Content Writers</span>
+            </div>
+          </div>
+          <div class="hiring-strip-action">
+            <button class="btn btn-secondary" data-action="open-careers-modal">
+              View Open Roles <span class="arrow">→</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         Section 7 — Minimal Final CTA
          ======================================================================= -->
     <section class="final-cta-section" id="contact">
       <div class="container">
         <div class="final-cta-content">
           <div class="eyebrow" style="justify-content: center;">
-            <span class="dot-indicator"></span> Direct Communication
+            <span class="dot-indicator"></span> Start What's Next
           </div>
           
-          <h2 class="final-cta-headline kinetic-heading" aria-label="Let's Talk.">
-            <span class="word-mask"><span class="reveal-word" style="--w-idx: 0">Let's</span></span>
-            <span class="word-mask"><span class="reveal-word highlight-lime" style="--w-idx: 1">Talk.</span></span>
+          <h2 class="final-cta-headline kinetic-heading" aria-label="Your Next Chapter Starts Here.">
+            <span class="word-mask"><span class="reveal-word" style="--w-idx: 0">Your</span></span>
+            <span class="word-mask"><span class="reveal-word" style="--w-idx: 1">Next</span></span>
+            <span class="word-mask"><span class="reveal-word highlight-lime" style="--w-idx: 2">Chapter</span></span>
+            <span class="word-mask"><span class="reveal-word" style="--w-idx: 3">Starts</span></span>
+            <span class="word-mask"><span class="reveal-word highlight-lime" style="--w-idx: 4">Here.</span></span>
           </h2>
 
           <p class="final-cta-supporting">
-            Reach our talent management and representation team directly.
+            Bring your talent. Let's build what's next.
           </p>
 
           <div class="final-cta-actions">
-            <button class="btn btn-lime" data-action="open-creator-modal" style="font-size: 1.05rem; padding: 1rem 2rem;">
-              Get Represented <span class="arrow">→</span>
+            <button class="btn btn-lime" data-action="open-creator-modal" style="font-size: 1.08rem; padding: 1.05rem 2.25rem;">
+              Join Thorvon Talent <span class="arrow">→</span>
             </button>
             <a href="https://wa.me/917002889463" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
               WhatsApp Our Team
@@ -412,62 +538,52 @@
   </main>
 
   <!-- =======================================================================
-       Static Site Footer (Horizontal Desktop, Responsive Compact Mobile Grid)
+       Minimal Site Footer
        ======================================================================= -->
   <footer class="site-footer">
-    <div class="container footer-container">
-      <div class="footer-main-grid">
-        <!-- Brand Block Column -->
-        <div class="footer-brand-col">
-          <a href="#top" class="brand-group" aria-label="Thorvon Talent Home">
-            <img src="assets/logo-white.png" alt="Thorvon Media" class="brand-logo-img">
-            <span class="division-badge-lime">TALENT</span>
-          </a>
-          <p class="footer-statement">
-            A creator management and talent partnerships division operating under Thorvon Media.
-          </p>
-          <a href="mailto:thorvonmedia@gmail.com" class="footer-email-link">
-            thorvonmedia@gmail.com
-          </a>
+    <div class="container footer-inner">
+      <!-- 1. Brand Block on Top -->
+      <div class="footer-brand-info">
+        <a href="#top" class="brand-group" aria-label="Thorvon Talent Home">
+          <img src="assets/logo-white.png" alt="Thorvon Media" class="brand-logo-img">
+          <span class="division-badge-lime">TALENT</span>
+        </a>
+        <p class="footer-brand-statement">
+          A creator management and talent partnerships division operating under Thorvon Media.
+        </p>
+      </div>
+
+      <!-- 2. Static 3-Column Navigation Block Directly Underneath -->
+      <div class="footer-links-group">
+        <div class="footer-nav-col">
+          <span class="footer-nav-heading">Platform</span>
+          <a href="#talent-worth" class="footer-nav-link">Talent Represented</a>
+          <a href="#journey" class="footer-nav-link">The Journey</a>
+          <a href="#" class="footer-nav-link" data-action="open-creator-modal">Get Represented</a>
         </div>
 
-        <!-- Links Grid: 3 columns on desktop, compact 2 columns on mobile -->
-        <div class="footer-links-grid">
-          <div class="footer-col">
-            <span class="footer-col-title">Platform</span>
-            <ul class="footer-col-list">
-              <li><a href="#services" class="footer-link">What We Do</a></li>
-              <li><a href="#talent-worth" class="footer-link">Talent Roster</a></li>
-              <li><a href="#" class="footer-link" data-action="open-creator-modal">Get Represented</a></li>
-            </ul>
-          </div>
+        <div class="footer-nav-col">
+          <span class="footer-nav-heading">Secondary Portals</span>
+          <a href="#" class="footer-nav-link" data-action="open-brand-modal">Brand Partnerships</a>
+          <a href="#" class="footer-nav-link" data-action="open-careers-modal">Careers at Thorvon</a>
+          <a href="mailto:thorvonmedia@gmail.com" class="footer-nav-link">thorvonmedia@gmail.com</a>
+        </div>
 
-          <div class="footer-col">
-            <span class="footer-col-title">Portals</span>
-            <ul class="footer-col-list">
-              <li><a href="#" class="footer-link" data-action="open-brand-modal">Brand Partnerships</a></li>
-              <li><a href="#" class="footer-link" data-action="open-careers-modal">Careers at Thorvon</a></li>
-              <li><a href="#" class="footer-link" data-action="open-privacy-modal">Privacy &amp; Data Consent</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-col">
-            <span class="footer-col-title">Direct</span>
-            <ul class="footer-col-list">
-              <li><a href="https://wa.me/917002889463" target="_blank" rel="noopener noreferrer" class="footer-link">WhatsApp Business &#8599;</a></li>
-              <li><a href="tel:+916000156191" class="footer-link">+91 60001 56191</a></li>
-              <li><a href="https://instagram.com/thorvonmedia" target="_blank" rel="noopener noreferrer" class="footer-link">Instagram &#8599;</a></li>
-            </ul>
-          </div>
+        <div class="footer-nav-col">
+          <span class="footer-nav-heading">Direct Channels</span>
+          <a href="https://wa.me/917002889463" target="_blank" rel="noopener noreferrer" class="footer-nav-link">WhatsApp Business &#8599;</a>
+          <a href="tel:+916000156191" class="footer-nav-link">+91 60001 56191</a>
+          <a href="https://instagram.com/thorvonmedia" target="_blank" rel="noopener noreferrer" class="footer-nav-link">Instagram &#8599;</a>
         </div>
       </div>
 
-      <div class="footer-bottom-bar">
-        <div class="footer-copyright">
+      <div class="footer-bottom-row">
+        <div>
           &copy; 2026 Thorvon Media. All rights reserved. Thorvon Talent is an operating division of Thorvon Media.
         </div>
-        <div class="footer-bottom-actions">
-          <a href="#top" class="footer-back-to-top">Back to Top ↑</a>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="#" class="footer-nav-link" data-action="open-privacy-modal">Privacy Policy &amp; Data Consent</a>
+          <a href="#top" class="footer-nav-link">Back to Top ↑</a>
         </div>
       </div>
     </div>
@@ -642,121 +758,107 @@
         
         <!-- Role 1 -->
         <div class="job-item-card" data-role="clipper">
-          <div class="job-item-body">
-            <div class="job-item-meta">
-              <span class="job-badge badge-lime">Urgent Hiring</span>
-              <span class="job-type">REMOTE &bull; FULL-TIME / PART-TIME</span>
+          <div>
+            <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.35rem;">
+              <span class="badge-tag badge-lime">Urgent Hiring</span>
+              <span style="font-size: 0.72rem; color: var(--color-text-muted);">REMOTE &bull; FULL-TIME / PART-TIME</span>
             </div>
             <h4 class="job-item-title">Clipper (Short-Form Video Editor)</h4>
             <p class="job-item-desc">High-retention video cutting, pacing, kinetic typography, and viral clip extraction.</p>
           </div>
-          <div class="job-item-action">
-            <button class="btn btn-secondary job-apply-btn" data-action="view-job-details" data-role="clipper">
-              Details &amp; Apply →
-            </button>
-          </div>
+          <button class="btn btn-secondary" style="padding: 0.6rem 1.25rem; font-size: 0.88rem;" data-action="view-job-details" data-role="clipper">
+            Details &amp; Apply →
+          </button>
         </div>
 
         <!-- Role 2 -->
         <div class="job-item-card" data-role="social-media-manager">
-          <div class="job-item-body">
-            <div class="job-item-meta">
-              <span class="job-badge badge-lime">Urgent Hiring</span>
-              <span class="job-type">REMOTE &bull; FULL-TIME</span>
+          <div>
+            <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.35rem;">
+              <span class="badge-tag badge-lime">Urgent Hiring</span>
+              <span style="font-size: 0.72rem; color: var(--color-text-muted);">REMOTE &bull; FULL-TIME</span>
             </div>
             <h4 class="job-item-title">Social Media Manager</h4>
             <p class="job-item-desc">Omnichannel feed ownership, native distribution, and high-converting audience growth.</p>
           </div>
-          <div class="job-item-action">
-            <button class="btn btn-secondary job-apply-btn" data-action="view-job-details" data-role="social-media-manager">
-              Details &amp; Apply →
-            </button>
-          </div>
+          <button class="btn btn-secondary" style="padding: 0.6rem 1.25rem; font-size: 0.88rem;" data-action="view-job-details" data-role="social-media-manager">
+            Details &amp; Apply →
+          </button>
         </div>
 
         <!-- Role 3 -->
         <div class="job-item-card" data-role="content-creator">
-          <div class="job-item-body">
-            <div class="job-item-meta">
-              <span class="job-badge badge-lime">Urgent Hiring</span>
-              <span class="job-type">REMOTE &bull; FULL / PART-TIME</span>
+          <div>
+            <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.35rem;">
+              <span class="badge-tag badge-lime">Urgent Hiring</span>
+              <span style="font-size: 0.72rem; color: var(--color-text-muted);">REMOTE &bull; FULL-TIME / PART-TIME</span>
             </div>
             <h4 class="job-item-title">Content Creator (On-Camera)</h4>
             <p class="job-item-desc">Charismatic on-camera storytelling, creative scripting, and viral concept development.</p>
           </div>
-          <div class="job-item-action">
-            <button class="btn btn-secondary job-apply-btn" data-action="view-job-details" data-role="content-creator">
-              Details &amp; Apply →
-            </button>
-          </div>
+          <button class="btn btn-secondary" style="padding: 0.6rem 1.25rem; font-size: 0.88rem;" data-action="view-job-details" data-role="content-creator">
+            Details &amp; Apply →
+          </button>
         </div>
 
         <!-- Role 4 -->
         <div class="job-item-card" data-role="brand-acquisition-head">
-          <div class="job-item-body">
-            <div class="job-item-meta">
-              <span class="job-badge badge-outline">Leadership Role</span>
-              <span class="job-type">REMOTE &bull; FULL-TIME</span>
+          <div>
+            <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.35rem;">
+              <span class="badge-tag badge-outline">Leadership Role</span>
+              <span style="font-size: 0.72rem; color: var(--color-text-muted);">REMOTE &bull; FULL-TIME</span>
             </div>
             <h4 class="job-item-title">Creator &amp; Brand Acquisition Head</h4>
             <p class="job-item-desc">Leading creator talent scouting, strategic brand partnerships, and client acquisition.</p>
           </div>
-          <div class="job-item-action">
-            <button class="btn btn-secondary job-apply-btn" data-action="view-job-details" data-role="brand-acquisition-head">
-              Details &amp; Apply →
-            </button>
-          </div>
+          <button class="btn btn-secondary" style="padding: 0.6rem 1.25rem; font-size: 0.88rem;" data-action="view-job-details" data-role="brand-acquisition-head">
+            Details &amp; Apply →
+          </button>
         </div>
 
         <!-- Role 5 -->
         <div class="job-item-card" data-role="content-writers">
-          <div class="job-item-body">
-            <div class="job-item-meta">
-              <span class="job-badge badge-outline">Open Position</span>
-              <span class="job-type">REMOTE &bull; FULL-TIME</span>
+          <div>
+            <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.35rem;">
+              <span class="badge-tag badge-outline">Open Position</span>
+              <span style="font-size: 0.72rem; color: var(--color-text-muted);">REMOTE &bull; FULL-TIME</span>
             </div>
             <h4 class="job-item-title">Content Writers</h4>
             <p class="job-item-desc">Clear, engaging writing for modern founders, press pitches, and newsletters.</p>
           </div>
-          <div class="job-item-action">
-            <button class="btn btn-secondary job-apply-btn" data-action="view-job-details" data-role="content-writers">
-              Details &amp; Apply →
-            </button>
-          </div>
+          <button class="btn btn-secondary" style="padding: 0.6rem 1.25rem; font-size: 0.88rem;" data-action="view-job-details" data-role="content-writers">
+            Details &amp; Apply →
+          </button>
         </div>
 
         <!-- Role 6 -->
         <div class="job-item-card" data-role="graphic-designers">
-          <div class="job-item-body">
-            <div class="job-item-meta">
-              <span class="job-badge badge-outline">Open Position</span>
-              <span class="job-type">REMOTE &bull; FULL-TIME</span>
+          <div>
+            <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.35rem;">
+              <span class="badge-tag badge-outline">Open Position</span>
+              <span style="font-size: 0.72rem; color: var(--color-text-muted);">REMOTE &bull; FULL-TIME</span>
             </div>
             <h4 class="job-item-title">Graphic Designers</h4>
             <p class="job-item-desc">Clean typography, social graphics, brand kits, and slide decks that stop the scroll.</p>
           </div>
-          <div class="job-item-action">
-            <button class="btn btn-secondary job-apply-btn" data-action="view-job-details" data-role="graphic-designers">
-              Details &amp; Apply →
-            </button>
-          </div>
+          <button class="btn btn-secondary" style="padding: 0.6rem 1.25rem; font-size: 0.88rem;" data-action="view-job-details" data-role="graphic-designers">
+            Details &amp; Apply →
+          </button>
         </div>
 
         <!-- Role 7 -->
         <div class="job-item-card" data-role="project-manager">
-          <div class="job-item-body">
-            <div class="job-item-meta">
-              <span class="job-badge badge-outline">Open Position</span>
-              <span class="job-type">REMOTE &bull; FULL-TIME</span>
+          <div>
+            <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.35rem;">
+              <span class="badge-tag badge-outline">Open Position</span>
+              <span style="font-size: 0.72rem; color: var(--color-text-muted);">REMOTE &bull; FULL-TIME</span>
             </div>
             <h4 class="job-item-title">Project Manager</h4>
             <p class="job-item-desc">Organizing creative timelines, keeping editors aligned, and ensuring seamless client delivery.</p>
           </div>
-          <div class="job-item-action">
-            <button class="btn btn-secondary job-apply-btn" data-action="view-job-details" data-role="project-manager">
-              Details &amp; Apply →
-            </button>
-          </div>
+          <button class="btn btn-secondary" style="padding: 0.6rem 1.25rem; font-size: 0.88rem;" data-action="view-job-details" data-role="project-manager">
+            Details &amp; Apply →
+          </button>
         </div>
 
       </div>
