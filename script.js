@@ -701,7 +701,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // View Job Details
-    const jobDetailBtn = e.target.closest('[data-action="view-job-details"]');
+    const jobDetailBtn = e.target.closest('[data-action="view-job-details"]') || e.target.closest('.job-item-card');
     if (jobDetailBtn) {
       e.preventDefault();
       const roleId = jobDetailBtn.getAttribute('data-role');
