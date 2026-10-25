@@ -372,7 +372,7 @@ ul {
 }
 
 .brand-logo-img {
-  height: clamp(23px, 2.8vw, 27px);
+  height: clamp(26px, 3.2vw, 32px);
   width: auto;
   display: block;
   object-fit: contain;
@@ -1684,7 +1684,7 @@ ul {
 }
 
 .footer-brand-info .brand-logo-img {
-  height: 28px;
+  height: 32px;
   width: auto;
 }
 
