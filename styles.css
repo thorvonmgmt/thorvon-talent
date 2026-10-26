@@ -649,6 +649,255 @@ ul {
   font-weight: 400;
 }
 
+
+/* --------------------------------------------------------------------------
+   Moving Managed Creator Roster Marquee (Curvy Boxes)
+   -------------------------------------------------------------------------- */
+.creator-marquee-wrap {
+  width: 100%;
+  margin: 2.5rem 0 3.25rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.creator-marquee-slider {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  padding: 1.25rem 0;
+}
+
+.creator-marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 1.85rem;
+  width: max-content;
+  animation: creator-scroll 32s linear infinite;
+  will-change: transform;
+}
+
+.creator-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes creator-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Curvy Creator Card */
+.curvy-creator-card {
+  width: 350px;
+  min-width: 350px;
+  background: rgba(14, 18, 26, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 28px;
+  padding: 1.6rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition: all var(--transition-smooth);
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+}
+
+.curvy-creator-card:hover {
+  background: rgba(20, 26, 38, 0.95);
+  border-color: rgba(204, 255, 0, 0.45);
+  transform: translateY(-6px);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.75), 0 0 35px rgba(204, 255, 0, 0.14);
+}
+
+.creator-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.creator-avatar-wrap {
+  position: relative;
+  width: 58px;
+  height: 58px;
+  flex-shrink: 0;
+}
+
+.creator-avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(204, 255, 0, 0.55);
+  box-shadow: 0 0 18px rgba(204, 255, 0, 0.22);
+}
+
+.creator-verified-badge {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  background: var(--color-lime);
+  color: #000000;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.creator-platform-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.38rem 0.88rem;
+  border-radius: 100px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+.creator-platform-pill.pill-instagram {
+  background: rgba(225, 48, 108, 0.12);
+  border-color: rgba(225, 48, 108, 0.32);
+  color: #ff7597;
+}
+
+.creator-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.creator-name {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.creator-niche {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+.creator-handle-link {
+  font-size: 0.88rem;
+  color: var(--color-lime);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity var(--transition-fast);
+  width: fit-content;
+  margin-top: 0.15rem;
+}
+
+.creator-handle-link:hover {
+  opacity: 0.82;
+  text-decoration: underline;
+}
+
+.creator-metric-box {
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 18px;
+  padding: 0.85rem 1.15rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.metric-num-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.metric-number {
+  font-family: var(--font-heading);
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+}
+
+.metric-label {
+  font-size: 0.72rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.creator-view-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(204, 255, 0, 0.12);
+  color: var(--color-lime);
+  border: 1px solid rgba(204, 255, 0, 0.32);
+  padding: 0.45rem 0.95rem;
+  border-radius: 100px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.curvy-creator-card:hover .creator-view-btn {
+  background: var(--color-lime);
+  color: #000000;
+}
+
+/* Call to action curvy card for joining roster */
+.curvy-creator-card.card-join-cta {
+  border-style: dashed;
+  border-color: rgba(204, 255, 0, 0.35);
+  cursor: pointer;
+}
+
+.curvy-creator-card.card-join-cta:hover {
+  border-style: solid;
+  border-color: var(--color-lime);
+}
+
+@media (max-width: 640px) {
+  .curvy-creator-card {
+    width: 295px;
+    min-width: 295px;
+    border-radius: 24px;
+    padding: 1.3rem 1.35rem;
+  }
+  .creator-avatar-wrap {
+    width: 50px;
+    height: 50px;
+  }
+  .creator-name {
+    font-size: 1.22rem;
+  }
+  .metric-number {
+    font-size: 1.4rem;
+  }
+}
+
 .talent-cards-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
