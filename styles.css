@@ -2230,19 +2230,29 @@ ul {
   margin-top: 1.25rem;
 }
 
-.team-linkedin-btn {
+.founder-links-group {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.team-social-btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.55rem 1.15rem;
-  border: 1px solid rgba(10, 102, 194, 0.45);
-  background-color: rgba(10, 102, 194, 0.15);
-  color: #93c5fd;
-  font-size: 0.85rem;
+  gap: 0.45rem;
+  padding: 0.48rem 0.95rem;
+  font-size: 0.82rem;
   font-weight: 600;
   border-radius: 100px;
   text-decoration: none;
   transition: all 0.25s ease;
+}
+
+.team-linkedin-btn {
+  border: 1px solid rgba(10, 102, 194, 0.4);
+  background-color: rgba(10, 102, 194, 0.12);
+  color: #93c5fd;
 }
 
 .team-linkedin-btn:hover {
@@ -2250,7 +2260,21 @@ ul {
   border-color: #0a66c2;
   color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(10, 102, 194, 0.35);
+  box-shadow: 0 6px 18px rgba(10, 102, 194, 0.35);
+}
+
+.team-instagram-btn {
+  border: 1px solid rgba(225, 48, 108, 0.4);
+  background-color: rgba(225, 48, 108, 0.1);
+  color: #ff8ca3;
+}
+
+.team-instagram-btn:hover {
+  background-color: #e1306c;
+  border-color: #e1306c;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(225, 48, 108, 0.35);
 }
 
 .linkedin-svg {
@@ -2296,7 +2320,12 @@ ul {
     width: 64px;
     height: 64px;
   }
-  .team-linkedin-btn {
+  .founder-links-group {
+    width: 100%;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .founder-links-group .team-social-btn {
     width: 100%;
     justify-content: center;
   }

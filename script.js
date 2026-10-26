@@ -29,7 +29,9 @@ const AppConfig = {
     EMAIL_PRIMARY: 'thorvonmedia@gmail.com',
     EMAIL_RECRUITMENT: 'thorvonmedia@gmail.com',
     EMAIL_ENTRIES: 'thorvonmedia@gmail.com',
-    INSTAGRAM_LINK: 'https://instagram.com/thorvonmedia'
+    INSTAGRAM_LINK: 'https://instagram.com/thorvonmedia',
+    FOUNDER_LINKEDIN: 'https://www.linkedin.com/in/drishtantabaruah',
+    FOUNDER_INSTAGRAM: 'https://www.instagram.com/drishtantab'
   }
 };
 
