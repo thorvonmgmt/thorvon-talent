@@ -585,6 +585,14 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
+    // Open Team Modal
+    const teamBtn = e.target.closest('[data-action="open-team-modal"]');
+    if (teamBtn) {
+      e.preventDefault();
+      ModalController.open('teamModal');
+      return;
+    }
+
     // Open Careers Modal
     const careersBtn = e.target.closest('[data-action="open-careers-modal"]');
     if (careersBtn) {

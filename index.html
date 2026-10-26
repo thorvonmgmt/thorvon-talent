@@ -57,6 +57,7 @@
           <li><a href="#talent-worth" class="nav-link">Talent</a></li>
           <li><a href="#choose" class="nav-link">Partnerships</a></li>
           <li><a href="#careers" class="nav-link">Careers</a></li>
+          <li><a href="#" class="nav-link" data-action="open-team-modal">Team</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
         <button class="btn btn-lime nav-cta" data-action="open-creator-modal">
@@ -80,6 +81,7 @@
           <li><a href="#talent-worth" class="mobile-nav-link">Talent</a></li>
           <li><a href="#choose" class="mobile-nav-link">Partnerships</a></li>
           <li><a href="#careers" class="mobile-nav-link">Careers</a></li>
+          <li><a href="#" class="mobile-nav-link" data-action="open-team-modal">Team</a></li>
           <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
         </ul>
         <div class="mobile-cta-wrap">
@@ -434,13 +436,12 @@
       <div class="creator-marquee-wrap" aria-label="Managed Creators Showcase">
         <div class="creator-marquee-slider">
           <div class="creator-marquee-track">
-            
-            <!-- Creator Card: Sarthak Saran -->
-            <div class="curvy-creator-card">
+            <!-- Creator Card: Sarthak Saran (AfterBoards Data-Dense Style) -->
+            <div class="curvy-creator-card afterboards-card">
               <div class="creator-card-top">
                 <div class="creator-avatar-wrap">
-                  <img src="assets/sarthak-saran.jpg" alt="Sarthak Saran" class="creator-avatar-img">
-                  <span class="creator-verified-badge" title="Thorvon Verified Creator">
+                  <img src="assets/sarthak-pfp.png" alt="Sarthak Saran" class="creator-avatar-img">
+                  <span class="creator-verified-badge" title="Verified Creator">
                     <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5">
                       <polyline points="20 6 9 17 4 12"></polyline>
                     </svg>
@@ -455,28 +456,43 @@
               </div>
 
               <div class="creator-card-info">
-                <h3 class="creator-name">Sarthak Saran</h3>
-                <span class="creator-niche">Education &bull; IIT Bombay</span>
-                <a href="https://www.instagram.com/sarthakksaran?exln=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="creator-handle-link">
-                  @sarthakksaran
-                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                </a>
+                <div class="creator-headline-group">
+                  <h3 class="creator-name">sarthakksaran <span class="creator-blue-check">&#10003;</span></h3>
+                  <span class="creator-realname">Sarthak Saran</span>
+                </div>
+                <div class="creator-badges-row">
+                  <span class="creator-chip">🏛️ IIT Bombay</span>
+                  <span class="creator-chip">⚡ Athlete</span>
+                </div>
+                <p class="creator-bio-line">&ldquo;Trying. Every single day.&rdquo;</p>
               </div>
 
-              <div class="creator-metric-box">
-                <div class="metric-num-group">
-                  <span class="metric-number">30K+</span>
-                  <span class="metric-label">Followers &bull; Highest Reach</span>
+              <!-- AfterBoards 3-Stat Data Bar -->
+              <div class="afterboards-stats-bar">
+                <div class="ab-stat-item">
+                  <span class="ab-stat-num">60</span>
+                  <span class="ab-stat-lbl">Posts</span>
                 </div>
-                <a href="https://www.instagram.com/sarthakksaran?exln=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="creator-view-btn" aria-label="View Sarthak Saran's Instagram">
-                  <span>View</span>
+                <div class="ab-stat-item ab-stat-highlight">
+                  <span class="ab-stat-num">21.3K</span>
+                  <span class="ab-stat-lbl">Followers</span>
+                </div>
+                <div class="ab-stat-item">
+                  <span class="ab-stat-num">1,031</span>
+                  <span class="ab-stat-lbl">Following</span>
+                </div>
+              </div>
+
+              <div class="creator-card-actions">
+                <a href="https://www.instagram.com/sarthakksaran?exln=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="creator-action-btn" aria-label="View Sarthak Saran's Instagram">
+                  <span>Open Instagram Profile</span>
                   <span class="arrow">↗</span>
                 </a>
               </div>
             </div>
 
-            <!-- Card: Join Thorvon Talent Roster (Curvy CTA) -->
-            <div class="curvy-creator-card card-join-cta" role="button" tabindex="0" data-action="open-creator-modal" aria-label="Apply to join Thorvon Talent roster">
+            <!-- Card: Join Thorvon Talent Roster (AfterBoards Style CTA) -->
+            <div class="curvy-creator-card afterboards-card card-join-cta" role="button" tabindex="0" data-action="open-creator-modal" aria-label="Apply to join Thorvon Talent roster">
               <div class="creator-card-top">
                 <div class="creator-avatar-wrap">
                   <div class="avatar-placeholder-inner" style="width:100%;height:100%;border-radius:50%;background:rgba(204,255,0,0.12);display:flex;align-items:center;justify-content:center;color:var(--color-lime);border:2px dashed rgba(204,255,0,0.4);">
@@ -492,32 +508,47 @@
               </div>
 
               <div class="creator-card-info">
-                <h3 class="creator-name">Next Creator</h3>
-                <span class="creator-niche">Category-Defining Voices</span>
-                <span class="creator-handle-link" style="color:var(--color-text-muted);">
-                  @yourhandle
-                </span>
+                <div class="creator-headline-group">
+                  <h3 class="creator-name">Next Creator</h3>
+                  <span class="creator-realname">Category-Defining Voice</span>
+                </div>
+                <div class="creator-badges-row">
+                  <span class="creator-chip">Exclusive Roster</span>
+                  <span class="creator-chip">Brand Retainers</span>
+                </div>
+                <p class="creator-bio-line">&ldquo;You create. We manage the commercial business.&rdquo;</p>
               </div>
 
-              <div class="creator-metric-box">
-                <div class="metric-num-group">
-                  <span class="metric-number" style="color:var(--color-lime);">Scale</span>
-                  <span class="metric-label">Full Management Support</span>
+              <!-- AfterBoards 3-Stat Data Bar -->
+              <div class="afterboards-stats-bar">
+                <div class="ab-stat-item">
+                  <span class="ab-stat-num">Tier-1</span>
+                  <span class="ab-stat-lbl">Brands</span>
                 </div>
-                <span class="creator-view-btn">
-                  <span>Apply</span>
-                  <span class="arrow">→</span>
+                <div class="ab-stat-item ab-stat-highlight">
+                  <span class="ab-stat-num">Zero</span>
+                  <span class="ab-stat-lbl">Admin Load</span>
+                </div>
+                <div class="ab-stat-item">
+                  <span class="ab-stat-num">100%</span>
+                  <span class="ab-stat-lbl">Focus</span>
+                </div>
+              </div>
+
+              <div class="creator-card-actions">
+                <span class="creator-action-btn cta-lime-btn">
+                  <span>Apply for Representation</span>
+                  <span class="arrow">&rarr;</span>
                 </span>
               </div>
             </div>
 
-            <!-- Duplicate Set for Seamless Continuous Marquee Loop -->
             <!-- Creator Card: Sarthak Saran (Duplicate 1) -->
-            <div class="curvy-creator-card" aria-hidden="true">
+            <div class="curvy-creator-card afterboards-card" aria-hidden="true">
               <div class="creator-card-top">
                 <div class="creator-avatar-wrap">
-                  <img src="assets/sarthak-saran.jpg" alt="Sarthak Saran" class="creator-avatar-img">
-                  <span class="creator-verified-badge" title="Thorvon Verified Creator">
+                  <img src="assets/sarthak-pfp.png" alt="Sarthak Saran" class="creator-avatar-img">
+                  <span class="creator-verified-badge" title="Verified Creator">
                     <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5">
                       <polyline points="20 6 9 17 4 12"></polyline>
                     </svg>
@@ -532,28 +563,43 @@
               </div>
 
               <div class="creator-card-info">
-                <h3 class="creator-name">Sarthak Saran</h3>
-                <span class="creator-niche">Education &bull; IIT Bombay</span>
-                <a href="https://www.instagram.com/sarthakksaran?exln=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="creator-handle-link">
-                  @sarthakksaran
-                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                </a>
+                <div class="creator-headline-group">
+                  <h3 class="creator-name">sarthakksaran <span class="creator-blue-check">&#10003;</span></h3>
+                  <span class="creator-realname">Sarthak Saran</span>
+                </div>
+                <div class="creator-badges-row">
+                  <span class="creator-chip">🏛️ IIT Bombay</span>
+                  <span class="creator-chip">⚡ Athlete</span>
+                </div>
+                <p class="creator-bio-line">&ldquo;Trying. Every single day.&rdquo;</p>
               </div>
 
-              <div class="creator-metric-box">
-                <div class="metric-num-group">
-                  <span class="metric-number">30K+</span>
-                  <span class="metric-label">Followers &bull; Highest Reach</span>
+              <!-- AfterBoards 3-Stat Data Bar -->
+              <div class="afterboards-stats-bar">
+                <div class="ab-stat-item">
+                  <span class="ab-stat-num">60</span>
+                  <span class="ab-stat-lbl">Posts</span>
                 </div>
-                <a href="https://www.instagram.com/sarthakksaran?exln=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="creator-view-btn" aria-label="View Sarthak Saran's Instagram">
-                  <span>View</span>
+                <div class="ab-stat-item ab-stat-highlight">
+                  <span class="ab-stat-num">21.3K</span>
+                  <span class="ab-stat-lbl">Followers</span>
+                </div>
+                <div class="ab-stat-item">
+                  <span class="ab-stat-num">1,031</span>
+                  <span class="ab-stat-lbl">Following</span>
+                </div>
+              </div>
+
+              <div class="creator-card-actions">
+                <a href="https://www.instagram.com/sarthakksaran?exln=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="creator-action-btn" aria-label="View Sarthak Saran's Instagram">
+                  <span>Open Instagram Profile</span>
                   <span class="arrow">↗</span>
                 </a>
               </div>
             </div>
 
             <!-- Card: Join Thorvon Talent Roster (Duplicate 1) -->
-            <div class="curvy-creator-card card-join-cta" role="button" tabindex="0" data-action="open-creator-modal" aria-hidden="true">
+            <div class="curvy-creator-card afterboards-card card-join-cta" aria-hidden="true" role="button" tabindex="0" data-action="open-creator-modal" aria-label="Apply to join Thorvon Talent roster">
               <div class="creator-card-top">
                 <div class="creator-avatar-wrap">
                   <div class="avatar-placeholder-inner" style="width:100%;height:100%;border-radius:50%;background:rgba(204,255,0,0.12);display:flex;align-items:center;justify-content:center;color:var(--color-lime);border:2px dashed rgba(204,255,0,0.4);">
@@ -569,101 +615,43 @@
               </div>
 
               <div class="creator-card-info">
-                <h3 class="creator-name">Next Creator</h3>
-                <span class="creator-niche">Category-Defining Voices</span>
-                <span class="creator-handle-link" style="color:var(--color-text-muted);">
-                  @yourhandle
-                </span>
+                <div class="creator-headline-group">
+                  <h3 class="creator-name">Next Creator</h3>
+                  <span class="creator-realname">Category-Defining Voice</span>
+                </div>
+                <div class="creator-badges-row">
+                  <span class="creator-chip">Exclusive Roster</span>
+                  <span class="creator-chip">Brand Retainers</span>
+                </div>
+                <p class="creator-bio-line">&ldquo;You create. We manage the commercial business.&rdquo;</p>
               </div>
 
-              <div class="creator-metric-box">
-                <div class="metric-num-group">
-                  <span class="metric-number" style="color:var(--color-lime);">Scale</span>
-                  <span class="metric-label">Full Management Support</span>
+              <!-- AfterBoards 3-Stat Data Bar -->
+              <div class="afterboards-stats-bar">
+                <div class="ab-stat-item">
+                  <span class="ab-stat-num">Tier-1</span>
+                  <span class="ab-stat-lbl">Brands</span>
                 </div>
-                <span class="creator-view-btn">
-                  <span>Apply</span>
-                  <span class="arrow">→</span>
-                </span>
-              </div>
-            </div>
-
-            <!-- Duplicate Set 2 -->
-            <div class="curvy-creator-card" aria-hidden="true">
-              <div class="creator-card-top">
-                <div class="creator-avatar-wrap">
-                  <img src="assets/sarthak-saran.jpg" alt="Sarthak Saran" class="creator-avatar-img">
-                  <span class="creator-verified-badge" title="Thorvon Verified Creator">
-                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                  </span>
+                <div class="ab-stat-item ab-stat-highlight">
+                  <span class="ab-stat-num">Zero</span>
+                  <span class="ab-stat-lbl">Admin Load</span>
                 </div>
-                <div class="creator-platform-pill pill-instagram">
-                  <svg class="platform-icon" width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                  </svg>
-                  <span>Instagram</span>
+                <div class="ab-stat-item">
+                  <span class="ab-stat-num">100%</span>
+                  <span class="ab-stat-lbl">Focus</span>
                 </div>
               </div>
 
-              <div class="creator-card-info">
-                <h3 class="creator-name">Sarthak Saran</h3>
-                <span class="creator-niche">Education &bull; IIT Bombay</span>
-                <a href="https://www.instagram.com/sarthakksaran?exln=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="creator-handle-link">
-                  @sarthakksaran
-                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                </a>
-              </div>
-
-              <div class="creator-metric-box">
-                <div class="metric-num-group">
-                  <span class="metric-number">30K+</span>
-                  <span class="metric-label">Followers &bull; Highest Reach</span>
-                </div>
-                <a href="https://www.instagram.com/sarthakksaran?exln=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="creator-view-btn" aria-label="View Sarthak Saran's Instagram">
-                  <span>View</span>
-                  <span class="arrow">↗</span>
-                </a>
-              </div>
-            </div>
-
-            <div class="curvy-creator-card card-join-cta" role="button" tabindex="0" data-action="open-creator-modal" aria-hidden="true">
-              <div class="creator-card-top">
-                <div class="creator-avatar-wrap">
-                  <div class="avatar-placeholder-inner" style="width:100%;height:100%;border-radius:50%;background:rgba(204,255,0,0.12);display:flex;align-items:center;justify-content:center;color:var(--color-lime);border:2px dashed rgba(204,255,0,0.4);">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-                      <line x1="12" y1="5" x2="12" y2="19"></line>
-                      <line x1="5" y1="12" x2="19" y2="12"></line>
-                    </svg>
-                  </div>
-                </div>
-                <div class="creator-platform-pill" style="background:rgba(204,255,0,0.12);border-color:rgba(204,255,0,0.3);color:var(--color-lime);">
-                  <span>Now Signing</span>
-                </div>
-              </div>
-
-              <div class="creator-card-info">
-                <h3 class="creator-name">Next Creator</h3>
-                <span class="creator-niche">Category-Defining Voices</span>
-                <span class="creator-handle-link" style="color:var(--color-text-muted);">
-                  @yourhandle
-                </span>
-              </div>
-
-              <div class="creator-metric-box">
-                <div class="metric-num-group">
-                  <span class="metric-number" style="color:var(--color-lime);">Scale</span>
-                  <span class="metric-label">Full Management Support</span>
-                </div>
-                <span class="creator-view-btn">
-                  <span>Apply</span>
-                  <span class="arrow">→</span>
+              <div class="creator-card-actions">
+                <span class="creator-action-btn cta-lime-btn">
+                  <span>Apply for Representation</span>
+                  <span class="arrow">&rarr;</span>
                 </span>
               </div>
             </div>
-
           </div>
+        </div>
+      </div>
         </div>
       </div>
 
@@ -816,6 +804,7 @@
 
         <div class="footer-nav-col">
           <span class="footer-nav-heading">Secondary Portals</span>
+          <a href="#" class="footer-nav-link" data-action="open-team-modal">Leadership &amp; Team</a>
           <a href="#" class="footer-nav-link" data-action="open-brand-modal">Brand Partnerships</a>
           <a href="#" class="footer-nav-link" data-action="open-careers-modal">Careers at Thorvon</a>
           <a href="mailto:thorvonmedia@gmail.com" class="footer-nav-link">thorvonmedia@gmail.com</a>
@@ -1215,6 +1204,86 @@
             </button>
           </div>
         </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- =======================================================================
+       MODAL: Embedded Leadership & Team Column (Drishtanta & Aprateep)
+       Headline: "The Minds Behind Thorvon Talent"
+       ======================================================================= -->
+  <div class="thorvon-modal-backdrop" id="teamModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="teamModalTitle">
+    <div class="thorvon-modal-container team-modal-container">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <div class="modal-eyebrow">LEADERSHIP // THE MINDS BEHIND THORVON</div>
+          <h2 class="modal-title" id="teamModalTitle">The Minds Behind Thorvon Talent.</h2>
+          <p class="modal-desc">
+            A dedicated leadership team representing creator interests, orchestrating tier-1 brand deals, and scaling creative media ventures.
+          </p>
+        </div>
+        <button class="modal-close-btn" data-action="close-modal" aria-label="Close team dialog">&times;</button>
+      </div>
+
+      <div class="team-modal-body">
+        <div class="team-cards-column">
+          
+          <!-- Team Member 1: Drishtanta Baruah -->
+          <article class="founder-card modal-founder-card">
+            <div class="founder-card-header">
+              <div class="founder-profile-group">
+                <img src="assets/drishtanta-portrait.jpg" alt="Drishtanta Baruah" class="founder-avatar-img">
+                <div class="founder-identity">
+                  <span class="founder-badge">FOUNDER &amp; MANAGING DIRECTOR</span>
+                  <h3 class="founder-name">Drishtanta Baruah</h3>
+                </div>
+              </div>
+
+              <!-- Official LinkedIn Button -->
+              <a href="https://www.linkedin.com/in/drishtanta-baruah/" target="_blank" rel="noopener noreferrer" class="team-linkedin-btn" aria-label="Connect with Drishtanta Baruah on LinkedIn">
+                <svg class="linkedin-svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+                <span>Connect on LinkedIn</span>
+                <span class="arrow">↗</span>
+              </a>
+            </div>
+
+            <p class="founder-bio">
+              Guiding strategic creator representation, commercial deal architecture, and talent growth. Focused on securing high-leverage brand partnerships and building long-term equity for category-defining creators.
+            </p>
+          </article>
+
+          <!-- Team Member 2: Aprateep Bordoloi -->
+          <article class="founder-card modal-founder-card">
+            <div class="founder-card-header">
+              <div class="founder-profile-group">
+                <img src="assets/aprateep-portrait.jpg" alt="Aprateep Bordoloi" class="founder-avatar-img">
+                <div class="founder-identity">
+                  <span class="founder-badge">HEAD OF CREATIVE PRODUCTION</span>
+                  <h3 class="founder-name">Aprateep Bordoloi</h3>
+                </div>
+              </div>
+            </div>
+
+            <p class="founder-bio">
+              Directs our creative video post-production and visual storytelling pipeline. Transforming raw creator assets into high-retention, high-engagement content engineered to capture attention and scale distribution.
+            </p>
+          </article>
+
+        </div>
+
+        <!-- Banner inside modal -->
+        <div class="team-modal-footer-banner">
+          <div class="team-footer-text">
+            <h4 class="team-footer-title">Ready to work with our team?</h4>
+            <p class="team-footer-desc">Whether you are a creator seeking representation or a brand looking for vetted talent partnerships.</p>
+          </div>
+          <div class="team-footer-actions">
+            <button class="btn btn-lime" data-action="open-creator-modal">Get Represented <span class="arrow">→</span></button>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>

@@ -2138,3 +2138,360 @@ ul {
     opacity: 1 !important;
   }
 }
+
+
+/* --------------------------------------------------------------------------
+   AfterBoards.in Inspired Data-Dense Creator Card Design System
+   -------------------------------------------------------------------------- */
+.curvy-creator-card.afterboards-card {
+  width: 375px;
+  min-width: 375px;
+  border-radius: 24px;
+  padding: 1.6rem 1.75rem;
+  background: rgba(13, 17, 24, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.creator-headline-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.creator-blue-check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 17px;
+  height: 17px;
+  background: #38bdf8;
+  color: #000000;
+  border-radius: 50%;
+  font-size: 10px;
+  font-weight: 900;
+  margin-left: 0.35rem;
+  vertical-align: middle;
+}
+
+.creator-realname {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #94a3b8;
+}
+
+.creator-badges-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.4rem;
+}
+
+.creator-chip {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #d1d5db;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.25rem 0.65rem;
+  border-radius: 8px;
+  letter-spacing: 0.01em;
+}
+
+.creator-bio-line {
+  font-size: 0.82rem;
+  color: #cbd5e1;
+  font-style: italic;
+  margin-top: 0.5rem;
+  line-height: 1.4;
+}
+
+/* AfterBoards 3-Column Statistics Bar */
+.afterboards-stats-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin: 0.25rem 0;
+}
+
+.ab-stat-item {
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 0.65rem 0.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  transition: all var(--transition-fast);
+}
+
+.ab-stat-item:hover {
+  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.ab-stat-item.ab-stat-highlight {
+  border-color: rgba(204, 255, 0, 0.3);
+  background: rgba(204, 255, 0, 0.04);
+}
+
+.ab-stat-item.ab-stat-highlight:hover {
+  border-color: var(--color-lime);
+}
+
+.ab-stat-num {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+.ab-stat-item.ab-stat-highlight .ab-stat-num {
+  color: var(--color-lime);
+}
+
+.ab-stat-lbl {
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  color: #64748b;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.creator-card-actions {
+  margin-top: 0.25rem;
+}
+
+.creator-action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  width: 100%;
+  padding: 0.65rem 1rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  color: #e2e8f0;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.creator-action-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.creator-action-btn.cta-lime-btn {
+  background: rgba(204, 255, 0, 0.1);
+  border-color: rgba(204, 255, 0, 0.35);
+  color: var(--color-lime);
+}
+
+.creator-action-btn.cta-lime-btn:hover {
+  background: var(--color-lime);
+  color: #000000;
+}
+
+@media (max-width: 640px) {
+  .curvy-creator-card.afterboards-card {
+    width: 310px;
+    min-width: 310px;
+    padding: 1.35rem 1.4rem;
+  }
+}
+
+
+/* --------------------------------------------------------------------------
+   Embedded Team Column & Modal Styling (Drishtanta & Aprateep)
+   -------------------------------------------------------------------------- */
+.team-modal-container {
+  max-width: 820px;
+  width: 95%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.team-modal-body {
+  padding-top: 0.5rem;
+}
+
+.team-cards-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.modal-founder-card {
+  background: rgba(14, 18, 26, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 22px;
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition: all var(--transition-smooth);
+}
+
+.modal-founder-card:hover {
+  background: rgba(20, 26, 38, 0.95);
+  border-color: rgba(204, 255, 0, 0.35);
+  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.7), 0 0 25px rgba(204, 255, 0, 0.08);
+}
+
+.founder-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.founder-profile-group {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.founder-avatar-img {
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 25%;
+  border: 2px solid rgba(204, 255, 0, 0.5);
+  box-shadow: 0 0 18px rgba(204, 255, 0, 0.18);
+  flex-shrink: 0;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.modal-founder-card:hover .founder-avatar-img {
+  transform: scale(1.04);
+  border-color: var(--color-lime);
+}
+
+.founder-identity {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.founder-badge {
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-lime);
+  background: rgba(204, 255, 0, 0.08);
+  border: 1px solid rgba(204, 255, 0, 0.25);
+  padding: 0.28rem 0.75rem;
+  border-radius: 100px;
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+}
+
+.founder-name {
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 2.5vw, 1.85rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: #ffffff;
+  margin: 0;
+}
+
+.founder-bio {
+  font-size: clamp(0.95rem, 1.3vw, 1.05rem);
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+  margin-top: 1.25rem;
+}
+
+.team-linkedin-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1.15rem;
+  border: 1px solid rgba(10, 102, 194, 0.45);
+  background-color: rgba(10, 102, 194, 0.15);
+  color: #93c5fd;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 100px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.team-linkedin-btn:hover {
+  background-color: #0a66c2;
+  border-color: #0a66c2;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(10, 102, 194, 0.35);
+}
+
+.linkedin-svg {
+  width: 15px;
+  height: 15px;
+  fill: currentColor;
+}
+
+.team-modal-footer-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding: 1.5rem 1.85rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  margin-top: 1.75rem;
+}
+
+.team-footer-title {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.3rem;
+}
+
+.team-footer-desc {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+@media (max-width: 640px) {
+  .founder-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .founder-avatar-img {
+    width: 64px;
+    height: 64px;
+  }
+  .team-linkedin-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .team-modal-footer-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .team-footer-actions {
+    width: 100%;
+  }
+  .team-footer-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
