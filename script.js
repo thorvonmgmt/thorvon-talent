@@ -34,48 +34,6 @@ const AppConfig = {
 };
 
 // --------------------------------------------------------------------------
-// 2. Interactive Creator Journey Stages Data
-// --------------------------------------------------------------------------
-const JourneyStages = [
-  {
-    badge: 'STAGE 01 • REPUTATION ARCHITECTURE',
-    heading: 'Build Your Presence',
-    desc: 'Social media management, content strategy, and stronger personal branding that position you as an unmistakable voice in your niche.',
-    cta: 'Start Stage 01',
-    metrics: [
-      { label: 'Content Strategy', val: 'Retention Pacing' },
-      { label: 'Feed Optimization', val: 'Omnichannel' },
-      { label: 'Brand Positioning', val: 'Authority First' },
-      { label: 'Operational Support', val: 'Thorvon Media' }
-    ]
-  },
-  {
-    badge: 'STAGE 02 • COMMERCIAL ALIGNMENT',
-    heading: 'Find Your Opportunities',
-    desc: 'Relevant brand collaborations, commercial partnerships, and campaign opportunities that fit your creative identity without compromise.',
-    cta: 'Start Stage 02',
-    metrics: [
-      { label: 'Brand Matching', val: 'Vetted Sponsors' },
-      { label: 'Deal Structuring', val: 'Multi-Month Retainers' },
-      { label: 'Rate Protection', val: 'Ethical Floor' },
-      { label: 'Legal Defense', val: 'Contract Security' }
-    ]
-  },
-  {
-    badge: 'STAGE 03 • CREATIVE FREEDOM',
-    heading: 'Focus on Your Craft',
-    desc: 'Let creators focus entirely on creating while our dedicated team supports your social media publishing, clip editing, and commercial pipelines.',
-    cta: 'Start Stage 03',
-    metrics: [
-      { label: 'Workflow Burden', val: 'Zero Admin Friction' },
-      { label: 'Video Post-Production', val: 'Clipper Network' },
-      { label: 'Native Scheduling', val: 'Managed Publishing' },
-      { label: 'Career Horizon', val: 'Long-Term Equity' }
-    ]
-  }
-];
-
-// --------------------------------------------------------------------------
 // 3. Verified Thorvon Media Vacancies Catalog
 // --------------------------------------------------------------------------
 const CareerPositions = {
@@ -227,6 +185,7 @@ const ModalController = {
     modal.classList.add('is-open');
     modal.setAttribute('aria-hidden', 'false');
     document.body.classList.add('modal-open');
+    document.body.style.overflow = 'hidden';
     this.activeModal = modal;
 
     const focusable = modal.querySelector('button, [href], input, select, textarea');
@@ -244,6 +203,7 @@ const ModalController = {
     const anyOpen = document.querySelector('.thorvon-modal-backdrop.is-open');
     if (!anyOpen) {
       document.body.classList.remove('modal-open');
+      document.body.style.overflow = '';
     }
   },
 
@@ -254,6 +214,7 @@ const ModalController = {
       m.setAttribute('aria-hidden', 'true');
     });
     document.body.classList.remove('modal-open');
+      document.body.style.overflow = '';
     this.activeModal = null;
   }
 };
@@ -547,66 +508,7 @@ document.addEventListener('DOMContentLoaded', () => {
     kineticHeadings.forEach((h) => h.classList.add('is-visible'));
   }
 
-  // D. Interactive Creator Journey Switcher
-  const stageTabs = document.querySelectorAll('.journey-tab-btn');
-  const stageBadge = document.getElementById('journeyStageBadge');
-  const stageHeading = document.getElementById('journeyStageHeading');
-  const stageDesc = document.getElementById('journeyStageDesc');
-  const metric1 = document.getElementById('journeyMetric1');
-  const metric2 = document.getElementById('journeyMetric2');
-  const metric3 = document.getElementById('journeyMetric3');
-  const metric4 = document.getElementById('journeyMetric4');
-
-  function setJourneyStage(stageIndex) {
-    const stage = JourneyStages[stageIndex];
-    if (!stage) return;
-
-    stageTabs.forEach((tab, idx) => {
-      const isActive = idx === stageIndex;
-      tab.classList.toggle('active', isActive);
-      tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
-    });
-
-    if (stageBadge) stageBadge.textContent = stage.badge;
-    if (stageHeading) stageHeading.textContent = stage.heading;
-    if (stageDesc) stageDesc.textContent = stage.desc;
-
-    if (metric1 && stage.metrics[0]) metric1.textContent = stage.metrics[0].val;
-    if (metric2 && stage.metrics[1]) metric2.textContent = stage.metrics[1].val;
-    if (metric3 && stage.metrics[2]) metric3.textContent = stage.metrics[2].val;
-    if (metric4 && stage.metrics[3]) metric4.textContent = stage.metrics[3].val;
-  }
-
-  stageTabs.forEach((tab) => {
-    tab.addEventListener('click', () => {
-      const idx = parseInt(tab.getAttribute('data-stage'), 10);
-      setJourneyStage(idx);
-    });
-  });
-
-  // E. Showcase Filter Pills
-  const showcasePills = document.querySelectorAll('.showcase-filter-pill');
-  const showcaseCards = document.querySelectorAll('.showcase-card');
-
-  showcasePills.forEach((pill) => {
-    pill.addEventListener('click', () => {
-      showcasePills.forEach((p) => p.classList.remove('active'));
-      pill.classList.add('active');
-
-      const filter = pill.getAttribute('data-filter');
-
-      showcaseCards.forEach((card) => {
-        const cat = card.getAttribute('data-category');
-        if (filter === 'all' || cat === filter) {
-          card.style.display = 'flex';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    });
-  });
-
-  // F. Mobile Menu Toggle
+  // D. Mobile Menu Toggle
   const mobileToggle = document.getElementById('mobileToggle');
   const mobileDrawer = document.getElementById('mobileDrawer');
   const mobileLinks = document.querySelectorAll('.mobile-nav-link');
@@ -794,9 +696,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const pillarCards = document.querySelectorAll('.pillar-card');
     if (!pillarCards.length) return;
 
+    // Sync initial label state
+    pillarCards.forEach((card) => {
+      const toggleText = card.querySelector('.toggle-text');
+      if (toggleText) {
+        toggleText.textContent = card.classList.contains('is-active') ? 'Close' : 'Services';
+      }
+    });
+
     pillarCards.forEach((card) => {
       card.addEventListener('click', (e) => {
-        // Prevent toggle if clicking a link or button with its own action
+        // Prevent toggle if clicking a link or independent button
         if (e.target.closest('a') || (e.target.closest('button') && !e.target.closest('.pillar-toggle-indicator'))) {
           return;
         }
@@ -822,6 +732,13 @@ document.addEventListener('DOMContentLoaded', () => {
           card.setAttribute('aria-expanded', 'true');
           const toggleText = card.querySelector('.toggle-text');
           if (toggleText) toggleText.textContent = 'Close';
+
+          // Mobile comfort scroll
+          if (window.innerWidth <= 960) {
+            setTimeout(() => {
+              card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }, 120);
+          }
         }
       });
 
