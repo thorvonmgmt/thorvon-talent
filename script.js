@@ -30,6 +30,7 @@ const AppConfig = {
     EMAIL_RECRUITMENT: 'thorvonmedia@gmail.com',
     EMAIL_ENTRIES: 'thorvonmedia@gmail.com',
     INSTAGRAM_LINK: 'https://instagram.com/thorvonmedia',
+    MAIN_WEBSITE: 'https://thorvonmedia.in',
     FOUNDER_LINKEDIN: 'https://www.linkedin.com/in/drishtantabaruah',
     FOUNDER_INSTAGRAM: 'https://www.instagram.com/drishtantab'
   }

@@ -2341,3 +2341,160 @@ ul {
     justify-content: center;
   }
 }
+
+
+/* --------------------------------------------------------------------------
+   Parent Brand Connection (Thorvon Media)
+   -------------------------------------------------------------------------- */
+.brand-group-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.brand-sub-divider {
+  width: 1px;
+  height: 18px;
+  background-color: rgba(255, 255, 255, 0.16);
+  display: inline-block;
+}
+
+.parent-brand-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  padding: 0.3rem 0.68rem;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all var(--transition-fast);
+}
+
+.parent-brand-link:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.parent-brand-link .external-arrow {
+  color: var(--color-lime);
+  transition: transform var(--transition-fast);
+}
+
+.parent-brand-link:hover .external-arrow {
+  transform: translate(1px, -1px);
+}
+
+/* Nav Parent Link */
+.nav-parent-link {
+  color: var(--color-text-secondary);
+  font-weight: 600;
+}
+
+.nav-parent-link:hover {
+  color: var(--color-lime) !important;
+}
+
+/* Hero Parent Agency Badge */
+.hero-parent-eyebrow {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.parent-agency-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.4rem 0.95rem;
+  border-radius: 100px;
+  text-decoration: none;
+  transition: all var(--transition-smooth);
+  backdrop-filter: blur(10px);
+}
+
+.parent-agency-badge:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(204, 255, 0, 0.35);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), 0 0 15px rgba(204, 255, 0, 0.08);
+}
+
+.parent-agency-badge .badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-lime);
+  box-shadow: 0 0 8px var(--color-lime);
+}
+
+.parent-agency-badge .badge-prefix {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.parent-agency-badge .badge-brand {
+  font-size: 0.82rem;
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.parent-agency-badge .badge-arrow {
+  font-size: 0.85rem;
+  color: var(--color-lime);
+  transition: transform var(--transition-fast);
+}
+
+.parent-agency-badge:hover .badge-arrow {
+  transform: translate(2px, -2px);
+}
+
+/* Mobile Parent Callout */
+.mobile-parent-callout {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 1rem 1.25rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  margin-bottom: 1.5rem;
+}
+
+.mobile-parent-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+  font-weight: 600;
+}
+
+.mobile-parent-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #ffffff;
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.mobile-parent-btn:hover {
+  color: var(--color-lime);
+}
+
+@media (max-width: 640px) {
+  .brand-sub-divider,
+  .parent-brand-link {
+    display: none;
+  }
+}

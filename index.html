@@ -45,10 +45,16 @@
   <!-- Minimalist Site Header -->
   <header class="site-header" id="top">
     <div class="container header-inner">
-      <a href="#top" class="brand-group" aria-label="Thorvon Talent Home">
-        <img src="assets/thorvon-talent-logo.png" alt="Thorvon Talent" class="brand-logo-img">
-
-      </a>
+      <div class="brand-group-wrap">
+        <a href="#top" class="brand-group" aria-label="Thorvon Talent Home">
+          <img src="assets/thorvon-talent-logo.png" alt="Thorvon Talent" class="brand-logo-img">
+        </a>
+        <span class="brand-sub-divider" aria-hidden="true"></span>
+        <a href="https://thorvonmedia.in" target="_blank" rel="noopener noreferrer" class="parent-brand-link" title="Visit Thorvon Media (Main Agency)">
+          <span>Thorvon Media</span>
+          <svg class="external-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+        </a>
+      </div>
 
       <!-- Minimal Navigation -->
       <nav class="site-nav" aria-label="Primary Navigation">
@@ -58,6 +64,7 @@
           <li><a href="#choose" class="nav-link">Partnerships</a></li>
           <li><a href="#careers" class="nav-link">Careers</a></li>
           <li><a href="#" class="nav-link" data-action="open-team-modal">Team</a></li>
+          <li><a href="https://thorvonmedia.in" target="_blank" rel="noopener noreferrer" class="nav-link nav-parent-link" title="Visit Thorvon Media Main Agency">Thorvon Media &#8599;</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
         <button class="btn btn-lime nav-cta" data-action="open-creator-modal">
@@ -75,6 +82,13 @@
     <!-- Mobile Drawer -->
     <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
       <div class="mobile-drawer-inner">
+        <div class="mobile-parent-callout">
+          <span class="mobile-parent-label">Main Agency</span>
+          <a href="https://thorvonmedia.in" target="_blank" rel="noopener noreferrer" class="mobile-parent-btn">
+            <span>Thorvon Media (Main Agency)</span>
+            <span class="arrow">&#8599;</span>
+          </a>
+        </div>
         <ul class="mobile-nav-links">
           <li><a href="#hero" class="mobile-nav-link">Home</a></li>
           <li><a href="#services" class="mobile-nav-link">What We Do</a></li>
@@ -100,6 +114,16 @@
     <section class="hero-section" id="hero">
       <div class="container">
         <div class="hero-content-centered">
+          <!-- Parent Agency Connection Badge -->
+          <div class="hero-parent-eyebrow">
+            <a href="https://thorvonmedia.in" target="_blank" rel="noopener noreferrer" class="parent-agency-badge" title="Visit Thorvon Media (Main Agency)">
+              <span class="badge-dot"></span>
+              <span class="badge-prefix">A division of</span>
+              <span class="badge-brand">Thorvon Media</span>
+              <span class="badge-arrow">&#8599;</span>
+            </a>
+          </div>
+
           <h1 class="hero-headline kinetic-heading" aria-label="Your Talent. Our Network. Bigger Opportunities.">
             <span class="hero-title-line">
               <span class="word-mask"><span class="reveal-word" style="--w-idx: 0">Your</span></span>
